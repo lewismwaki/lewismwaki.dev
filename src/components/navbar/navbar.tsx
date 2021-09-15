@@ -4,7 +4,6 @@ import { Link as ScrollLink } from "react-scroll";
 import "@fontsource/fira-mono";
 import { Flex, Text, Center, Link as ChakraLink, Box } from "@chakra-ui/react";
 import { Link } from "gatsby";
-import { css } from "@emotion/react";
 import styled from "styled-components";
 
 const LogoStyle = styled.h1`

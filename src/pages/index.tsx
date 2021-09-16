@@ -12,7 +12,7 @@ import Contact from "../components/content/contact/contact"
 
 const Home = () => {
   return (
-    <Box background="#0A0A00" height="100vh" textStyle="none">
+    <Box background="black" height="100vh" textStyle="none">
       <Navbar />
       <Intro />
       <About />

@@ -47,6 +47,7 @@
     "react-id-swiper": "^4.0.0",
     "react-scroll": "^1.8.2",
     "react-slick": "^0.28.1",
+    "react-use": "^17.3.1",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.0"
   },

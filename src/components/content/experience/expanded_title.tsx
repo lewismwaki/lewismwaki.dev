@@ -1,14 +1,7 @@
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
-import MuiAccordion from "@material-ui/core/Accordion";
-import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
-import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
-import Typography from "@material-ui/core/Typography";
-import SectionTitle from "./../../shared/section_title";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
-import CollapsedTitle from "./collapsed_title";
+import { StaticImage } from "gatsby-plugin-image";
 
 const TextStyle = styled.h1`
   -webkit-text-stroke: 0.75px yellow;
@@ -30,9 +23,19 @@ const ExpandedSubTitleStyle = styled.h1`
   font-size: 18px;
   font-weight: 500;
 `;
-const ExpandedTitle = () => {
-    return (
-        <Flex direction='column'>
+
+interface Company {
+  where: string;
+  when: string;
+}
+const ExpandedTitle = ({ where, when }: Company) => {
+  return (
+    <Flex direction='row' alignItems='flex-start'>
+      <Box mr='32px' mt='12px' width='16px' height='16px'>
+        <StaticImage src='../../../images/dot.png' alt='' />
+      </Box>
+
+      <Flex direction='column'>
         <Flex direction='row'>
           <TextStyle>
             <Text
@@ -45,15 +48,15 @@ const ExpandedTitle = () => {
               {">"}
             </Text>
           </TextStyle>
-          <Box width='8'></Box>
-          <ExpandedTitleStyle>Bytmatic Inc. - Texas, US</ExpandedTitleStyle>
+          <Box width='32px'></Box>
+          <ExpandedTitleStyle>{where}</ExpandedTitleStyle>
         </Flex>
-
         <Box pl='48px'>
-          <ExpandedSubTitleStyle>July '21 - Present</ExpandedSubTitleStyle>
+          <ExpandedSubTitleStyle>{when}</ExpandedSubTitleStyle>
         </Box>
       </Flex>
-    )
-}
+    </Flex>
+  );
+};
 
-export default ExpandedTitle
+export default ExpandedTitle;

@@ -17,7 +17,8 @@ const Navbar = () => {
       direction='row'
       alignItems='center'
       justifyContent='space-between'
-      p='32px'
+      py='32px'
+      px='60px'
     >
       {/* logo */}
 

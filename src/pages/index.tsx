@@ -9,7 +9,7 @@ import Experience from "../components/content/experience/experience"
 import Projects from "../components/content/projects/projects"
 import References from "../components/content/references/references"
 import Contact from "../components/content/contact/contact"
-
+import GlobalFonts from '../fonts/fonts';
 const Home = () => {
   return (
     <Box background="black" height="100vh" textStyle="none">

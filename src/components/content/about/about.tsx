@@ -10,6 +10,8 @@ const TextStyle = styled.h1`
   -webkit-text-fill-color: transparent;
 `;
 
+
+
 const About = () => {
   return (
     <Box height='115vh' background='inherit'>

@@ -4,12 +4,14 @@ import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import { useToggle } from "react-use";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
+import { StaticImage } from "gatsby-plugin-image";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
-import Typography from "@material-ui/core/Typography";
 import SectionTitle from "./../../shared/section_title";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 import CollapsedTitle from "./collapsed_title";
+import Role from "./role";
+import Date from "./date";
 import ExpandedTitle from "./expanded_title";
 
 const Accordion = withStyles({
@@ -37,7 +39,7 @@ const AccordionSummary = withStyles({
   },
   content: {
     "&$expanded": {
-      margin: "12px 0",
+      margin: "8px 0",
     },
   },
   expanded: {},
@@ -48,7 +50,7 @@ const AccordionDetails = withStyles((theme) => ({
     color: "#cecece",
     width: 800,
     backgroundColor: "black",
-    paddingLeft: "96px",
+    paddingLeft: "64px",
     paddingRight: 0,
     paddingTop: 0,
     paddingBottom: 0,
@@ -65,30 +67,35 @@ export default function Experience() {
         <SectionTitle title={".experience()"}></SectionTitle>
         <Box height='32px'></Box>
         <Center>
-          <Text color='#707070' fontSize='20' textAlign='center' width='500px'>
+          <Text
+            color='#707070'
+            fontSize='20px'
+            textAlign='center'
+            width='500px'
+          >
             Overview of some of the technologies I've worked with, highlighting
             how & where they've been used. A list that is ever-growing.
           </Text>
         </Center>
         <Box height='48px'></Box>
         <Flex direction='row' position='relative'>
-          <Box position='relative' zIndex='10' left='9px'>
+          <Box position='relative' zIndex='1' left='23px'>
             {expanded2 === true && expanded1 === true && expanded3 === true ? (
-              <Box backgroundColor='#4C00E8' height='760px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='1040px' width='2px'></Box>
             ) : expanded2 === true && expanded3 === true ? (
-              <Box backgroundColor='#4C00E8' height='600px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='800px' width='2px'></Box>
             ) : expanded1 === true && expanded3 === true ? (
-              <Box backgroundColor='#4C00E8' height='600px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='800px' width='2px'></Box>
             ) : expanded2 === true && expanded1 === true ? (
-              <Box backgroundColor='#4C00E8' height='600px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='800px' width='2px'></Box>
             ) : expanded1 === true ? (
-              <Box backgroundColor='#4C00E8' height='400px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='500px' width='2px'></Box>
             ) : expanded2 === true ? (
-              <Box backgroundColor='#4C00E8' height='440px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='520px' width='2px'></Box>
             ) : expanded3 === true ? (
-              <Box backgroundColor='#4C00E8' height='440px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='540px' width='2px'></Box>
             ) : (
-              <Box backgroundColor='#4C00E8' height='280px' width='2px'></Box>
+              <Box backgroundColor='#4C00E8' height='240px' width='2px'></Box>
             )}
           </Box>
           <Flex position='relative' direction='column'>
@@ -102,19 +109,21 @@ export default function Experience() {
                 {expanded1 === true ? (
                   <ExpandedTitle
                     where='Bytmatic Inc. - Texas, US'
-                    when="July '21 - Present"
+                    title='Mobile Apps Developer'
                   />
                 ) : (
                   <CollapsedTitle
                     where='Bytmatic Inc. - Texas, US'
-                    when="July '21 - Present"
+                    title='Mobile Apps Developer'
                   />
                 )}
               </AccordionSummary>
               <AccordionDetails>
                 <Flex direction='column'>
+                  <Date date=' 📆 Jul 25th 2021 - Present' />
+                  <Box height='16px'></Box>
                   <Center>
-                    <Text color='#707070' fontSize='16' width='700px'>
+                    <Text color='#707070' fontSize='16px' width='700px'>
                       Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
@@ -124,6 +133,11 @@ export default function Experience() {
                       they've been used. A list that is ever-growing.
                     </Text>
                   </Center>
+
+                  <Box height='16px'></Box>
+
+                  <Role role='Leading architectural & design patterns' />
+                  <Role role='Leading architectural & design patterns' />
                 </Flex>
               </AccordionDetails>
             </Accordion>
@@ -135,15 +149,23 @@ export default function Experience() {
                 id='panel2d-header'
               >
                 {expanded2 === true ? (
-                  <ExpandedTitle where='Giglab.io' when="Jan '21 - Present" />
+                  <ExpandedTitle
+                    where='Giglab.io - Nairobi, KE'
+                    title='Mobile Apps Developer'
+                  />
                 ) : (
-                  <CollapsedTitle where='Giglab.io' when="Jan '21 - Present" />
+                  <CollapsedTitle
+                    where='Giglab.io - Nairobi, KE'
+                    title='Mobile Apps Developer'
+                  />
                 )}
               </AccordionSummary>
               <AccordionDetails>
                 <Flex direction='column'>
+                  <Date date=' 📆 Jul 25th 2021 - Present' />
+                  <Box height='16px'></Box>
                   <Center>
-                    <Text color='#707070' fontSize='16' width='700px'>
+                    <Text color='#707070' fontSize='16px' width='700px'>
                       Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
@@ -156,6 +178,11 @@ export default function Experience() {
                       ever-growing.
                     </Text>
                   </Center>
+
+                  <Box height='16px'></Box>
+
+                  <Role role='Leading architectural & design patterns' />
+                  <Role role='Leading architectural & design patterns' />
                 </Flex>
               </AccordionDetails>
             </Accordion>
@@ -168,15 +195,17 @@ export default function Experience() {
                 id='panel3d-header'
               >
                 {expanded3 === true ? (
-                  <ExpandedTitle where='Self' when="Aug '21 - Jan '21" />
+                  <ExpandedTitle where='Self' title="Aug '21 - Jan '21" />
                 ) : (
-                  <CollapsedTitle where='Self' when="Aug '21 - Jan '21" />
+                  <CollapsedTitle where='Self' title="Aug '21 - Jan '21" />
                 )}
               </AccordionSummary>
               <AccordionDetails>
-                <Flex direction='column'>
+              <Flex direction='column'>
+                  <Date date=' 📆 Jul 25th 2021 - Present' />
+                  <Box height='16px'></Box>
                   <Center>
-                    <Text color='#707070' fontSize='16' width='700px'>
+                    <Text color='#707070' fontSize='16px' width='700px'>
                       Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
@@ -189,6 +218,11 @@ export default function Experience() {
                       ever-growing.
                     </Text>
                   </Center>
+
+                  <Box height='16px'></Box>
+
+                  <Role role='Leading architectural & design patterns' />
+                  <Role role='Leading architectural & design patterns' />
                 </Flex>
               </AccordionDetails>
             </Accordion>

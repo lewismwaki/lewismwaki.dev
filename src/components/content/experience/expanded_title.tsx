@@ -3,7 +3,7 @@ import { Box, Text, Center, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
-const TextStyle = styled.h1`
+const RegularTextStyle = styled.h1`
   -webkit-text-stroke: 0.75px yellow;
   -webkit-text-fill-color: transparent;
 `;
@@ -17,43 +17,41 @@ const ExpandedTitleStyle = styled.h1`
 `;
 
 const ExpandedSubTitleStyle = styled.h1`
-  -webkit-text-stroke: 0.6px yellow;
-  -webkit-text-fill-color: transparent;
   font-family: Fira Mono;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
 `;
 
 interface Company {
   where: string;
-  when: string;
+  title: string;
 }
-const ExpandedTitle = ({ where, when }: Company) => {
+const ExpandedTitle = ({ where, title }: Company) => {
   return (
     <Flex direction='row' alignItems='flex-start'>
-      <Box mr='32px' mt='12px' width='16px' height='16px'>
-        <StaticImage src='../../../images/dot.png' alt='' />
+      <Box width='45px' height='45px' zIndex='2' mr='20px'>
+        <StaticImage src='../../../images/company_img.png' alt='' />
       </Box>
 
-      <Flex direction='column'>
-        <Flex direction='row'>
-          <TextStyle>
-            <Text
-              transform='auto'
-              rotate='90deg'
-              fontFamily='Fira Mono'
-              fontSize='26px'
-              color='yellow'
-            >
-              {">"}
-            </Text>
-          </TextStyle>
-          <Box width='32px'></Box>
-          <ExpandedTitleStyle>{where}</ExpandedTitleStyle>
+      <Flex
+        direction='row'
+        width='760px'
+        alignItems='center'
+        justify='space-between'
+      >
+        <Flex direction='column'>
+          <ExpandedSubTitleStyle>{title}</ExpandedSubTitleStyle>
+          <Flex>
+            <ExpandedTitleStyle>{where}</ExpandedTitleStyle>
+          </Flex>
         </Flex>
-        <Box pl='48px'>
-          <ExpandedSubTitleStyle>{when}</ExpandedSubTitleStyle>
-        </Box>
+
+        <RegularTextStyle>
+          <Text fontFamily='Fira Mono' fontSize='26px' color='yellow'>
+            {"-"}
+          </Text>
+        </RegularTextStyle>
       </Flex>
     </Flex>
   );

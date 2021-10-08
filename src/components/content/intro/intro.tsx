@@ -9,7 +9,7 @@ const Intro = () => {
       <GlobalFonts />
 
       <Flex
-        pl='60px'
+        pl='76px'
         background='inherit'
         direction='column'
         justifyContent='center'

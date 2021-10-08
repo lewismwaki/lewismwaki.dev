@@ -5,7 +5,7 @@ import SectionTitle from "../../shared/section_title";
 
 const Expertise = () => {
   return (
-    <Box height='115vh' background='inherit'>
+    <Box height='115vh' background='inherit' >
       <SectionTitle title='.expertise()' id='expertise' />
 
       <Center>

@@ -9,18 +9,18 @@ const Intro = () => {
       <GlobalFonts />
 
       <Flex
-        pl='76px'
+        pl='80px'
         background='inherit'
         direction='column'
         justifyContent='center'
         pb='55px'
         pt='20px'
       >
-        <Text color='#707070' fontSize='32px'>
+        <Text color='#7c7c80' fontSize='32px'>
           Hello, I'm
         </Text>
         <Box position='relative'>
-          <Text color='#707070' fontSize='80px'>
+          <Text color='#7c7c80' fontSize='80px'>
             Lewis Mwaki
           </Text>
 
@@ -36,15 +36,15 @@ const Intro = () => {
           </Box>
         </Box>
 
-        <Flex direction='row' pt='8px'>
-          <Text fontSize='18px' color='#707070' fontFamily='Font Name'>
+        <Flex direction='row'  alignItems="center" pt="8px">
+          <Text fontSize='16px' color='#7c7c80' fontFamily='Font Name'>
             ˈlu(ː)ɪs mwaːkiː
           </Text>
 
           <Text
             fontWeight='bold'
-            fontSize='17px'
-            color='#707070'
+            fontSize='15px'
+            color='#7c7c80'
             fontFamily='Font Name'
             pl='8px'
           >
@@ -52,8 +52,8 @@ const Intro = () => {
           </Text>
         </Flex>
 
-        <Box height='28px'></Box>
-        <Text color='#707070' fontSize='18px' width='500px'>
+        <Box height='14px'></Box>
+        <Text color='#7c7c80' fontSize='18px' width='500px'>
           I exist purposely to \build quality software\ I enjoy getting
           knee-deep in the conception, design, development and production
           phases.

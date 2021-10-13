@@ -36,30 +36,42 @@ const Projects = () => {
   return (
     <Box background='inherit' pb='100px'>
       <SectionTitle title='.projects()' id='projects' />
-      <SectionDescription description='Some of my proudest works. Enjoy. :)' />
+      <SectionDescription description='A brief overview of some of my proudest works' />
 
       {/* projects images here*/}
       <Center>
-        <Box width='214px'>
+        <Box width='700px' height='700px'>
           <Slider
             asNavFor={nav2}
             ref={(slider) => (slider1 = slider)}
             {...projectImagesProps}
           >
-            <StaticImage src='../../../images/image_13.png' alt='' />
-            <StaticImage src='../../../images/image_13.png' alt='' />
+            <StaticImage src='../../../images/cryptoboard.png' alt='' />
+
+            <Flex
+              direction='row'
+              backgroundColor='#8d1e8d'
+              width='200px'
+              height='100px'
+            >
+              <Text>ddd</Text>
+            </Flex>
           </Slider>
         </Box>
       </Center>
 
       {/* projects controller */}
+      <Box width="200px"height="200px">
+        
+        <StaticImage src="../../../images/peep_projects.png/"alt=""/>
+      </Box>
       <Center>
         <Box width='978px' height='240px' position='relative'>
+          
           {/* bkg */}
           <StaticImage src='../../../images/projects_controller.png' alt='' />
 
           {/* content */}
-
           <Box
             position='absolute'
             top='56px'

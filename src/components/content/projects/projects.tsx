@@ -40,7 +40,7 @@ const Projects = () => {
 
       {/* projects images here*/}
       <Center>
-        <Box width='700px' height='700px'>
+        <Box width='600px' height='600px'>
           <Slider
             asNavFor={nav2}
             ref={(slider) => (slider1 = slider)}
@@ -61,13 +61,19 @@ const Projects = () => {
       </Center>
 
       {/* projects controller */}
-      <Box width="200px"height="200px">
-        
-        <StaticImage src="../../../images/peep_projects.png/"alt=""/>
-      </Box>
+
       <Center>
         <Box width='978px' height='240px' position='relative'>
-          
+          <Box
+            width='200px'
+            height='200px'
+            position='absolute'
+            left='0px'
+            top='-202px'
+            zIndex='1'
+          >
+            <StaticImage src='../../../images/peep_projects.png/' alt='' />
+          </Box>
           {/* bkg */}
           <StaticImage src='../../../images/projects_controller.png' alt='' />
 

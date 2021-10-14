@@ -13,7 +13,7 @@ const SectionDescription = (props: SectionDescription) => {
         color='#cecece'
         fontWeight='600'
         textAlign='center'
-        width='500px'
+        width='450px'
       >
         {props.description}
       </Text>

@@ -1,17 +1,15 @@
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import { useToggle } from "react-use";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
-import { StaticImage } from "gatsby-plugin-image";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import SectionTitle from "./../../shared/section_title";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
-import styled from "styled-components";
+import SectionDescription from "../../shared/section_description";
 import CollapsedTitle from "./collapsed_title";
 import Role from "./role";
-import Date from "./date";
+import Duration from "./duration";
 import ExpandedTitle from "./expanded_title";
 
 const Accordion = withStyles({
@@ -66,17 +64,7 @@ export default function Experience() {
       <Box>
         <SectionTitle title={".experience()"}></SectionTitle>
         <Box height='32px'></Box>
-        <Center>
-          <Text
-            color='#707070'
-            fontSize='20px'
-            textAlign='center'
-            width='500px'
-          >
-            Overview of some of the technologies I've worked with, highlighting
-            how & where they've been used. A list that is ever-growing.
-          </Text>
-        </Center>
+        <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
         <Box height='48px'></Box>
         <Flex direction='row' position='relative'>
           <Box position='relative' zIndex='1' left='23px'>
@@ -120,10 +108,14 @@ export default function Experience() {
               </AccordionSummary>
               <AccordionDetails>
                 <Flex direction='column'>
-                  <Date date=' 📆 Jul 25th 2021 - Present' />
+                  <Duration date=' 📆 Jul 25th 2021 - Present' />
                   <Box height='16px'></Box>
                   <Center>
-                    <Text color='#707070' fontSize='16px' width='700px'>
+                    <Text
+                      color='#7c7c80'
+                      fontSize='15px'
+                      width='700px'
+                    >
                       Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
@@ -162,7 +154,7 @@ export default function Experience() {
               </AccordionSummary>
               <AccordionDetails>
                 <Flex direction='column'>
-                  <Date date=' 📆 Jul 25th 2021 - Present' />
+                  <Duration date=' 📆 Jul 25th 2021 - Present' />
                   <Box height='16px'></Box>
                   <Center>
                     <Text color='#707070' fontSize='16px' width='700px'>
@@ -201,8 +193,8 @@ export default function Experience() {
                 )}
               </AccordionSummary>
               <AccordionDetails>
-              <Flex direction='column'>
-                  <Date date=' 📆 Jul 25th 2021 - Present' />
+                <Flex direction='column'>
+                  <Duration date=' 📆 Jul 25th 2021 - Present' />
                   <Box height='16px'></Box>
                   <Center>
                     <Text color='#707070' fontSize='16px' width='700px'>

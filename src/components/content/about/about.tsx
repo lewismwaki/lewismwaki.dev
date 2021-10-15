@@ -3,14 +3,13 @@ import React from "react";
 import { Text } from "@chakra-ui/react";
 import SectionTitle from "../../shared/section_title";
 import { StaticImage } from "gatsby-plugin-image";
+
 import styled from "styled-components";
 
 const TextStyle = styled.h1`
   -webkit-text-stroke: 0.75px yellow;
   -webkit-text-fill-color: transparent;
 `;
-
-
 
 const About = () => {
   return (
@@ -104,11 +103,7 @@ const About = () => {
 
         <Flex direction='column' mt='20px'>
           <Box height={10}></Box>
-          <Text
-            fontFamily='Fira Mono'
-            color='#FFFF04'
-            fontSize='23px'
-          >
+          <Text fontFamily='Fira Mono' color='#FFFF04' fontSize='23px'>
             // meet lewis
           </Text>
 

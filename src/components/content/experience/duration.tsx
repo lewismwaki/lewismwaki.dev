@@ -4,7 +4,7 @@ import { Box, Text, Center, Flex } from "@chakra-ui/react";
 interface Date {
   date: string;
 }
-const Date = ({date}:Date) => {
+const Duration = ({date}:Date) => {
   return (
     <Text
       color='#808080'
@@ -17,4 +17,4 @@ const Date = ({date}:Date) => {
   );
 };
 
-export default Date;
+export default Duration;

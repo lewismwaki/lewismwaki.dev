@@ -1,15 +1,12 @@
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import { useToggle } from "react-use";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
-import { StaticImage } from "gatsby-plugin-image";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import SectionTitle from "./../../shared/section_title";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
 import SectionDescription from "../../shared/section_description";
-import styled from "styled-components";
 import CollapsedTitle from "./collapsed_title";
 import Role from "./role";
 import Duration from "./duration";

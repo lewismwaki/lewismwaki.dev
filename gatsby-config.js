@@ -36,5 +36,32 @@ module.exports = {
       },
       __key: "images",
     },
+    
+    {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        { 
+          loader: 'css-loader', 
+          options: { 
+            modules: true,
+            localIdentName: '[local]__[hash:base64:6]',
+            importLoaders: 1,
+            minimize: true
+          }
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            ident: 'postcss',
+            plugins: [
+              require('autoprefixer')({}),
+              require('cssnano')({ preset: 'default' })
+            ],
+            minimize: true
+          }
+        }
+      ]
+    }
   ],
 };

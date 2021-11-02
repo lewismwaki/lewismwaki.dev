@@ -27,6 +27,7 @@
     "@material-ui/icons": "^4.11.2",
     "@mui/material": "^5.0.0-rc.1",
     "@react-icons/all-files": "^4.1.0",
+    "@types/react-helmet": "^6.1.4",
     "babel-plugin-styled-components": "^1.13.2",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.11.0",

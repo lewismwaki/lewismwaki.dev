@@ -39,7 +39,7 @@ const Expertise = () => {
                   ) : lang == "#gatsby" ? (
                     <StaticImage alt='' src='../../../images/gatsby_logo.png' />
                   ) : (
-                    <StaticImage alt='' src='' />
+                    <StaticImage alt='' src='../../../images/gatsby_logo.png' />
                   )}
                 </Box>
               </AnimateOnChange>

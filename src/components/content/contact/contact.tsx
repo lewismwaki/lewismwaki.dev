@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/layout";
-import { MdSend } from "@react-icons/all-files/md/Mdsend";
+import { MdSend } from "react-icons/md";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../shared/section_title";
 import {

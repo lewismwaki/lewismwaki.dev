@@ -43,7 +43,7 @@ const Projects = () => {
             ) : projectTag == 2 ? (
               <StaticImage src='../../../images/cryptoboard.png' alt='' />
             ) : (
-              <StaticImage src='../../../images/s.png' alt='' />
+              <StaticImage src='../../../images/image_13.png' alt='' />
             )}
           </AnimateOnChange>
         </Box>

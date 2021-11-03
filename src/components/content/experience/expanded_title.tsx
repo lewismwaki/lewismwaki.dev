@@ -31,7 +31,7 @@ const ExpandedTitle = ({ where, title }: Company) => {
   return (
     <Flex direction='row' alignItems='flex-start'>
       <Box width='45px' height='45px' zIndex='2' mr='20px'>
-        <StaticImage src='../../../images/company_img.png' alt='' />
+        <StaticImage src='../../../images/company_logo.png' alt='' />
       </Box>
 
       <Flex

@@ -8,8 +8,8 @@ import DisabledProjectsArrowLeft from "../projects/disabled_projects_arrow_left"
 import DisabledProjectsArrowRight from "../projects/disabled_projects_arrow_right";
 import { StaticImage } from "gatsby-plugin-image";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css"
 import { AnimateOnChange } from "react-animation";
 import ProjectsArrowLeft from "./projects_arrow_left";
 

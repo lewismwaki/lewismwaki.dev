@@ -1,21 +1,18 @@
 exports.onCreateWebpackConfig = ({
     stage,
-    rules,
-    loaders,
     plugins,
     actions,
   }) => {
     actions.setWebpackConfig({
       module: {
         rules: [
-            {
-                test: /\.(s*)css$/,
-                use: [
-                  'css-loader',
-                
-                  'style-loader',
-                ]
-              },
+          {
+            test: /\.css$/,
+              use: [
+                'style-loader',
+                'css-loader',
+            ],
+          },
         ],
       },
       plugins: [

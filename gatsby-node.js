@@ -3,10 +3,6 @@ exports.onCreateWebpackConfig = ({ stage, plugins, loaders, actions }) => {
     actions.setWebpackConfig({
       module: {
         rules: [
-          // {
-          //   test: /\.css$/,
-          //   use: ["style-loader", "css-loader"],
-          // },
           {
             test: /react-animation/,
             use: loaders.null(),
@@ -19,10 +15,6 @@ exports.onCreateWebpackConfig = ({ stage, plugins, loaders, actions }) => {
   actions.setWebpackConfig({
     module: {
       rules: [
-        // {
-        //   test: /\.css$/,
-        //   use: ["style-loader", "css-loader"],
-        // },
         {
           test: /react-animation/,
           use: loaders.null(),

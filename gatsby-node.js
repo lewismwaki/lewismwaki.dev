@@ -1,24 +1,38 @@
-exports.onCreateWebpackConfig = ({
-    stage,
-    plugins,
-    actions,
-  }) => {
+exports.onCreateWebpackConfig = ({ stage, plugins, loaders, actions }) => {
+  if (stage === "build-html") {
     actions.setWebpackConfig({
       module: {
         rules: [
+          // {
+          //   test: /\.css$/,
+          //   use: ["style-loader", "css-loader"],
+          // },
           {
-            test: /\.css$/,
-              use: [
-                'style-loader',
-                'css-loader',
-            ],
+            test: /react-animation/,
+            use: loaders.null(),
           },
         ],
       },
-      plugins: [
-        plugins.define({
-          __DEVELOPMENT__: stage === `develop` || stage === `develop-html`,
-        }),
-      ],
-    })
+    });
   }
+
+  actions.setWebpackConfig({
+    module: {
+      rules: [
+        // {
+        //   test: /\.css$/,
+        //   use: ["style-loader", "css-loader"],
+        // },
+        {
+          test: /react-animation/,
+          use: loaders.null(),
+        },
+      ],
+    },
+    plugins: [
+      plugins.define({
+        __DEVELOPMENT__: stage === `develop` || stage === `develop-html`,
+      }),
+    ],
+  });
+};

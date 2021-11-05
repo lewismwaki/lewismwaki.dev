@@ -1,7 +1,6 @@
 import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 
-import "@fontsource/fira-mono";
 import { Flex, Text, Center, Link as ChakraLink, Box } from "@chakra-ui/react";
 import { Link } from "gatsby";
 import styled from "styled-components";

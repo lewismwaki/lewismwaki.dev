@@ -1,6 +1,8 @@
 import * as React from "react"
 import styled from "styled-components"
 
+
+
 const Arrows = styled.svg`
   &.slick-arrow {
     right: 32px;

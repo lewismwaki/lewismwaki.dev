@@ -13,8 +13,17 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
+        start_url: `/`,
+        background_color: `#ffff00`,
         icon: "src/images/icon.png",
       },
     },
@@ -27,14 +36,6 @@ module.exports = {
           injectFirst: true,
         },
       },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "images",
-        path: "./src/images/",
-      },
-      __key: "images",
     },
   ],
 };

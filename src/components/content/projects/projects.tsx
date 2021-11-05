@@ -8,8 +8,6 @@ import DisabledProjectsArrowLeft from "../projects/disabled_projects_arrow_left"
 import DisabledProjectsArrowRight from "../projects/disabled_projects_arrow_right";
 import { StaticImage } from "gatsby-plugin-image";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { AnimateOnChange } from "react-animation";
 import ProjectsArrowLeft from "./projects_arrow_left";
 
@@ -26,12 +24,32 @@ const Projects = () => {
   const [projectTag, setProjectTag] = useState(0);
 
   console.log("tag " + projectTag);
+  // return paragraph of random text{
 
   return (
     <Box background='inherit' pb='100px'>
       <SectionTitle title='.projects()' id='projects' />
       <SectionDescription description='A brief overview of some of my proudest works' />
-
+      // render description again
+      {
+        <Box
+          mt='50px'
+          mb='50px'
+          display='flex'
+          flexDirection='column'
+          justifyContent='center'
+          alignItems='center'
+        >
+          <Text fontSize='2xl' fontWeight='bold' color='#2D3748'>
+            Projects
+          </Text>
+          <Text fontSize='xl' color='#2D3748'>
+            A brief overview of some of my proudest works
+          </Text>
+        </Box>
+       
+        
+      }
       {/* projects images here*/}
       <Center>
         <Box width='600px' height='600px'>
@@ -43,14 +61,12 @@ const Projects = () => {
             ) : projectTag == 2 ? (
               <StaticImage src='../../../images/cryptoboard.png' alt='' />
             ) : (
-              <StaticImage src='../../../images/s.png' alt='' />
+              <StaticImage src='../../../images/image_13.png' alt='' />
             )}
           </AnimateOnChange>
         </Box>
       </Center>
-
       {/* projects controller */}
-
       <Center>
         <Box width='978px' height='240px' position='relative'>
           <Box

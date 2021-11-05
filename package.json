@@ -15,8 +15,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@chakra-ui/anatomy": "^1.0.1",
     "@chakra-ui/gatsby-plugin": "^2.0.1",
+    "@chakra-ui/provider": "^1.6.9",
     "@chakra-ui/react": "^1.6.5",
+    "@ctrl/tinycolor": "^3.4.0",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@fontsource/fira-mono": "^4.5.0",
@@ -24,6 +27,7 @@
     "@material-ui/icons": "^4.11.2",
     "@mui/material": "^5.0.0-rc.1",
     "@react-icons/all-files": "^4.1.0",
+    "@types/react-helmet": "^6.1.4",
     "babel-plugin-styled-components": "^1.13.2",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.11.0",
@@ -44,7 +48,7 @@
     "react-animation": "^1.2.2",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
-    "react-icons": "^4.2.0",
+    "react-icons": "^4.3.1",
     "react-id-swiper": "^4.0.0",
     "react-scroll": "^1.8.2",
     "react-select": "^5.1.0",
@@ -57,6 +61,7 @@
     "@types/react-scroll": "^1.8.2",
     "@types/react-slick": "^0.23.4",
     "@types/styled-components": "^5.1.10",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "webpack-cli": "^4.9.1"
   }
 }

@@ -5,9 +5,6 @@ import { Avatar, Flex, Box, Center, Text } from "@chakra-ui/react";
 import ArrowRight from "../../shared/arrow-right";
 import ArrowLeft from "../../shared/arrow-left";
 import Slider from "react-slick";
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ReferenceDetails from "./reference_details";
 import { ReferenceItem } from "./reference_details";
 import ReferenceArrowLeft from "../../shared/reference_arrow_left";

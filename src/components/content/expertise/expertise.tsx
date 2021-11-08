@@ -1,12 +1,13 @@
-import { Box, Center, Flex } from "@chakra-ui/layout";
 import React, { useState } from "react";
+
+import { Box, Center, Flex } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/react";
 import SectionTitle from "../../shared/section_title";
-import { AnimateOnChange } from "react-animation";
+// import { AnimateOnChange } from "react-animation";
 import SectionDescription from "../../shared/section_description";
 import { StaticImage } from "gatsby-plugin-image";
 
-const Expertise = () => {
+export default function Expertise() {
   const [lang, setLang] = useState("#flutter");
 
   return (
@@ -22,7 +23,7 @@ const Expertise = () => {
         <Flex direction='row' pt='48px' alignItems='center'>
           <Flex direction='column' position='relative'>
             <Flex direction='row' alignItems='flex-end'>
-              <AnimateOnChange>
+              <div>
                 <Box width='62px' height='56px'>
                   {lang == "#flutter" ? (
                     <StaticImage
@@ -42,7 +43,7 @@ const Expertise = () => {
                     <StaticImage alt='' src='../../../images/gatsby_logo.png' />
                   )}
                 </Box>
-              </AnimateOnChange>
+              </div>
 
               <Box width='20px'></Box>
 
@@ -111,7 +112,7 @@ const Expertise = () => {
 
             <Box height='10px'></Box>
             <Box position='relative' left='-28px' top='16px'>
-              <AnimateOnChange>
+              <div>
                 {lang == "#flutter" ? (
                   <Text
                     width='640px'
@@ -221,21 +222,21 @@ const Expertise = () => {
                     user experi
                   </Text>
                 )}
-              </AnimateOnChange>
+              </div>
             </Box>
           </Flex>
 
           <Box width='120px'></Box>
-          <AnimateOnChange>
+          <div>
             <Box width='200px' height='200px' py='20px'>
               <StaticImage src='../../../images/flutter_graphic.png' alt='' />
             </Box>
-          </AnimateOnChange>
+          </div>
         </Flex>
       </Center>
     </Box>
   );
-};
+}
 
 interface Lang {
   lang: string;
@@ -262,4 +263,3 @@ const LANG_ITEMS: Array<Lang> = [
     tagNo: "tag4",
   },
 ];
-export default Expertise;

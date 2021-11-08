@@ -57,7 +57,7 @@ const About = () => {
 
           <Flex direction='row' alignItems='flex-end'>
             <Box width='85px'>
-              <StaticImage src='../../../images/group_40.png' alt='' />
+              <StaticImage src='../../../images/arrow_1.png' alt='' />
             </Box>
 
             <Text

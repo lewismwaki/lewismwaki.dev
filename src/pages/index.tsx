@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Home</title>
 
@@ -30,7 +30,7 @@ const Home = () => {
           charSet='UTF-8'
           href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'
         />
-        
+
         <link
           rel='stylesheet'
           type='text/css'
@@ -48,7 +48,7 @@ const Home = () => {
         <References />
         <Contact />
       </Box>
-    </>
+    </div>
   );
 };
 

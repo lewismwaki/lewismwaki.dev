@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Navbar from "../components/navbar/navbar";
 import Intro from "../components/content/intro/intro";
@@ -9,10 +9,15 @@ import Projects from "../components/content/projects/projects";
 import References from "../components/content/references/references";
 import Contact from "../components/content/contact/contact";
 import GlobalFonts from "../fonts/fonts";
-
 import { Helmet } from "react-helmet";
 
 const Home = () => {
+  const [indexSelectedBySection, selectBySection] = useState(0);
+
+  // useEffect(() => {
+  //   selectBySection(0);
+  // }, []);
+
   return (
     <div>
       <Helmet>
@@ -39,12 +44,12 @@ const Home = () => {
       </Helmet>
 
       <Box background='black' textStyle='none'>
-        <Navbar />
+        <Navbar indexSelectedBySection={indexSelectedBySection} />
         <Intro />
-        <About />
-        <Experience />
-        <Expertise />
-        <Projects />
+        <About onSectionChange={selectBySection} />
+        <Experience onSectionChange={selectBySection} />
+        <Projects onSectionChange={selectBySection} />
+        <Expertise onSectionChange={selectBySection} />
         <References />
         <Contact />
       </Box>

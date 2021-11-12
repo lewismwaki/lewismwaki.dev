@@ -8,7 +8,7 @@ import DisabledProjectsArrowLeft from "../projects/disabled_projects_arrow_left"
 import DisabledProjectsArrowRight from "../projects/disabled_projects_arrow_right";
 import { StaticImage } from "gatsby-plugin-image";
 import Slider from "react-slick";
-// import { AnimateOnChange } from "react-animation";
+import VisibilitySensor from "react-visibility-sensor";
 import ProjectsArrowLeft from "./projects_arrow_left";
 
 const settings = {
@@ -19,16 +19,20 @@ const settings = {
   arrows: false,
 };
 
-const Projects = () => {
+const Projects = ({ onSectionChange }) => {
   const slider = useRef(null);
   const [projectTag, setProjectTag] = useState(0);
 
-  console.log("tag " + projectTag);
-  // return paragraph of random text{
-
   return (
     <Box background='inherit' pb='100px'>
-      <SectionTitle title='.projects()' id='projects' />
+      <VisibilitySensor
+        partialVisibility={true}
+        onChange={(val) => {
+          val ? onSectionChange(2) : null;
+        }}
+      >
+        <SectionTitle title='.projects()' id='projects' />
+      </VisibilitySensor>
       <SectionDescription description='A brief overview of some of my proudest works' />
 
       {/* projects images here*/}

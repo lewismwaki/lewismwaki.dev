@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { AppBar, Slide, useScrollTrigger } from "@material-ui/core";
+import { Slide, useScrollTrigger } from "@material-ui/core";
 import { Flex, Text, Center, Link as ChakraLink, Box } from "@chakra-ui/react";
 import { Link } from "gatsby";
 import styled from "styled-components";
@@ -35,7 +35,10 @@ function HideOnScroll(props: Props) {
   );
 }
 
-const Navbar = () => {
+const Navbar = ({ indexSelectedBySection }) => {
+  console.log("nav index" + indexSelectedBySection);
+  // const [isSelected, select] = useState(0);
+
   return (
     <HideOnScroll>
       <GlassNav>
@@ -59,7 +62,7 @@ const Navbar = () => {
           </Link>
           {/* nav */}
           <Center>
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((item, index) => (
               <ScrollLink
                 activeClass='active'
                 to={item.href}
@@ -72,11 +75,20 @@ const Navbar = () => {
                   fontFamily='Fira Mono'
                   fontSize='smaller'
                   fontWeight='semibold'
-                  backgroundImage='linear-gradient(120deg, #5B5B00 100%, #5B5B00 100%)'
+                  backgroundImage={
+                    index == indexSelectedBySection
+                      ? "linear-gradient(120deg, #ffff00 100%, #f5f5d8 100%)"
+                      : "linear-gradient(120deg, #5B5B00 100%, #5B5B00 100%)"
+                  }
                   backgroundRepeat='no-repeat'
-                  backgroundSize='100% 0.5em'
+                  backgroundSize={
+                    index == indexSelectedBySection ? "100% 100%" : "100% 0.5em"
+                  }
                   backgroundPosition='0 90%'
                   transition='all 250ms ease-in-out'
+                  textColor={
+                    index == indexSelectedBySection ? "#000000" : "#ffffff"
+                  }
                   transition-property='height, width, background, font-size, background-size, font-color'
                   cursor='pointer'
                   _hover={{
@@ -92,6 +104,7 @@ const Navbar = () => {
                       "linear-gradient(120deg, #ffff00 100%, #ffff00 100%)",
                     textColor: "#000000",
                   }}
+                  // onClick={() => select(index)}
                 >
                   {item.nav}
                 </Box>
@@ -144,15 +157,16 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 
   {
-    nav: "expertise",
-    href: "expertise",
+    nav: "experience",
+    href: "experience",
   },
+
   {
     nav: "projects",
     href: "projects",
   },
   {
-    nav: "references",
-    href: "references",
+    nav: "expertise",
+    href: "expertise",
   },
 ];

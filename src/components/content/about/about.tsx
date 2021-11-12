@@ -3,18 +3,19 @@ import React from "react";
 import { Text } from "@chakra-ui/react";
 import SectionTitle from "../../shared/section_title";
 import { StaticImage } from "gatsby-plugin-image";
+import VisibilitySensor from "react-visibility-sensor";
 
-import styled from "styled-components";
-
-const TextStyle = styled.h1`
-  -webkit-text-stroke: 0.75px yellow;
-  -webkit-text-fill-color: transparent;
-`;
-
-const About = () => {
+const About = ({ onSectionChange }) => {
   return (
     <Box height='115vh' background='inherit'>
-      <SectionTitle title='.aboutMe()' id='about' />
+      <VisibilitySensor
+        partialVisibility={true}
+        onChange={(val) => {
+          val ? onSectionChange(0) : null;
+        }}
+      >
+        <SectionTitle title='.aboutMe()' id='about' />
+      </VisibilitySensor>
 
       <Flex
         direction='row'

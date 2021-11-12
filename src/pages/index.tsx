@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
 import Navbar from "../components/navbar/navbar";
 import Intro from "../components/content/intro/intro";
@@ -9,16 +9,21 @@ import Projects from "../components/content/projects/projects";
 import References from "../components/content/references/references";
 import Contact from "../components/content/contact/contact";
 import GlobalFonts from "../fonts/fonts";
-
 import { Helmet } from "react-helmet";
 
 const Home = () => {
+  const [indexSelectedBySection, selectBySection] = useState(0);
+
+  // useEffect(() => {
+  //   selectBySection(0);
+  // }, []);
+
   return (
     <div>
       <Helmet>
-        <title>Home</title>
+        <title>Lewis Mwaki</title>
 
-        <meta name='description' content='Home page of the website' />
+        <meta name="Lewis' Portfolio Site" content="Welcome to Lewis' world" />
         <link
           href='https://fonts.googleapis.com/css?family=Fira+Mono&display=swap'
           rel='stylesheet'
@@ -38,13 +43,13 @@ const Home = () => {
         />
       </Helmet>
 
-      <Box background='black' height='100vh' textStyle='none'>
-        <Navbar />
+      <Box background='black' textStyle='none'>
+        <Navbar indexSelectedBySection={indexSelectedBySection} />
         <Intro />
-        <About />
-        <Experience />
-        <Expertise />
-        <Projects />
+        <About onSectionChange={selectBySection} />
+        <Experience onSectionChange={selectBySection} />
+        <Projects onSectionChange={selectBySection} />
+        <Expertise onSectionChange={selectBySection} />
         <References />
         <Contact />
       </Box>

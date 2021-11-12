@@ -1,8 +1,9 @@
-import React from "react";
+import React, { LegacyRef } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import { useToggle } from "react-use";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
+import VisibilitySensor from "react-visibility-sensor";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import SectionTitle from "./../../shared/section_title";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
@@ -55,14 +56,22 @@ const AccordionDetails = withStyles((theme) => ({
   },
 }))(MuiAccordionDetails);
 
-export default function Experience() {
+export default function Experience({ onSectionChange }) {
   const [expanded1, toggle1] = useToggle(true);
   const [expanded2, toggle2] = useToggle(false);
   const [expanded3, toggle3] = useToggle(false);
   return (
     <Center background='inherit'>
       <Box>
-        <SectionTitle title={".experience()"}></SectionTitle>
+        <VisibilitySensor
+          partialVisibility={true}
+          onChange={(val) => {
+            val ? onSectionChange(1) : null;
+          }}
+        >
+          <SectionTitle title='.experience()' id='experience'></SectionTitle>
+        </VisibilitySensor>
+
         <Box height='32px'></Box>
         <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
         <Box height='48px'></Box>
@@ -111,11 +120,7 @@ export default function Experience() {
                   <Duration date=' 📆 Jul 25th 2021 - Present' />
                   <Box height='16px'></Box>
                   <Center>
-                    <Text
-                      color='#7c7c80'
-                      fontSize='15px'
-                      width='700px'
-                    >
+                    <Text color='#7c7c80' fontSize='15px' width='700px'>
                       Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've

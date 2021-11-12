@@ -3,16 +3,22 @@ import React, { useState } from "react";
 import { Box, Center, Flex } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/react";
 import SectionTitle from "../../shared/section_title";
-// import { AnimateOnChange } from "react-animation";
 import SectionDescription from "../../shared/section_description";
 import { StaticImage } from "gatsby-plugin-image";
-
-export default function Expertise() {
+import VisibilitySensor from "react-visibility-sensor";
+export default function Expertise({ onSectionChange }) {
   const [lang, setLang] = useState("#flutter");
 
   return (
     <Box background='inherit' pb='100px'>
-      <SectionTitle title='.expertise()' id='expertise' />
+      <VisibilitySensor
+        partialVisibility={true}
+        onChange={(val) => {
+          val ? onSectionChange(3) : null;
+        }}
+      >
+        <SectionTitle title='.expertise()' id='expertise' />
+      </VisibilitySensor>
 
       <SectionDescription
         description="Overview of some of the technologies I've worked with, highlighting how

@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://lewismwaki.dev",
     title: "lewismwaki.dev",
+    
   },
   plugins: [
     `@chakra-ui/gatsby-plugin`,

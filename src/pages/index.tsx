@@ -16,9 +16,9 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Home</title>
+        <title>Lewis Mwaki</title>
 
-        <meta name='description' content='Home page of the website' />
+        <meta name="Lewis' Portfolio Site" content="Welcome to Lewis' world" />
         <link
           href='https://fonts.googleapis.com/css?family=Fira+Mono&display=swap'
           rel='stylesheet'
@@ -38,7 +38,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <Box background='black' height='100vh' textStyle='none'>
+      <Box background='black' textStyle='none'>
         <Navbar />
         <Intro />
         <About />

@@ -42,6 +42,7 @@ const Home = () => {
           href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css'
         />
       </Helmet>
+      <GlobalFonts/>
 
       <Box background='black' textStyle='none'>
         <Navbar indexSelectedBySection={indexSelectedBySection} />

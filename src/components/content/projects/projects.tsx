@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState, Component } from "react";
 import { Box, Center, Flex, Text } from "@chakra-ui/layout";
 import ProjectsArrowRight from "./projects_arrow_right";
-
+import SyntaxHighlighter from "react-syntax-highlighter";
 import SectionDescription from "../../shared/section_description";
 import SectionTitle from "../../shared/section_title";
 import DisabledProjectsArrowLeft from "../projects/disabled_projects_arrow_left";
 import DisabledProjectsArrowRight from "../projects/disabled_projects_arrow_right";
 import { StaticImage } from "gatsby-plugin-image";
 import Slider from "react-slick";
+import customStyle from "../projects/custom_prism";
 import VisibilitySensor from "react-visibility-sensor";
 import ProjectsArrowLeft from "./projects_arrow_left";
 
@@ -22,7 +23,16 @@ const settings = {
 const Projects = ({ onSectionChange }) => {
   const slider = useRef(null);
   const [projectTag, setProjectTag] = useState(0);
-
+  const templateString = `
+  {
+    "projectName": "Cryptoboard",
+    "projectFeatures": [
+        "Charts & Alerts", 
+        "Payment Intergration", 
+        "AR Functionality",
+        "AR Functionality",
+      ]
+  }`;
   return (
     <Box background='inherit' pb='100px'>
       <VisibilitySensor
@@ -77,14 +87,31 @@ const Projects = ({ onSectionChange }) => {
             direction='row'
             justifyContent='space-between'
             alignItems='center'
-            // backgroundColor='red'
           >
             <Box width='700px'>
               <Slider ref={slider} {...settings}>
                 <>
                   <Flex direction='row' height='150px'>
-                    <Box width='220px' height='150px' backgroundColor='#0000fa'>
-                      1--------- name + features
+                    <Box width='220px' height='150px' zIndex='30'>
+                      {/* 1--------- name + features */}
+
+                      <SyntaxHighlighter
+                        language='javascript'
+                        style={customStyle}
+                        wrapLongLines
+                        customStyle={{
+                          backgroundColor: "transparent",
+                          opacity: "1",
+                          marginTop: "-2rem",
+                        }}
+                        codeTagProps={{
+                          style: {
+                            fontSize: "11px",
+                          },
+                        }}
+                      >
+                        {templateString}
+                      </SyntaxHighlighter>
                     </Box>
 
                     <Box width='40px'></Box>

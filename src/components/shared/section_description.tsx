@@ -11,7 +11,7 @@ const SectionDescription = (props: SectionDescription) => {
       <Text
         fontSize='16px'
         color='#cecece'
-        fontWeight='600'
+        fontFamily="CircularMedium"
         textAlign='center'
         width='450px'
       >

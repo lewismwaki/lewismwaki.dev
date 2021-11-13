@@ -1,27 +1,38 @@
 import { Box, Center, Flex } from "@chakra-ui/layout";
 import React from "react";
-import { Stack, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
-import GlobalFonts from "../../../fonts/fonts";
+import styled from "styled-components";
+import { FullscreenExit } from "@material-ui/icons";
+
+const TextStyle = styled.h1`
+  -webkit-text-stroke: 0.75px #cecece;
+  -webkit-text-fill-color: transparent;
+`;
 const Intro = () => {
   return (
-    <Flex direction='row' position='relative'>
-      <GlobalFonts />
+    <Flex direction='row' pl='80px' pb='80px' pt='40px' position='relative'>
+      <Flex background='inherit' direction='column' justifyContent='center'>
+        <TextStyle>
+          <Text
+            color='#cecece'
+            fontSize='72px'
+            fontFamily='Futura'
+            lineHeight='1.0'
+          >
+            Hello,
+          </Text>
+        </TextStyle>
 
-      <Flex
-        pl='80px'
-        background='inherit'
-        direction='column'
-        justifyContent='center'
-        pb='55px'
-        pt='20px'
-      >
-        <Text color='#7c7c80' fontSize='32px'>
-          Hello, I'm
-        </Text>
         <Box position='relative'>
-          <Text color='#7c7c80' fontSize='80px'>
-            Lewis Mwaki
+          <Text
+            color='#cecece'
+            fontSize='88px'
+            fontFamily='Futura'
+            lineHeight='1.2'
+          >
+            <span>I'm Lewis Mwaki</span>
+            <span style={{ color: "#4400ff" }}>.</span>
           </Text>
 
           <Box
@@ -29,50 +40,91 @@ const Intro = () => {
             height='100px'
             width='300px'
             zIndex='10'
-            top='-10px'
-            right='8px'
+            top='-20px'
+            right='-18px'
           >
             <StaticImage src='../../../images/pointer.png' alt='' />
           </Box>
         </Box>
 
-        <Flex direction='row'  alignItems="center" pt="8px">
-          <Text fontSize='16px' color='#7c7c80' fontFamily='Font Name'>
+        {/* <Flex direction='row' alignItems='center' pt='8px'> */}
+        {/* <Text fontSize='16px' color='#cecece' fontFamily='Lucida'>
             ˈlu(ː)ɪs mwaːkiː
           </Text>
 
           <Text
             fontWeight='bold'
             fontSize='15px'
-            color='#7c7c80'
-            fontFamily='Font Name'
+            color='#cecece'
+            fontFamily='Lucida'
             pl='8px'
           >
             (n)
           </Text>
-        </Flex>
+        </Flex> */}
 
         <Box height='14px'></Box>
-        <Text color='#7c7c80' fontSize='18px' width='500px'>
-          I exist purposely to \build quality software\ I enjoy getting
-          knee-deep in the conception, design, development and production
-          phases.
+        <Text
+          color='#7c7c80'
+          fontSize='18px'
+          fontFamily='CircularBook'
+          width='500px'
+          lineHeight='1.2'
+        >
+          I exist purposely to <span style={{ color: "#ffff00" }}>{"{"}</span> build quality software <span style={{ color: "#ffff00" }}>{"}"}</span>. I
+          enjoy getting knee-deep in the conception, design, development and
+          production phases. Enjoy getting knee-deep in the conception, design, development and
+          
         </Text>
-      </Flex>
 
-      <Box width='200px'></Box>
-      <Box height='300px' width='300px' zIndex='10'>
-        {/* <StaticImage src='../../../images/about_img.png' alt='' /> */}
-      </Box>
+        <Box height='40px'></Box>
+
+        {/* cta */}
+        <>
+          <Flex
+            backgroundColor='#4400ff'
+            borderRadius='100'
+            width='40px'
+            position='relative'
+            direction='column'
+            justifyContent='center'
+            height='40px'
+            transition='all 0.3s ease-in-out'
+            cursor='pointer'
+            transition-property='width'
+            _hover={{
+              width: "110px",
+            }}
+            onClick={() => {}}
+          >
+            <>
+              <Text
+                position='absolute'
+                left='15px'
+                fontSize='13px'
+                width='80px'
+                color='#cecece'
+                fontFamily='CircularBook'
+                fontWeight='600'
+              >
+                View Resume
+              </Text>
+            </>
+          </Flex>
+        </>
+
+        {/* <Flex>Jump to Projects </Flex> */}
+      </Flex>
 
       <Box
         position='absolute'
-        height='70px'
-        width='60px'
+        top='-60px'
+        width='460px'
+        height='416px'
         right='90px'
         bottom='65px'
       >
-        <StaticImage src='../../../images/shapes_1.png' alt='' />
+        <StaticImage src='../../../images/intro_img.png' alt='' />
       </Box>
     </Flex>
   );

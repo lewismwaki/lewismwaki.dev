@@ -22,15 +22,16 @@ const settings = {
 const References = () => {
   const slider = useRef(null);
   return (
-    <Box background='inherit' height='115vh'>
+    <Box background='inherit'>
       <SectionTitle title='.references()' id='references' />
-      <Box height='40px'></Box>
 
       {/* reference box */}
-      <Center>
-        <Box height='293.3px' width='544px' position='relative'>
+      <Center position='relative' overflow='clip' top='-100px'>
+        <Box height='293.3px' width='544px' position='relative' right='-100px'>
           {/* background img */}
-          <StaticImage src='../../../images/references_img_bkg.png' alt='' />
+          <Box height='293.3px' width='544px'>
+            <StaticImage src='../../../images/references_img_bkg.png' alt='' />
+          </Box>
 
           {/* content*/}
           <Box
@@ -65,6 +66,25 @@ const References = () => {
                 onClick={() => slider?.current?.slickNext()}
               />
             </Flex>
+          </Box>
+        </Box>
+
+        <Box position='relative' width='1130px' height='1130px' right='-50px'>
+          <Box
+            filter='blur(80px)'
+            position='absolute'
+            width='1130px'
+            height='1130px'
+            transform='rotate(240deg)'
+          >
+            <StaticImage src='../../../images/rectangle_154.svg' alt='' />
+          </Box>
+
+          <Box position='absolute' width='1130px' height='1130px'>
+            <StaticImage
+              src='../../../images/group_194.svg'
+              alt=''
+            ></StaticImage>
           </Box>
         </Box>
       </Center>

@@ -1,9 +1,11 @@
 export default {
   hljs: {
     display: "block",
-    overflowX: "auto",
-    padding: "0.5em",
-    color: "#333",
+    overflowX: "hidden",
+
+    //field
+    color: "#4C00E8",
+    fontWeight: 600,
     lineHeight: 1,
     background: "#f8f8f8",
   },
@@ -12,11 +14,11 @@ export default {
     fontStyle: "italic",
   },
   "hljs-quote": {
-    color: "#918392",
+    color: "#ee00ff",
     fontStyle: "italic",
   },
   "hljs-keyword": {
-    color: "#333",
+    color: "#990a0a",
     fontWeight: "bold",
   },
   "hljs-selector-tag": {
@@ -24,7 +26,7 @@ export default {
     fontWeight: "bold",
   },
   "hljs-subst": {
-    color: "#333",
+    color: "#ee00ff",
     fontWeight: "normal",
   },
   "hljs-number": {
@@ -42,8 +44,10 @@ export default {
   "hljs-tag .hljs-attr": {
     color: "#008080",
   },
+
+  //value
   "hljs-string": {
-    color: "#d14",
+    color: "#6CB735",
   },
   "hljs-doctag": {
     color: "#d14",
@@ -69,15 +73,15 @@ export default {
     fontWeight: "bold",
   },
   "hljs-tag": {
-    color: "#000080",
+    color: "#ee00ff",
     fontWeight: "normal",
   },
   "hljs-name": {
-    color: "#000080",
+    color: "#680011",
     fontWeight: "normal",
   },
   "hljs-attribute": {
-    color: "#000080",
+    color: "#ff00ff",
     fontWeight: "normal",
   },
   "hljs-regexp": {
@@ -87,10 +91,10 @@ export default {
     color: "#009926",
   },
   "hljs-symbol": {
-    color: "#990073",
+    color: "#ee00ff",
   },
   "hljs-bullet": {
-    color: "#990073",
+    color: "#ee00ff",
   },
   "hljs-built_in": {
     color: "#0086b3",
@@ -99,14 +103,14 @@ export default {
     color: "#0086b3",
   },
   "hljs-meta": {
-    color: "#999",
+    color: "#ee00ff",
     fontWeight: "bold",
   },
   "hljs-deletion": {
     background: "#fdd",
   },
   "hljs-addition": {
-    background: "#dfd",
+    background: "#ee00ff",
   },
   "hljs-emphasis": {
     fontStyle: "italic",

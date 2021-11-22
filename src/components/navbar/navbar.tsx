@@ -37,7 +37,6 @@ function HideOnScroll(props: Props) {
 
 const Navbar = ({ indexSelectedBySection }) => {
   console.log("nav index" + indexSelectedBySection);
-  // const [isSelected, select] = useState(0);
 
   return (
     <HideOnScroll>

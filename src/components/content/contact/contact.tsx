@@ -1,14 +1,18 @@
 import React from "react";
-import { Box , Text} from "@chakra-ui/layout";
-import { MdSend,MdOpenInNew } from "react-icons/md";
+
+import { MdSend, MdOpenInNew } from "react-icons/md";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../shared/section_title";
+import ContactBubble from "./contact_bubble";
 
 import {
   Flex,
   Input,
   FormControl,
   FormLabel,
+  Box,
+  Center,
+  Text,
   FormHelperText,
   Textarea,
   IconButton,
@@ -19,10 +23,9 @@ const Contact = () => {
   return (
     <Box background='inherit'>
       <SectionTitle title='.getInTouch()' id='getInTouch' />
-      <Box height='50px'></Box>
-      <Flex pl='0px' alignItems='flex-start'>
+      <Center position='relative' overflowX='clip' overflowY='clip'>
         {/* contact form */}
-        <Box position='relative'>
+        <Box position='relative' right='30px' zIndex='10'>
           {/* bkg */}
           <Box width='500px'>
             <StaticImage src='../../../images/contact_box.png' alt='' />
@@ -224,9 +227,73 @@ const Contact = () => {
             </Flex>
           </Flex>
         </Box>
-      </Flex>
+
+        {/* contact bubbles */}
+        <Box position='relative' right='50px'>
+          <Box
+            filter='blur(80px)'
+            position='absolute'
+            width='1100px'
+            height='1100px'
+            top='100px'
+            transform='rotate(120deg)'
+          >
+            <StaticImage src='../../../images/rectangle_154.svg' alt='' />
+          </Box>
+
+          <Box position='relative' width='700px' height='700px'>
+            <Text
+              position='absolute'
+              left='170px'
+              textColor='#ffff04'
+              fontWeight='bold'
+              fontFamily='Fira Mono'
+            >
+              {"//TODO: Connect"}
+            </Text>
+
+            {ContactBubbleList.map((contactBubble, index) => (
+              <ContactBubble
+                href={contactBubble.href}
+                platform={contactBubble.platform}
+                index={index}
+              />
+            ))}
+          </Box>
+        </Box>
+      </Center>
     </Box>
   );
 };
+
+interface ContactBubbleProps {
+  href: string;
+  platform: string;
+}
+
+const ContactBubbleList: Array<ContactBubbleProps> = [
+  {
+    href: "https://mailto:mwakicodes@gmail.com",
+    platform: "Mail",
+  },
+  {
+    href: "https://www.linkedin.com/in/mwakicodes/",
+    platform: "LinkedIn",
+  },
+
+  {
+    href: "https://twitter.com/lewymwaki",
+    platform: "Twitter",
+  },
+
+  {
+    href: "https://wa.me/254745943954",
+    platform: "Whatsapp",
+  },
+  {
+    href: "https://www.github.com/mwakicodes/",
+    platform: "Github",
+  },
+];
 
 export default Contact;

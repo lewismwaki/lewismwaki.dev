@@ -10,13 +10,10 @@ import References from "../components/content/references/references";
 import Contact from "../components/content/contact/contact";
 import GlobalFonts from "../fonts/fonts";
 import { Helmet } from "react-helmet";
+import Footer from "../components/content/footer/footer";
 
 const Home = () => {
   const [indexSelectedBySection, selectBySection] = useState(0);
-
-  // useEffect(() => {
-  //   selectBySection(0);
-  // }, []);
 
   return (
     <div>
@@ -53,6 +50,7 @@ const Home = () => {
         <Expertise onSectionChange={selectBySection} />
         <References />
         <Contact />
+        <Footer/>
       </Box>
     </div>
   );

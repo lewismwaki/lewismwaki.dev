@@ -26,8 +26,14 @@ const References = () => {
       <SectionTitle title='.references()' id='references' />
 
       {/* reference box */}
-      <Center position='relative' overflow='clip' top='-100px'>
-        <Box height='293.3px' width='544px' position='relative' right='-100px'>
+      <Center position='relative' overflowX='clip' top='-100px'>
+        <Box
+          height='293.3px'
+          width='544px'
+          position='relative'
+          right='-100px'
+          zIndex='10'
+        >
           {/* background img */}
           <Box height='293.3px' width='544px'>
             <StaticImage src='../../../images/references_img_bkg.png' alt='' />
@@ -75,7 +81,7 @@ const References = () => {
             position='absolute'
             width='1130px'
             height='1130px'
-            transform='rotate(240deg)'
+            transform='rotate(90deg)'
           >
             <StaticImage src='../../../images/rectangle_154.svg' alt='' />
           </Box>

@@ -11,12 +11,8 @@ import svg from "../../../images/rectangle_1752.svg";
 import VisibilitySensor from "react-visibility-sensor";
 import ProjectsArrowLeft from "./projects_arrow_left";
 import ProjectsInfo from "./projects_info";
-
 import MeshProjects from "./../../shared/mesh_projects";
-
 import styled from "styled-components";
-// import RectangleComponent from "../../../images/RectangleComponent";
-
 
 const settings = {
   dots: false,

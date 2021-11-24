@@ -128,9 +128,7 @@ const Navbar = ({ indexSelectedBySection }) => {
               fontWeight='semibold'
               fontFamily='Fira Mono'
               background='#FFFF00'
-              _hover={{
-                textDecoration: "none",
-              }}
+              _hover={{ textDecoration: "none" }}
               _focus={{ borderStyle: "none" }}
             >
               GET IN TOUCH

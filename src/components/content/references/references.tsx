@@ -9,6 +9,7 @@ import ReferenceDetails from "./reference_details";
 import { ReferenceItem } from "./reference_details";
 import ReferenceArrowLeft from "../../shared/reference_arrow_left";
 import ReferenceArrowRight from "../../shared/reference_arrow_right";
+import SectionDescription from "./../../shared/section_description";
 
 const settings = {
   dots: false,
@@ -25,6 +26,7 @@ const References = () => {
     <Box background='inherit'>
       <SectionTitle title='.references()' id='references' />
 
+      <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
       {/* reference box */}
       <Center position='relative' overflowX='clip' top='-100px'>
         <Box

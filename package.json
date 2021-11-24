@@ -29,6 +29,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@types/react-helmet": "^6.1.4",
     "babel-plugin-styled-components": "^1.13.2",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^4.1.17",
     "gatsby": "^3.11.0",
     "gatsby-cli": "^3.11.0",

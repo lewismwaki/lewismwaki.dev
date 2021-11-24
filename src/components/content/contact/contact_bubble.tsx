@@ -70,7 +70,7 @@ const ContactBubble = ({ href, platform, index }) => {
       transition='all 0.2s ease-in-out'
       _hover={{
         cursor: "pointer",
-        border: "1px solid #4400FF",
+        border: "1px solid yellow",
         backgroundColor: "yellow",
         textColor: "black",
       }}

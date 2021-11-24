@@ -1,10 +1,12 @@
 import React from "react";
 
-import { MdSend, MdOpenInNew } from "react-icons/md";
+import { MdOpenInNew } from "react-icons/md";
 import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../shared/section_title";
+import SectionDescription from "../../shared/section_description";
 import ContactBubble from "./contact_bubble";
-
+import emailjs from "emailjs-com";
+import { Fade, Tooltip } from "@material-ui/core";
 import {
   Flex,
   Input,
@@ -20,25 +22,48 @@ import {
 } from "@chakra-ui/react";
 
 const Contact = () => {
+  const [email, setEmail] = React.useState("");
+  const [message, setMessage] = React.useState("");
+  const [subject, setSubject] = React.useState("");
+  const [sentStatus, setSentStatus] = React.useState("initial");
+
+  function isFormValid(): boolean {
+    const emailRegEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const emailBool = emailRegEx.test(String(email).toLowerCase());
+    const messageBool = message.length > 0;
+    const subjectBool = subject.length > 0;
+    return emailBool && messageBool && subjectBool;
+  }
+
   return (
-    <Box background='inherit'>
+    <Box position='relative' top='-200px'>
       <SectionTitle title='.getInTouch()' id='getInTouch' />
-      <Center position='relative' overflowX='clip' overflowY='clip'>
+      
+      <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing."/>
+      <Center position='relative' overflow='clip'>
         {/* contact form */}
         <Box position='relative' right='30px' zIndex='10'>
           {/* bkg */}
-          <Box width='500px'>
-            <StaticImage src='../../../images/contact_box.png' alt='' />
+          <Box width='545px'>
+            <StaticImage src='../../../images/group_3920.png' alt='' />
           </Box>
-          <Flex direction='row' alignItems='flex-start' background='red'>
-            {/* form */}
+          {/* form */}
+          <Flex direction='column'>
+            {/* fields */}
             <Flex
               position='absolute'
               direction='column'
-              top='40px'
-              left='202px'
+              top='48px'
+              left='220px'
             >
-              <FormControl id='email'>
+              {/* email */}
+              <FormControl
+                id='email'
+                isRequired
+                onChange={(e) => {
+                  setEmail((e.target as HTMLInputElement).value);
+                }}
+              >
                 <FormLabel
                   fontSize='13px'
                   fontWeight='bold'
@@ -56,7 +81,7 @@ const Contact = () => {
                   borderRadius='4px'
                   backgroundColor='#F0F011'
                   background='#F0F011'
-                  width='278px'
+                  width='304px'
                   height='38px'
                   pl='10px'
                   mb='8px'
@@ -71,9 +96,14 @@ const Contact = () => {
                 ></Input>
                 <FormHelperText></FormHelperText>
               </FormControl>
-
               {/* subject */}
-              <FormControl id='subject'>
+              <FormControl
+                id='subject'
+                isRequired
+                onChange={(e) => {
+                  setSubject((e.target as HTMLInputElement).value);
+                }}
+              >
                 <FormLabel
                   fontSize='13px'
                   fontWeight='bold'
@@ -90,7 +120,7 @@ const Contact = () => {
                   borderRadius='4px'
                   background='#F0F011'
                   backgroundColor='#F0F011'
-                  width='278px'
+                  width='304px'
                   height='38px'
                   pl='10px'
                   mb='8px'
@@ -105,9 +135,20 @@ const Contact = () => {
                 ></Input>
                 <FormHelperText></FormHelperText>
               </FormControl>
-
-              <FormControl id='message'>
-                <Flex direction='row' alignItems='center' mb='8px'>
+              {/* message */}
+              <FormControl
+                id='message'
+                isRequired
+                onChange={(e) => {
+                  setMessage((e.target as HTMLInputElement).value);
+                }}
+              >
+                <Flex
+                  direction='row'
+                  justifyContent='space-between'
+                  alignItems='center'
+                  mb='8px'
+                >
                   <FormLabel
                     fontSize='13px'
                     fontWeight='bold'
@@ -116,14 +157,48 @@ const Contact = () => {
                   >
                     Message
                   </FormLabel>
-                  <Text
-                    color='#707070'
-                    fontWeight='semibold'
-                    fontSize='11px'
-                    ml='4px'
+                  <Flex
+                    direction='row'
+                    alignItems='center'
+                    position='relative'
+                    bottom='0px'
+                    right='14px'
+                    onClick={() => {
+                      window.open(
+                        "https://mail.google.com/mail/u/0/?fs=1&to=mwakicodes@gmail.com" +
+                          "&su=" +
+                          subject +
+                          "&body=" +
+                          message +
+                          "&tf=cm",
+                        "_blank"
+                      );
+                    }}
                   >
-                    // unlimited characters
-                  </Text>
+                    <Text
+                      color='#707070'
+                      fontWeight='semibold'
+                      fontSize='10px'
+                      cursor='pointer'
+                    >
+                      Use Gmail?
+                    </Text>
+                    <IconButton
+                      m='0px'
+                      p='0px'
+                      position='absolute'
+                      top='-14px'
+                      right='-28px'
+                      icon={<Icon as={MdOpenInNew} />}
+                      aria-label='Send Message'
+                      fontSize='11px'
+                      iconSize='11px'
+                      color='#707070'
+                      backgroundColor='rgba(0, 0, 0, 0)'
+                      _hover={{ textDecoration: "none" }}
+                      _focus={{ borderStyle: "none" }}
+                    />
+                  </Flex>
                 </Flex>
                 <Textarea
                   resize='none'
@@ -137,8 +212,8 @@ const Contact = () => {
                   borderColor='#F0F011'
                   borderRadius='4px'
                   background='#F0F011'
-                  width='278px'
-                  height='150px'
+                  width='304px'
+                  height='155px'
                   pl='12px'
                   pb='40px'
                   mb='16px'
@@ -152,99 +227,124 @@ const Contact = () => {
                     borderColor: "#4D00FF",
                   }}
                 ></Textarea>
-                <FormHelperText></FormHelperText>
               </FormControl>
             </Flex>
-            {/* actions */}
-            <Flex
-              direction='row'
-              alignItems='center'
-              position='absolute'
-              bottom='24px'
-              right='24px'
+            {/* submit */}
+            <Tooltip
+              title={
+                subject.length == 0 && message.length == 0 && email.length == 0
+                  ? "Please enter all the required fields to proceed"
+                  : subject.length == 0
+                  ? "Please enter subject text"
+                  : message.length == 0
+                  ? "Please enter message"
+                  : "Please input a valid email address"
+              }
+              TransitionComponent={Fade}
+              TransitionProps={{ timeout: 300 }}
+              disableHoverListener={isFormValid()}
             >
-              {/* gmail */}
               <Flex
-                direction='row'
+                position='absolute'
+                bottom='36px'
+                left='220px'
+                height='40px'
+                borderRadius='6px'
+                width='304px'
+                textAlign='center'
                 alignItems='center'
-                position='relative'
-                bottom='0px'
-                right='20px'
+                justifyContent='center'
+                transition='all 0.3s ease-in-out'
+                fontSize='14px'
+                fontFamily='Futura'
+                disabled={!isFormValid()}
+                bg={
+                  sentStatus == "initial"
+                    ? isFormValid()
+                      ? "#4D00FF"
+                      : "#e2e213"
+                    : "green"
+                }
+                color={
+                  sentStatus == "initial"
+                    ? isFormValid()
+                      ? "yellow"
+                      : "#4D00FF"
+                    : "white"
+                }
+                cursor={
+                  sentStatus == "initial"
+                    ? isFormValid()
+                      ? "pointer"
+                      : "default"
+                    : "default"
+                }
+                onClick={
+                  sentStatus != "initial"
+                    ? (e) => {}
+                    : (e) => {
+                        if (isFormValid()) {
+                          setSentStatus("loading");
+                          e.preventDefault();
+                          emailjs
+                            .send(
+                              "service_1yqu5y5",
+                              "template_lqyz8nq",
+                              {
+                                email: email,
+                                subject: subject,
+                                message: message,
+                              },
+                              "user_yquw9FSILqZGY1yq3R8Xh"
+                            )
+                            .then((res) => {
+                              if (res.status == 200) {
+                                setSentStatus("success");
+                              } else {
+                                setSentStatus("failure");
+                              }
+                              setTimeout(function () {
+                                setSentStatus("initial");
+                              }, 5000);
+                            })
+                            .catch(() => {
+                              setSentStatus("failure");
+                              setTimeout(function () {
+                                setSentStatus("initial");
+                              }, 5000);
+                            });
+                        }
+                      }
+                }
               >
-                <Text
-                  color='#707070'
-                  fontWeight='semibold'
-                  fontSize='11px'
-                  cursor='pointer'
-                >
-                  Use Gmail?
-                </Text>
-
-                <IconButton
-                  m='0px'
-                  p='0px'
-                  position='absolute'
-                  top='-14px'
-                  right='-27px'
-                  icon={<Icon as={MdOpenInNew} />}
-                  aria-label='Send Message'
-                  fontSize='11px'
-                  iconSize='11px'
-                  color='#707070'
-                  backgroundColor='rgba(0, 0, 0, 0)'
-                  _hover={{
-                    borderStyle: "none",
-                    margin: "0px",
-                    padding: "0px",
-                    color: "#707070",
-                  }}
-                />
+                {sentStatus == "success"
+                  ? "Success!"
+                  : sentStatus == "loading"
+                  ? "Sending..."
+                  : "Send Message"}
               </Flex>
-              <Box
-                backgroundColor='#4C00E8'
-                borderRadius='100'
-                height='10px'
-                width='2px'
-                mx='6px'
-              ></Box>
-              {/* send */}
-              <Icon
-                position='relative'
-                bottom='0px'
-                right='0px'
-                icon={<Icon as={MdSend} />}
-                aria-label='Send Message'
-                size='sm'
-                color='#4D00FF'
-                _hover={{
-                  borderStyle: "none",
-                  margin: "0px",
-                  padding: "0px",
-                  color: "#4D00FF",
-                }}
-                backgroundColor='rgba(0, 0, 0, 0)'
-              />
-            </Flex>
+            </Tooltip>
           </Flex>
         </Box>
 
         {/* contact bubbles */}
-        <Box position='relative' right='50px'>
+        <Box position='relative' right='60px'>
           <Box
             filter='blur(80px)'
             position='absolute'
             width='1100px'
             height='1100px'
-            top='100px'
+            top='140px'
             transform='rotate(120deg)'
           >
             <StaticImage src='../../../images/rectangle_154.svg' alt='' />
           </Box>
 
-          <Box position='relative' width='700px' height='700px'>
+          <Box position='relative' width='700px' height='700px' top='-30px'>
             <Text
               position='absolute'
               left='170px'
+              top='180px'
               textColor='#ffff04'
               fontWeight='bold'
               fontFamily='Fira Mono'
@@ -273,7 +373,8 @@ interface ContactBubbleProps {
 
 const ContactBubbleList: Array<ContactBubbleProps> = [
   {
-    href: "https://mailto:mwakicodes@gmail.com",
+    href:
+      "https://mail.google.com/mail/u/0/?fs=1&to=mwakicodes@gmail.com&tf=cm",
     platform: "Mail",
   },
   {

@@ -2,20 +2,17 @@ import { Text } from "@chakra-ui/layout";
 import { Center } from "@chakra-ui/react";
 import React from "react";
 
-interface SectionDescription {
-  description: string;
-}
-const SectionDescription = (props: SectionDescription) => {
+const SectionDescription = ({ description }) => {
   return (
-    <Center>
+    <Center py="20px">
       <Text
         fontSize='16px'
         color='#cecece'
-        fontFamily="CircularMedium"
+        fontFamily='CircularMedium'
         textAlign='center'
         width='450px'
       >
-        {props.description}
+        {description}
       </Text>
     </Center>
   );

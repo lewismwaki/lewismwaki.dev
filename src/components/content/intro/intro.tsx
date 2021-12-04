@@ -8,14 +8,15 @@ const TextStyle = styled.h1`
   -webkit-text-stroke: 0.75px #cecece;
   -webkit-text-fill-color: transparent;
 `;
+
 const Intro = () => {
   return (
     <Center>
       <Flex
         direction='row'
-        left='-40px'
+        left='-10px'
         pb='80px'
-        pt='40px'
+        pt='20px'
         position='relative'
       >
         <Flex
@@ -42,52 +43,90 @@ const Intro = () => {
               lineHeight='1.2'
             >
               <span>I'm Lewis Mwaki</span>
-              <span style={{ color: "#4400ff" }}>.</span>
+              <span style={{ color: "yellow" }}>.</span>
             </Text>
-            <Box
-              position='absolute'
-              height='100px'
-              width='300px'
-              zIndex='10'
-              top='-20px'
-              right='-18px'
-            >
-              <StaticImage src='../../../images/pointer.png' alt='' />
-            </Box>
           </Box>
-          {/* <Flex direction='row' alignItems='center' pt='8px'> */}
-          {/* <Text fontSize='16px' color='#cecece' fontFamily='Lucida'>
-              ˈlu(ː)ɪs mwaːkiː
+
+          <Flex py='20px'>
+            <Text
+              color='#d6d6d6'
+              fontFamily='Fira Mono'
+              fontSize='smaller'
+              fontWeight='semibold'
+              width='80px'
+              lineHeight='1.2'
+              p='4px'
+              backgroundImage='linear-gradient(120deg, #cecece 100%, #cecece 100%)'
+              backgroundRepeat='no-repeat'
+              backgroundSize='100% 100%'
+              backgroundPosition='100% 100%'
+              transition='all 250ms ease-in-out'
+              textColor='#000000'
+              transition-property='height, width, background, font-size, background-size, font-color'
+            >
+              developer
+            </Text>
+
+            <Text
+              color='#d6d6d6'
+              fontFamily='Fira Mono'
+              fontSize='smaller'
+              fontWeight='semibold'
+              width='74px'
+              lineHeight='1.2'
+              p='4px'
+              ml='8px'
+              backgroundImage='linear-gradient(120deg, #cecece 100%, #cecece 100%)'
+              backgroundRepeat='no-repeat'
+              backgroundSize='100% 100%'
+              backgroundPosition='100% 100%'
+              transition='all 250ms ease-in-out'
+              textColor='#000000'
+              transition-property='height, width, background, font-size, background-size, font-color'
+            >
+              designer
             </Text>
             <Text
-              fontWeight='bold'
-              fontSize='15px'
-              color='#cecece'
-              fontFamily='Lucida'
-              pl='8px'
+              color='#d6d6d6'
+              fontFamily='Fira Mono'
+              fontSize='smaller'
+              fontWeight='semibold'
+              width='64px'
+              lineHeight='1.2'
+              p='4px'
+              ml='8px'
+              backgroundImage='linear-gradient(120deg, #cecece 100%, #cecece 100%)'
+              backgroundRepeat='no-repeat'
+              backgroundSize='100% 100%'
+              backgroundPosition='100% 100%'
+              transition='all 250ms ease-in-out'
+              textColor='#000000'
+              transition-property='height, width, background, font-size, background-size, font-color'
             >
-              (n)
+              learner
             </Text>
-          </Flex> */}
-          <Box height='14px'></Box>
+          </Flex>
+
           <Text
-            color='#7c7c80'
-            fontSize='18px'
+            color='#d6d6d6'
+            fontSize='17px'
             fontFamily='CircularBook'
             width='500px'
             lineHeight='1.2'
           >
-            I exist purposely to <span style={{ color: "#ffff00" }}>{"{"}</span>{" "}
-            build quality software{" "}
-            <span style={{ color: "#ffff00" }}>{"}"}</span>. I enjoy getting
-            knee-deep in the conception, design, development and production
-            phases. Enjoy getting knee-deep in the conception, design,
-            development and
+            I exist purposely to
+            {/* <span style={{ color: "#ffff00" }}>{"{"}</span>{" "} */}
+            {" "}build quality software.{" "}
+            {/* <span style={{ color: "#ffff00" }}>{"}"}</span>.  */}
+            Thouroughly enjoy getting knee-deep in the conception, design,
+            development and production phases. Enjoy getting knee-deep in the
+            conception, design, development and
           </Text>
-          <Box height='40px'></Box>
+
           {/* cta */}
           <>
             <Flex
+              mt='30px'
               backgroundColor='#4400ff'
               borderRadius='100'
               width='40px'
@@ -136,3 +175,29 @@ const Intro = () => {
 };
 
 export default Intro;
+
+//  <Box
+// position='absolute'
+// height='100px'
+// width='300px'
+// zIndex='10'
+// top='-20px'
+// right='-18px'
+// >
+// <StaticImage src='../../../images/pointer.png' alt='' />
+// </Box> */}
+
+//  {/* <Flex direction='row' alignItems='center' pt='8px'> */
+// <Text fontSize='16px' color='hsl(0, 0%, 80.7843137254902%)' fontFamily='Lucida'>
+//     ˈlu(ː)ɪs mwaːkiː
+//   </Text>
+//   <Text
+//     fontWeight='bold'
+//     fontSize='15px'
+//     color='#cecece'
+//     fontFamily='Lucida'
+//     pl='8px'
+//   >
+//     (n)
+//   </Text>
+// </Flex>

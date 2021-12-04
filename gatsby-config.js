@@ -2,13 +2,19 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://lewismwaki.dev",
     title: "lewismwaki.dev",
-    
   },
   plugins: [
     `@chakra-ui/gatsby-plugin`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-react-svg`,
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /images/,
+        },
+      },
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-image`,

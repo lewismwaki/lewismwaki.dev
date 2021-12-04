@@ -1,15 +1,15 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useRef } from "react";
 import SectionTitle from "../../shared/section_title";
-import { Avatar, Flex, Box, Center, Text } from "@chakra-ui/react";
-import ArrowRight from "../../shared/arrow-right";
-import ArrowLeft from "../../shared/arrow-left";
+import { Flex, Box, Center } from "@chakra-ui/react";
 import Slider from "react-slick";
 import ReferenceDetails from "./reference_details";
 import { ReferenceItem } from "./reference_details";
 import ReferenceArrowLeft from "../../shared/reference_arrow_left";
 import ReferenceArrowRight from "../../shared/reference_arrow_right";
 import SectionDescription from "./../../shared/section_description";
+import BkgGradient from "../../../images/bkg_gradient_1.svg";
+import ReferencesGroup from "../../../images/references_group.svg";
 
 const settings = {
   dots: false,
@@ -27,13 +27,14 @@ const References = () => {
       <SectionTitle title='.references()' id='references' />
 
       <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
-      {/* reference box */}
-      <Center position='relative' overflowX='clip' top='-100px'>
+
+      <Center position='relative' overflowX='clip' top='-150px'>
+        {/* reference box */}
         <Box
           height='293.3px'
           width='544px'
           position='relative'
-          right='-100px'
+          right='-300px'
           zIndex='10'
         >
           {/* background img */}
@@ -77,22 +78,19 @@ const References = () => {
           </Box>
         </Box>
 
-        <Box position='relative' width='1130px' height='1130px' right='-50px'>
+        {/* references graphic */}
+        <Box position='relative' right='-250px'>
           <Box
-            filter='blur(80px)'
             position='absolute'
-            width='1130px'
-            height='1130px'
+            width='1300px'
             transform='rotate(90deg)'
+            height='1300px'
           >
-            <StaticImage src='../../../images/rectangle_154.svg' alt='' />
+            <BkgGradient width='1300px' height='1300px' />
           </Box>
 
-          <Box position='absolute' width='1130px' height='1130px'>
-            <StaticImage
-              src='../../../images/group_194.svg'
-              alt=''
-            ></StaticImage>
+          <Box position='relative' width='1100px' height='1100px'>
+            <ReferencesGroup width='1100px' height='1100px' />
           </Box>
         </Box>
       </Center>

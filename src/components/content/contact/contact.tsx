@@ -7,6 +7,7 @@ import SectionDescription from "../../shared/section_description";
 import ContactBubble from "./contact_bubble";
 import emailjs from "emailjs-com";
 import { Fade, Tooltip } from "@material-ui/core";
+import BkgGradient from "../../../images/bkg_gradient_1.svg";
 import {
   Flex,
   Input,
@@ -36,11 +37,13 @@ const Contact = () => {
   }
 
   return (
-    <Box position='relative' top='-200px'>
+    <Box position='relative' top='-300px'>
       <SectionTitle title='.getInTouch()' id='getInTouch' />
-      
-      <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing."/>
-      <Center position='relative' overflow='clip'>
+      <Box position='relative' zIndex='10'>
+        <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
+      </Box>
+
+      <Center position='relative' overflowX='clip'>
         {/* contact form */}
         <Box position='relative' right='30px' zIndex='10'>
           {/* bkg */}
@@ -330,14 +333,13 @@ const Contact = () => {
         {/* contact bubbles */}
         <Box position='relative' right='60px'>
           <Box
-            filter='blur(80px)'
             position='absolute'
-            width='1100px'
-            height='1100px'
-            top='140px'
-            transform='rotate(120deg)'
+            transform='rotate(45deg)'
+            width='900px'
+            height='900px'
+            top='-100px'
           >
-            <StaticImage src='../../../images/rectangle_154.svg' alt='' />
+            <BkgGradient width='900px' height='900px' />
           </Box>
 
           <Box position='relative' width='700px' height='700px' top='-30px'>

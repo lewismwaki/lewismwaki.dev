@@ -7,7 +7,7 @@ import VisibilitySensor from "react-visibility-sensor";
 
 const About = ({ onSectionChange }) => {
   return (
-    <Box  background='inherit'>
+    <Box background='inherit'>
       <VisibilitySensor
         partialVisibility={true}
         onChange={(val) => {
@@ -103,12 +103,16 @@ const About = ({ onSectionChange }) => {
         <Box width='100px'></Box>
 
         <Flex direction='column' mt='20px'>
-          <Box height="10px"></Box>
-          <Text fontFamily='Fira Mono' color='#FFFF04' fontSize='23px'>
-            // meet lewis
+          <Text
+            textColor='#ffff04'
+            fontWeight='bold'
+            fontFamily='Fira Mono'
+            pt='10px'
+          >
+            {"//TODO: Meet-Lewis"}
           </Text>
 
-          <Box height="10px"></Box>
+          <Box height='10px'></Box>
           <Text
             color='#cecece'
             fontSize='16px'

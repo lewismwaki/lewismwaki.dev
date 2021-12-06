@@ -1,8 +1,7 @@
 import React from "react";
-
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
 import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+import { BiBriefcaseAlt2 } from "react-icons/bi";
 
 const CollapsedTitleStyle = styled.h1`
   font-family: Fira Mono;
@@ -31,13 +30,30 @@ interface Company {
 const CollapsedTitle = ({ where, title }: Company) => {
   return (
     <Flex direction='row' alignItems='flex-start'>
-      <Box width='45px' height='45px' zIndex='2' mr='20px'>
-        <StaticImage src='../../../images/company_img.png' alt='' />
+      <Box
+        width='45px'
+        height='45px'
+        zIndex='2'
+        mr='20px'
+        borderRadius='100px'
+        bg='#160044'
+        border='2.5px solid black'
+        p='6px'
+      >
+        <Center>
+          <BiBriefcaseAlt2
+            style={{
+              width: "28px",
+              height: "28px",
+              color: "#4C00E8",
+            }}
+          />
+        </Center>
       </Box>
 
       <Flex
         direction='row'
-        width='760px'
+        width='700px'
         alignItems='center'
         justify='space-between'
       >

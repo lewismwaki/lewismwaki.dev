@@ -4,7 +4,7 @@ import React from "react";
 
 const SectionDescription = ({ description }) => {
   return (
-    <Center py="20px">
+    <Center py='20px'>
       <Text
         fontSize='16px'
         color='#cecece'

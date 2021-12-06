@@ -11,6 +11,7 @@ import SectionDescription from "./../../shared/section_description";
 import BkgGradient from "../../../images/bkg_gradient_1.svg";
 import ReferencesGroup from "../../../images/references_group.svg";
 
+
 const settings = {
   dots: false,
   infinite: true,
@@ -29,6 +30,7 @@ const References = () => {
       <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
 
       <Center position='relative' overflowX='clip' top='-150px'>
+        
         {/* reference box */}
         <Box
           height='293.3px'

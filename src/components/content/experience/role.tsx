@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
-import { StaticImage } from "gatsby-plugin-image";
+import { IoGitCommit } from "react-icons/io5";
 
 interface Role {
   role: string;
@@ -12,14 +12,14 @@ const Role = ({ role }: Role) => {
       py='4px'
       alignItems='center'
       direction='row'
-      left='-50px'
+      left='-52px'
     >
-      <Box pt='2px' width='16px' height='15px' zIndex='2' mr='34px'>
-        <StaticImage src='../../../images/roles_img.png' alt='' />
+      <Box bg='black' zIndex='2' mr='32px' border='0px'>
+        <IoGitCommit size='18px' color='#4C00E8' />
       </Box>
 
       <Text
-        color='#808080'
+        color='#cecece'
         fontFamily='Fira Mono'
         fontSize='13px'
         fontWeight='500'

@@ -240,6 +240,8 @@ export default function Expertise({ onSectionChange }) {
           </div>
         </Flex>
       </Center>
+      
+      <Box height='24px'/>
     </Box>
   );
 }

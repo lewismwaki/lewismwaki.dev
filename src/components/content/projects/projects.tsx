@@ -27,7 +27,7 @@ const Projects = ({ onSectionChange }) => {
 
   return (
     <Box position='relative'>
-      <Box position='relative' overflowX='clip'>
+      <Box position='relative' overflow='clip'>
         <Center>
           <Box zIndex='10'>
             <VisibilitySensor
@@ -55,12 +55,12 @@ const Projects = ({ onSectionChange }) => {
         >
           <Box
             position='absolute'
-            transform='rotate(45deg)'
-            width='900px'
-            height='900px'
-            top='-250px'
+            transform='rotate(315deg)'
+            width='1200px'
+            height='1200px'
+            top='-350px'
           >
-            <BkgGradient width='900px' height='900px' />
+            <BkgGradient width='1200px' height='1200px' />
           </Box>
           {/* projects images here*/}
           <Center>
@@ -208,6 +208,8 @@ const Projects = ({ onSectionChange }) => {
               </Flex>
             </Box>
           </Center>
+
+          <Box height='24px' />
         </Flex>
       </Box>
     </Box>

@@ -115,8 +115,8 @@ const Intro = () => {
             lineHeight='1.2'
           >
             I exist purposely to
-            {/* <span style={{ color: "#ffff00" }}>{"{"}</span>{" "} */}
-            {" "}build quality software.{" "}
+            {/* <span style={{ color: "#ffff00" }}>{"{"}</span>{" "} */} build
+            quality software.{" "}
             {/* <span style={{ color: "#ffff00" }}>{"}"}</span>.  */}
             Thouroughly enjoy getting knee-deep in the conception, design,
             development and production phases. Enjoy getting knee-deep in the
@@ -140,7 +140,12 @@ const Intro = () => {
               _hover={{
                 width: "110px",
               }}
-              onClick={() => {}}
+              onClick={() => {
+                window.open(
+                  "https://docs.google.com/document/d/1zxWzzW33wMQgQqamyp7083aGpDWgD2M6jLyjJNTAP7o/edit?usp=sharing",
+                  "_blank"
+                );
+              }}
             >
               <>
                 <Text

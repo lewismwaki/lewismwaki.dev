@@ -124,7 +124,7 @@ const About = ({ onSectionChange }) => {
             <br />
             <br />
             developer based in Nairobi,
-            <Underliner text={"male"} fontSize='13px' /> Kenya. based in
+            {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
             Nairobi, Kenya. Mobile applications developer based in Nairobi,
             Kenya. developer based in Nairobi, Kenya.
           </Text>

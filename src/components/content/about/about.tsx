@@ -144,14 +144,18 @@ const About = ({ onSectionChange }) => {
 
               <Flex justifyContent='space-between'>
                 <Flex direction='column'>
-                  {langItemsFirst.map((item) => (
-                    <LanguageItem item={item} />
-                  ))}
+                  <div>
+                    {langItemsFirst.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
                 </Flex>
                 <Flex direction='column'>
-                  {langItemsSecond.map((item) => (
-                    <LanguageItem item={item} />
-                  ))}
+                  <div>
+                    {langItemsSecond.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
                 </Flex>
               </Flex>
             </Flex>
@@ -172,14 +176,18 @@ const About = ({ onSectionChange }) => {
 
               <Flex justifyContent='space-between'>
                 <Flex direction='column'>
-                  {langItemsThird.map((item) => (
-                    <LanguageItem item={item} />
-                  ))}
+                  <div>
+                    {langItemsThird.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
                 </Flex>
                 <Flex direction='column'>
-                  {langItemsFourth.map((item) => (
-                    <LanguageItem item={item} />
-                  ))}
+                  <div>
+                    {langItemsFourth.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
                 </Flex>
               </Flex>
             </Flex>

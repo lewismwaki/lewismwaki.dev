@@ -8,12 +8,6 @@ import VisibilitySensor from "react-visibility-sensor";
 import Underliner from "../../shared/underliner";
 import styled from "styled-components";
 
-const LangsContainer = styled.div`
-  z-index: 30;
-  display: flex;
-  flex-direction: row;
-`;
-
 const About = ({ onSectionChange }) => {
   return (
     <Box background='inherit'>
@@ -135,7 +129,12 @@ const About = ({ onSectionChange }) => {
             Kenya. developer based in Nairobi, Kenya.
           </Text>
 
-          <LangsContainer>
+          <div
+            style={{
+              display: "flex",
+              zIndex: 20,
+            }}
+          >
             {/* active */}
             <Flex direction='column'>
               <Text
@@ -198,7 +197,7 @@ const About = ({ onSectionChange }) => {
                 </Flex>
               </Flex>
             </Flex>
-          </LangsContainer>
+          </div>
         </Flex>
       </Center>
     </Box>

@@ -6,6 +6,7 @@ const LanguageItem = ({ item }) => {
     <Box
       px='2px'
       mb='10px'
+      width='fit-content'
       fontFamily='Fira Mono'
       fontSize='11px'
       fontWeight='semibold'

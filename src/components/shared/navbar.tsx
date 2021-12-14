@@ -16,7 +16,7 @@ const GlassNav = styled.div`
   background-color: rgba(0, 0, 0, 0.8);
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
   transition: top 0.6s;
 `;
 
@@ -45,7 +45,7 @@ const Navbar = ({ indexSelectedBySection }) => {
           direction='row'
           position='sticky'
           top='0'
-          zIndex='30'
+          zIndex='60'
           alignItems='center'
           justifyContent='space-between'
           py='32px'

@@ -6,6 +6,13 @@ import LanguageItem from "../about/language_item";
 import { StaticImage } from "gatsby-plugin-image";
 import VisibilitySensor from "react-visibility-sensor";
 import Underliner from "../../shared/underliner";
+import styled from "styled-components";
+
+const LangsContainer = styled.div`
+  z-index: 30;
+  display: flex;
+  flex-direction: row;
+`;
 
 const About = ({ onSectionChange }) => {
   return (
@@ -128,7 +135,7 @@ const About = ({ onSectionChange }) => {
             Kenya. developer based in Nairobi, Kenya.
           </Text>
 
-          <Flex zIndex='30' direction='row'>
+          <LangsContainer>
             {/* active */}
             <Flex direction='column'>
               <Text
@@ -191,7 +198,7 @@ const About = ({ onSectionChange }) => {
                 </Flex>
               </Flex>
             </Flex>
-          </Flex>
+          </LangsContainer>
         </Flex>
       </Center>
     </Box>

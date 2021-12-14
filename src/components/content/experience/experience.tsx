@@ -94,14 +94,13 @@ export default function Experience({ onSectionChange }) {
           height='800px'
           top='-300px'
           right='-650px'
-           zIndex='10'
+          zIndex='10'
           width='800px'
           transform='rotate(180deg)'
         >
           <CircleGradientYellow
             filter='blur(40px)'
             height='800px'
-            
             width='800px'
           />
         </Box>

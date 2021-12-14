@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box } from "@chakra-ui/layout";
 
-const Underliner = ({ text , fontSize}) => {
+const Underliner = ({ text, fontSize }) => {
   return (
     <Box
       display='inline-block'

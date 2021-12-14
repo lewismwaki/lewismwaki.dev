@@ -114,6 +114,7 @@ const About = ({ onSectionChange }) => {
             fontFamily='CircularBook'
             width='470px'
             pt='20px'
+            zIndex='20'
           >
             Mobile applications developer based in Nairobi, Kenya. Mobile Mobile
             applications developer based in Nairobi, Kenya. Mobile Mobile
@@ -121,10 +122,10 @@ const About = ({ onSectionChange }) => {
             Kenya. developer based in Nairobi, Kenya.
             <br />
             <br />
-            
-            developer based in Nairobi, <Underliner text={"male"} fontSize='13px' /> Kenya. based in Nairobi, Kenya. Mobile
-            applications developer based in Nairobi, Kenya. developer based in
-            Nairobi, Kenya.
+            developer based in Nairobi,
+            <Underliner text={"male"} fontSize='13px' /> Kenya. based in
+            Nairobi, Kenya. Mobile applications developer based in Nairobi,
+            Kenya. developer based in Nairobi, Kenya.
           </Text>
 
           <Flex zIndex='30'>

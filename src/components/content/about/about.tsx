@@ -5,6 +5,7 @@ import SectionTitle from "../../shared/section_title";
 import LanguageItem from "../about/language_item";
 import { StaticImage } from "gatsby-plugin-image";
 import VisibilitySensor from "react-visibility-sensor";
+import Underliner from "../../shared/underliner";
 
 const About = ({ onSectionChange }) => {
   return (
@@ -120,9 +121,10 @@ const About = ({ onSectionChange }) => {
             Kenya. developer based in Nairobi, Kenya.
             <br />
             <br />
-            developer based in Nairobi, Kenya. based in Nairobi, Kenya. Mobile
+            
+            developer based in Nairobi, <Underliner text={"male"} fontSize='13px' /> Kenya. based in Nairobi, Kenya. Mobile
             applications developer based in Nairobi, Kenya. developer based in
-            Nairobi, Kenya. 
+            Nairobi, Kenya.
           </Text>
 
           <Flex zIndex='30'>

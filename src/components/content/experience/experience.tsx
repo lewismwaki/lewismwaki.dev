@@ -14,11 +14,12 @@ import Duration from "./duration";
 import ExpandedTitle from "./expanded_title";
 import { RiGitBranchLine } from "react-icons/ri";
 import WorkDescription from "./work_description";
+import BkgGradient from "../../../images/bkg_gradient_1.svg";
 import CircleGradientYellow from "../../../images/ellipse_122_yellow.svg";
 
 const Accordion = withStyles({
   root: {
-    backgroundColor: "#000",
+    backgroundColor: "transparent",
     boxShadow: "none",
     "&:not(:last-child)": {
       borderBottom: 0,
@@ -33,7 +34,7 @@ const Accordion = withStyles({
 
 const AccordionSummary = withStyles({
   root: {
-    backgroundColor: "black",
+    backgroundColor: "transparent",
     paddingLeft: 0,
     paddingRight: 0,
     paddingTop: 0,
@@ -56,7 +57,7 @@ const AccordionDetails = withStyles((theme) => ({
   root: {
     color: "#cecece",
     width: 800,
-    backgroundColor: "black",
+    backgroundColor: "transparent",
     paddingLeft: "64px",
     paddingRight: 0,
     paddingTop: 0,
@@ -72,7 +73,7 @@ export default function Experience({ onSectionChange }) {
   };
   return (
     <Center position='relative' overflowX='clip' background='inherit'>
-      <Box>
+      <Box position='relative'>
         <VisibilitySensor
           partialVisibility={true}
           onChange={(val) => {
@@ -83,24 +84,28 @@ export default function Experience({ onSectionChange }) {
         </VisibilitySensor>
 
         <Box height='24px'></Box>
-        <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
+        <Box position='relative' zIndex='10'>
+          <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
+        </Box>
         <Box height='24px'></Box>
 
         <Box
           position='absolute'
           height='800px'
           top='-300px'
-          right='-470px'
+          right='-650px'
+           zIndex='10'
           width='800px'
           transform='rotate(180deg)'
         >
           <CircleGradientYellow
             filter='blur(40px)'
             height='800px'
+            
             width='800px'
           />
         </Box>
-        
+
         <Box width='min-content'>
           <Flex
             border='1.5px solid #4C00E8'
@@ -121,6 +126,16 @@ export default function Experience({ onSectionChange }) {
         </Box>
 
         <Flex direction='row' position='relative'>
+          <Box
+            position='absolute'
+            transform='rotate(45deg)'
+            width='900px'
+            height='900px'
+            top='-200px'
+          >
+            <BkgGradient width='900px' height='900px' />
+          </Box>
+
           <Box position='relative' zIndex='1' left='23px'>
             <Box
               backgroundColor='#4C00E8'
@@ -278,8 +293,8 @@ export default function Experience({ onSectionChange }) {
             </Accordion>
           </Flex>
         </Flex>
-        
-        <Box height='24px'/>
+
+        <Box height='24px' />
       </Box>
     </Center>
   );

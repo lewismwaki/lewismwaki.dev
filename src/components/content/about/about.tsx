@@ -13,9 +13,7 @@ const About = ({ onSectionChange }) => {
       <VisibilitySensor
         partialVisibility={true}
         onChange={(val) => {
-          
           val ? onSectionChange(0) : null;
-          
         }}
       >
         <SectionTitle title='.aboutMe()' id='about' />

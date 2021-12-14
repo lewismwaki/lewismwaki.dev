@@ -128,7 +128,7 @@ const About = ({ onSectionChange }) => {
             Kenya. developer based in Nairobi, Kenya.
           </Text>
 
-          <Flex zIndex='30'>
+          <Flex zIndex='30' direction='row'>
             {/* active */}
             <Flex direction='column'>
               <Text

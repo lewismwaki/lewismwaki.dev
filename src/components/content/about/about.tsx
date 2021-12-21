@@ -1,13 +1,16 @@
-import { Box, Flex } from "@chakra-ui/layout";
+import { Box, Flex, Center } from "@chakra-ui/layout";
 import React from "react";
 import { Text } from "@chakra-ui/react";
 import SectionTitle from "../../shared/section_title";
+import LanguageItem from "../about/language_item";
 import { StaticImage } from "gatsby-plugin-image";
 import VisibilitySensor from "react-visibility-sensor";
+import Underliner from "../../shared/underliner";
+import styled from "styled-components";
 
 const About = ({ onSectionChange }) => {
   return (
-    <Box height='115vh' background='inherit'>
+    <Box background='inherit'>
       <VisibilitySensor
         partialVisibility={true}
         onChange={(val) => {
@@ -17,14 +20,8 @@ const About = ({ onSectionChange }) => {
         <SectionTitle title='.aboutMe()' id='about' />
       </VisibilitySensor>
 
-      <Flex
-        direction='row'
-        justify='center'
-        pl='96px'
-        pt='40px'
-        position='relative'
-      >
-        <Box width={384} height={468} zIndex='10'>
+      <Center pl='96px' pr='80px' pt='40px' position='relative'>
+        <Box width='384px' height='468px' zIndex='10'>
           <StaticImage src='../../../images/about_img.png' alt='' />
         </Box>
 
@@ -100,27 +97,119 @@ const About = ({ onSectionChange }) => {
           </Flex>
         </Flex>
 
-        <Box width='100px'></Box>
+        <Box width='80px'></Box>
 
         <Flex direction='column' mt='20px'>
-          <Box height={10}></Box>
-          <Text fontFamily='Fira Mono' color='#FFFF04' fontSize='23px'>
-            // meet lewis
+          <Text
+            textColor='#ffff04'
+            fontWeight='bold'
+            fontFamily='Fira Mono'
+            pt='10px'
+          >
+            {"//TODO: Meet-Lewis"}
           </Text>
 
-          <Box height={10}></Box>
-          <Text color='#707070' fontSize='19' width='500px'>
+          <Text
+            color='#cecece'
+            fontSize='16px'
+            fontFamily='CircularBook'
+            width='470px'
+            pt='20px'
+            zIndex='20'
+          >
             Mobile applications developer based in Nairobi, Kenya. Mobile Mobile
             applications developer based in Nairobi, Kenya. Mobile Mobile
-            applications developer based in Nairobi, Kenya. Mobile applications
             developer based in Nairobi, Kenya. developer based in Nairobi,
-            Kenya. developer based in Nairobi, Kenya. developer based in
-            Nairobi, Kenya.
+            Kenya. developer based in Nairobi, Kenya.
+            <br />
+            <br />
+            developer based in Nairobi,
+            {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
+            Nairobi, Kenya. Mobile applications developer based in Nairobi,
+            Kenya. developer based in Nairobi, Kenya.
           </Text>
+
+          <div
+            style={{
+              display: "flex",
+              zIndex: 20,
+            }}
+          >
+            {/* active */}
+            <Flex direction='column'>
+              <Text
+                pt='20px'
+                pb='10px'
+                fontFamily='Fira Mono'
+                fontSize='11.5px'
+                fontWeight='500'
+                color='#858689'
+              >
+                🟢 Actively working with
+              </Text>
+
+              <Flex justifyContent='space-between'>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsFirst.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
+                </Flex>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsSecond.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
+                </Flex>
+              </Flex>
+            </Flex>
+
+            <Box width='40px' />
+            {/* interested */}
+            <Flex direction='column'>
+              <Text
+                pt='20px'
+                pb='10px'
+                fontFamily='Fira Mono'
+                fontSize='11.5px'
+                fontWeight='500'
+                color='#858689'
+              >
+                ⚪ Learning/Interested in
+              </Text>
+
+              <Flex justifyContent='space-between'>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsThird.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
+                </Flex>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsFourth.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
+                </Flex>
+              </Flex>
+            </Flex>
+          </div>
         </Flex>
-      </Flex>
+      </Center>
     </Box>
   );
 };
 
 export default About;
+
+const langItemsFirst: Array<String> = ["#flutter", "#gatsby"];
+
+const langItemsSecond: Array<String> = ["#firebase", "#react"];
+
+const langItemsThird: Array<String> = ["#kotlin", "#python"];
+
+const langItemsFourth: Array<String> = ["#AR", "#solidity"];

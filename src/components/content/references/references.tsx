@@ -1,14 +1,16 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useRef } from "react";
 import SectionTitle from "../../shared/section_title";
-import { Avatar, Flex, Box, Center, Text } from "@chakra-ui/react";
-import ArrowRight from "../../shared/arrow-right";
-import ArrowLeft from "../../shared/arrow-left";
+import { Flex, Box, Center } from "@chakra-ui/react";
 import Slider from "react-slick";
 import ReferenceDetails from "./reference_details";
 import { ReferenceItem } from "./reference_details";
 import ReferenceArrowLeft from "../../shared/reference_arrow_left";
 import ReferenceArrowRight from "../../shared/reference_arrow_right";
+import SectionDescription from "./../../shared/section_description";
+import BkgGradient from "../../../images/bkg_gradient_1.svg";
+import ReferencesGroup from "../../../images/references_group.svg";
+
 
 const settings = {
   dots: false,
@@ -22,15 +24,25 @@ const settings = {
 const References = () => {
   const slider = useRef(null);
   return (
-    <Box background='inherit' height='115vh'>
+    <Box background='inherit'>
       <SectionTitle title='.references()' id='references' />
-      <Box height='40px'></Box>
 
-      {/* reference box */}
-      <Center>
-        <Box height='293.3px' width='544px' position='relative'>
+      <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
+
+      <Center position='relative' overflowX='clip' top='-150px'>
+        
+        {/* reference box */}
+        <Box
+          height='293.3px'
+          width='544px'
+          position='relative'
+          right='-300px'
+          zIndex='10'
+        >
           {/* background img */}
-          <StaticImage src='../../../images/references_img_bkg.png' alt='' />
+          <Box height='293.3px' width='544px'>
+            <StaticImage src='../../../images/references_img_bkg.png' alt='' />
+          </Box>
 
           {/* content*/}
           <Box
@@ -65,6 +77,22 @@ const References = () => {
                 onClick={() => slider?.current?.slickNext()}
               />
             </Flex>
+          </Box>
+        </Box>
+
+        {/* references graphic */}
+        <Box position='relative' right='-250px'>
+          <Box
+            position='absolute'
+            width='1300px'
+            transform='rotate(90deg)'
+            height='1300px'
+          >
+            <BkgGradient width='1300px' height='1300px' />
+          </Box>
+
+          <Box position='relative' width='1100px' height='1100px'>
+            <ReferencesGroup width='1100px' height='1100px' />
           </Box>
         </Box>
       </Center>

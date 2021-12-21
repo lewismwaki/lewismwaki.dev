@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1291" height="1417.397" viewBox="0 0 1291 1417.397">
+	<defs>
+		<style>
+			.ellipseB{fill:url(#ellipseB);}
+		</style>
+		<radialGradient id="ellipseB" cx="0.242" cy="0.5" r="0.752" gradientTransform="translate(0.013 -0.009) rotate(1.469)" gradientUnits="objectBoundingBox">
+			<stop offset="0" stop-opacity="0.329" />
+			<stop offset="0" stop-color="#EDED04" />
+			<stop offset="1" stop-opacity="0.231" />
+		</radialGradient>
+	</defs>
+	<ellipse class="ellipseB" cx="495.5" cy="558.699" rx="495.5" ry="558.699" transform="translate(150 150)" />
+</svg>

@@ -43,7 +43,7 @@ const Home = () => {
 
       <GlobalFonts />
 
-      <Box background='black' textStyle='none'>
+      <Box background='black' textStyle='none' overflowX='clip'>
         <Navbar indexSelectedBySection={indexSelectedBySection} />
         <Intro />
         <About onSectionChange={selectBySection} />

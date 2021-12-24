@@ -8,6 +8,7 @@ import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
 import SectionTitle from "./../../shared/section_title";
 import { Box, Center, Flex } from "@chakra-ui/react";
 import SectionDescription from "../../shared/section_description";
+import MediaQuery from "react-responsive";
 import CollapsedTitle from "./collapsed_title";
 import Role from "./role";
 import Duration from "./duration";
@@ -56,7 +57,6 @@ const AccordionSummary = withStyles({
 const AccordionDetails = withStyles((theme) => ({
   root: {
     color: "#cecece",
-    width: 800,
     backgroundColor: "transparent",
     paddingLeft: "64px",
     paddingRight: 0,
@@ -71,6 +71,7 @@ export default function Experience({ onSectionChange }) {
   const handleChange = (panel: string) => () => {
     setExpanded(panel);
   };
+
   return (
     <Center position='relative' overflowX='clip' background='inherit'>
       <Box position='relative'>
@@ -89,93 +90,101 @@ export default function Experience({ onSectionChange }) {
         </Box>
         <Box height='24px'></Box>
 
-        <Box
-          position='absolute'
-          height='800px'
-          top='-300px'
-          right='-650px'
-          zIndex='10'
-          width='800px'
-          transform='rotate(180deg)'
-        >
-          <CircleGradientYellow
-            filter='blur(40px)'
-            height='800px'
-            width='800px'
-          />
-        </Box>
-
-        <Box width='min-content'>
-          <Flex
-            border='1.5px solid #4C00E8'
-            borderRadius='6px'
-            textColor='#cecece'
-            fontFamily='Fira Mono'
-            px='12px'
-            py='6px'
-            bg='#160044'
-            alignItems='center'
-            justifyContent='center'
-            fontSize='12px'
-            fontWeight='600'
-          >
-            <RiGitBranchLine size='14px' /> <Box width='4px' />
-            main
-          </Flex>
-        </Box>
-
-        <Flex direction='row' position='relative'>
-          <Box
-            position='absolute'
-            transform='rotate(45deg)'
-            width='900px'
-            height='900px'
-            top='-200px'
-          >
-            <BkgGradient width='900px' height='900px' />
-          </Box>
-
-          <Box position='relative' zIndex='1' left='23px'>
-            <Box
-              backgroundColor='#4C00E8'
-              height='568px'
-              width='2px'
-              borderBottomRadius='100px'
-            />
-          </Box>
-          <Flex position='relative' direction='column'>
-            {/* accordion 1 */}
-            <Accordion
-              square
-              expanded={expanded === "panel1"}
-              onChange={
-                expanded === "panel1"
-                  ? handleChange("panel2")
-                  : handleChange("panel1")
-              }
-            >
-              {/* title */}
-              <AccordionSummary
-                aria-controls='panel1d-content'
-                id='panel1d-header'
-              >
-                {expanded === "panel1" ? (
-                  <ExpandedTitle
-                    where='Bytmatic Inc. - Texas, US'
-                    title='Mobile Apps Developer'
+        <MediaQuery maxWidth={769}>
+          {(isMobile: boolean) =>
+            isMobile ? (
+              <div>
+                <Box
+                  position='absolute'
+                  height='800px'
+                  top='-500px'
+                  right='100px'
+                  zIndex='10'
+                  width='800px'
+                >
+                  <CircleGradientYellow
+                    filter='blur(40px)'
+                    height='800px'
+                    width='800px'
                   />
-                ) : (
-                  <CollapsedTitle
-                    where='Bytmatic Inc. - Texas, US'
-                    title='Mobile Apps Developer'
-                  />
-                )}
-              </AccordionSummary>
-              <AccordionDetails>
-                <Flex direction='column'>
-                  <Duration date=' 📆 Jul 25th 2021 - Present' />
-                  <WorkDescription
-                    description="Overview of some of the technologies I've worked with,
+                </Box>
+
+                <Box width='min-content'>
+                  <Flex
+                    border='1.5px solid #4C00E8'
+                    borderRadius='6px'
+                    textColor='#cecece'
+                    fontFamily='Fira Mono'
+                    px='12px'
+                    py='6px'
+                    ml='10px'
+                    bg='#160044'
+                    alignItems='center'
+                    justifyContent='center'
+                    fontSize='12px'
+                    fontWeight='600'
+                  >
+                    <RiGitBranchLine size='14px' /> <Box width='4px' />
+                    main
+                  </Flex>
+                </Box>
+
+                <Flex direction='row' position='relative'>
+                  <Box
+                    position='absolute'
+                    transform='rotate(45deg)'
+                    width='900px'
+                    height='900px'
+                    top='-200px'
+                  >
+                    <BkgGradient width='900px' height='900px' />
+                  </Box>
+
+                  <Box position='relative' zIndex='1' left='33px'>
+                    <Box
+                      backgroundColor='#4C00E8'
+                      height='568px'
+                      width='2px'
+                      borderBottomRadius='100px'
+                    />
+                  </Box>
+                  <Flex position='relative' direction='column'>
+                    {/* accordion 1 */}
+                    <Accordion
+                      square
+                      expanded={expanded === "panel1"}
+                      onChange={
+                        expanded === "panel1"
+                          ? handleChange("panel2")
+                          : handleChange("panel1")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel1d-content'
+                        id='panel1d-header'
+                      >
+                        {expanded === "panel1" ? (
+                          <ExpandedTitle
+                            where='Bytmatic Inc. - Texas, US'
+                            title='Mobile Apps Developer'
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Bytmatic Inc. - Texas, US'
+                            title='Mobile Apps Developer'
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails
+                        style={{
+                          width: 260,
+                        }}
+                      >
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 25th 2021 - Present' />
+                          <WorkDescription
+                            description="Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
                       worked with, highlighting how & where they've been used. A
@@ -185,48 +194,52 @@ export default function Experience({ onSectionChange }) {
                       of some of the technologies I've worked with, highlighting
                       how & where they've been used. A list that is
                       ever-growing."
-                  />
+                          />
 
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                </Flex>
-              </AccordionDetails>
-            </Accordion>
-            {/* accordion 2 */}
-            <Accordion
-              square
-              expanded={expanded === "panel2"}
-              onChange={
-                expanded === "panel2"
-                  ? handleChange("panel3")
-                  : handleChange("panel2")
-              }
-            >
-              {/* title */}
-              <AccordionSummary
-                aria-controls='panel2d-content'
-                id='panel2d-header'
-              >
-                {expanded === "panel2" ? (
-                  <ExpandedTitle
-                    where='Giglab.io - Nairobi, KE'
-                    title='Mobile Apps Developer'
-                  />
-                ) : (
-                  <CollapsedTitle
-                    where='Giglab.io - Nairobi, KE'
-                    title='Mobile Apps Developer'
-                  />
-                )}
-              </AccordionSummary>
-              <AccordionDetails>
-                <Flex direction='column'>
-                  <Duration date=' 📆 Jul 25th 2021 - Present' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
+                    {/* accordion 2 */}
+                    <Accordion
+                      square
+                      expanded={expanded === "panel2"}
+                      onChange={
+                        expanded === "panel2"
+                          ? handleChange("panel3")
+                          : handleChange("panel2")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel2d-content'
+                        id='panel2d-header'
+                      >
+                        {expanded === "panel2" ? (
+                          <ExpandedTitle
+                            where='Giglab.io - Nairobi, KE'
+                            title='Mobile Apps Developer'
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Giglab.io - Nairobi, KE'
+                            title='Mobile Apps Developer'
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails
+                        style={{
+                          width: 260,
+                        }}
+                      >
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 25th 2021 - Present' />
 
-                  <WorkDescription
-                    description="Overview of some of the technologies I've worked with,
+                          <WorkDescription
+                            description="Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
                       worked with, highlighting how & where they've been used. A
@@ -236,42 +249,52 @@ export default function Experience({ onSectionChange }) {
                       of some of the technologies I've worked with, highlighting
                       how & where they've been used. A list that is
                       ever-growing."
-                  />
+                          />
 
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                </Flex>
-              </AccordionDetails>
-            </Accordion>
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
 
-            {/* accordion 3 */}
-            <Accordion
-              square
-              expanded={expanded === "panel3"}
-              onChange={
-                expanded === "panel3"
-                  ? handleChange("panel2")
-                  : handleChange("panel3")
-              }
-            >
-              {/* title */}
-              <AccordionSummary
-                aria-controls='panel3d-content'
-                id='panel3d-header'
-              >
-                {expanded === "panel3" ? (
-                  <ExpandedTitle where='Self' title="Aug '21 - Jan '21" />
-                ) : (
-                  <CollapsedTitle where='Self' title="Aug '21 - Jan '21" />
-                )}
-              </AccordionSummary>
-              <AccordionDetails>
-                <Flex direction='column'>
-                  <Duration date=' 📆 Jul 25th 2021 - Present' />
-                  <WorkDescription
-                    description="Overview of some of the technologies I've worked with,
+                    {/* accordion 3 */}
+                    <Accordion
+                      square
+                      expanded={expanded === "panel3"}
+                      onChange={
+                        expanded === "panel3"
+                          ? handleChange("panel2")
+                          : handleChange("panel3")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel3d-content'
+                        id='panel3d-header'
+                      >
+                        {expanded === "panel3" ? (
+                          <ExpandedTitle
+                            where='Self'
+                            title="Aug '21 - Jan '21"
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Self'
+                            title="Aug '21 - Jan '21"
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails
+                        style={{
+                          width: 260,
+                        }}
+                      >
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 25th 2021 - Present' />
+                          <WorkDescription
+                            description="Overview of some of the technologies I've worked with,
                       highlighting how & where they've been used. A list that is
                       ever-growing. Overview of some of the technologies I've
                       worked with, highlighting how & where they've been used. A
@@ -281,19 +304,237 @@ export default function Experience({ onSectionChange }) {
                       of some of the technologies I've worked with, highlighting
                       how & where they've been used. A list that is
                       ever-growing."
-                  />
+                          />
 
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
-                  <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
+                  </Flex>
                 </Flex>
-              </AccordionDetails>
-            </Accordion>
-          </Flex>
-        </Flex>
 
-        <Box height='24px' />
+                <Box height='24px' />
+              </div>
+            ) : (
+              <div>
+                <Box
+                  position='absolute'
+                  height='800px'
+                  top='-300px'
+                  right='-650px'
+                  zIndex='10'
+                  width='800px'
+                  transform='rotate(180deg)'
+                >
+                  <CircleGradientYellow
+                    filter='blur(40px)'
+                    height='800px'
+                    width='800px'
+                  />
+                </Box>
+
+                <Box width='min-content'>
+                  <Flex
+                    border='1.5px solid #4C00E8'
+                    borderRadius='6px'
+                    textColor='#cecece'
+                    fontFamily='Fira Mono'
+                    px='12px'
+                    py='6px'
+                    bg='#160044'
+                    alignItems='center'
+                    justifyContent='center'
+                    fontSize='12px'
+                    fontWeight='600'
+                  >
+                    <RiGitBranchLine size='14px' /> <Box width='4px' />
+                    main
+                  </Flex>
+                </Box>
+
+                <Flex direction='row' position='relative'>
+                  <Box
+                    position='absolute'
+                    transform='rotate(45deg)'
+                    width='900px'
+                    height='900px'
+                    top='-200px'
+                  >
+                    <BkgGradient width='900px' height='900px' />
+                  </Box>
+
+                  <Box position='relative' zIndex='1' left='23px'>
+                    <Box
+                      backgroundColor='#4C00E8'
+                      height='568px'
+                      width='2px'
+                      borderBottomRadius='100px'
+                    />
+                  </Box>
+                  <Flex position='relative' direction='column'>
+                    {/* accordion 1 */}
+                    <Accordion
+                      square
+                      expanded={expanded === "panel1"}
+                      onChange={
+                        expanded === "panel1"
+                          ? handleChange("panel2")
+                          : handleChange("panel1")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel1d-content'
+                        id='panel1d-header'
+                      >
+                        {expanded === "panel1" ? (
+                          <ExpandedTitle
+                            where='Bytmatic Inc. - Texas, US'
+                            title='Mobile Apps Developer'
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Bytmatic Inc. - Texas, US'
+                            title='Mobile Apps Developer'
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 25th 2021 - Present' />
+                          <WorkDescription
+                            description="Overview of some of the technologies I've worked with,
+                      highlighting how & where they've been used. A list that is
+                      ever-growing. Overview of some of the technologies I've
+                      worked with, highlighting how & where they've been used. A
+                      list that is ever-growing. Overview of some of the
+                      technologies I've worked with, highlighting how & where
+                      they've been used. A list that is ever-growing. Overview
+                      of some of the technologies I've worked with, highlighting
+                      how & where they've been used. A list that is
+                      ever-growing."
+                          />
+
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
+                    {/* accordion 2 */}
+                    <Accordion
+                      square
+                      expanded={expanded === "panel2"}
+                      onChange={
+                        expanded === "panel2"
+                          ? handleChange("panel3")
+                          : handleChange("panel2")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel2d-content'
+                        id='panel2d-header'
+                      >
+                        {expanded === "panel2" ? (
+                          <ExpandedTitle
+                            where='Giglab.io - Nairobi, KE'
+                            title='Mobile Apps Developer'
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Giglab.io - Nairobi, KE'
+                            title='Mobile Apps Developer'
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 25th 2021 - Present' />
+
+                          <WorkDescription
+                            description="Overview of some of the technologies I've worked with,
+                      highlighting how & where they've been used. A list that is
+                      ever-growing. Overview of some of the technologies I've
+                      worked with, highlighting how & where they've been used. A
+                      list that is ever-growing. Overview of some of the
+                      technologies I've worked with, highlighting how & where
+                      they've been used. A list that is ever-growing. Overview
+                      of some of the technologies I've worked with, highlighting
+                      how & where they've been used. A list that is
+                      ever-growing."
+                          />
+
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
+
+                    {/* accordion 3 */}
+                    <Accordion
+                      square
+                      expanded={expanded === "panel3"}
+                      onChange={
+                        expanded === "panel3"
+                          ? handleChange("panel2")
+                          : handleChange("panel3")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel3d-content'
+                        id='panel3d-header'
+                      >
+                        {expanded === "panel3" ? (
+                          <ExpandedTitle
+                            where='Self'
+                            title="Aug '21 - Jan '21"
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Self'
+                            title="Aug '21 - Jan '21"
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 25th 2021 - Present' />
+                          <WorkDescription
+                            description="Overview of some of the technologies I've worked with,
+                      highlighting how & where they've been used. A list that is
+                      ever-growing. Overview of some of the technologies I've
+                      worked with, highlighting how & where they've been used. A
+                      list that is ever-growing. Overview of some of the
+                      technologies I've worked with, highlighting how & where
+                      they've been used. A list that is ever-growing. Overview
+                      of some of the technologies I've worked with, highlighting
+                      how & where they've been used. A list that is
+                      ever-growing."
+                          />
+
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                          <Role role='Leading architectural & design patterns' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
+                  </Flex>
+                </Flex>
+
+                <Box height='24px' />
+              </div>
+            )
+          }
+        </MediaQuery>
       </Box>
     </Center>
   );

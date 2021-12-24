@@ -67,12 +67,7 @@ const Projects = ({ onSectionChange }) => {
             <Box width='430px' height='452px' zIndex='10'>
               <>
                 {projectTag == 0 ? (
-                  <StaticImage
-                    src='../../../images/group_3910.png/'
-                    alt=''
-                    width={430}
-                    height={452}
-                  />
+                  <StaticImage src='../../../images/group_3910.png/' alt='' />
                 ) : projectTag == 1 ? (
                   <StaticImage src='../../../images/image_13.png' alt='' />
                 ) : projectTag == 2 ? (

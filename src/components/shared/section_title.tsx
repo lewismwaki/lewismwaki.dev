@@ -18,7 +18,7 @@ const SectionTitle = ({ title, id }) => {
             <TextStyle>
               <Text
                 fontFamily='Fira Mono'
-                fontSize='48px'
+                fontSize='52px'
                 color='yellow'
                 id={id}
               >

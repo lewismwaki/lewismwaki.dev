@@ -10,7 +10,7 @@ const SectionDescription = ({ description }) => {
         isMobile ? (
           <Center py='10px'>
             <Text
-              fontSize='16px'
+              fontSize='14px'
               color='#cecece'
               fontFamily='CircularMedium'
               textAlign='center'

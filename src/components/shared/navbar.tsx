@@ -3,6 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { Slide, useScrollTrigger } from "@material-ui/core";
 import { Flex, Text, Center, Link as ChakraLink, Box } from "@chakra-ui/react";
 import { Link } from "gatsby";
+
 import { Pivot as Hamburger } from "hamburger-react";
 import styled from "styled-components";
 import MediaQuery from "react-responsive";
@@ -21,7 +22,7 @@ const GlassNav = styled.div`
   position: sticky;
   top: 0;
   z-index: 50;
-  transition: top 0.6s;
+  transition: all 0.6s;
 `;
 
 interface Props {
@@ -87,76 +88,86 @@ const Navbar = ({ indexSelectedBySection }) => {
                   toggle={toggleDrawer("right", !state["right"])}
                 />
               </Flex>
-              <>
+
+              <Flex
+                direction='column'
+                transition='all 0.3s'
+                alignItems='center'
+                justifyContent='space-between'
+                transform={isOpen ? "translateY(0px)" : "translateY(-200px)"}
+                height={isOpen ? "calc(100vh - 80px)" : "0px"}
+              >
+                {NAV_ITEMS.map((item, index) => (
+                  <>
+                    <ScrollLink activeClass='active' to={item.href} spy={true}>
+                      {isOpen ? (
+                        <Box
+                          mr='0px'
+                          px='2px'
+                          my='30px'
+                          width='fit-content'
+                          fontFamily='Fira Mono'
+                          fontSize='18px'
+                          fontWeight='semibold'
+                          onClick={toggleDrawer("right", !state["right"])}
+                          backgroundImage={
+                            index == indexSelectedBySection
+                              ? "linear-gradient(120deg, #ffff00 100%, #ffff00 100%)"
+                              : "linear-gradient(120deg, #5B5B00 100%, #5B5B00 100%)"
+                          }
+                          backgroundRepeat='no-repeat'
+                          backgroundSize={
+                            index == indexSelectedBySection
+                              ? "100% 100%"
+                              : "100% 0.5em"
+                          }
+                          backgroundPosition='0 90%'
+                          transition='all 250ms ease-in-out'
+                          textColor={
+                            index == indexSelectedBySection
+                              ? "#000000"
+                              : "#ffffff"
+                          }
+                          transition-property='height, width, background, font-size, background-size, font-color'
+                          cursor='pointer'
+                          _hover={{
+                            backgroundSize: "100% 100%",
+                            backgroundImage:
+                              "linear-gradient(120deg, #ffff00 100%, #ffff00 100%)",
+                            textColor: "#000000",
+                          }}
+                          _after={{
+                            content: `""`,
+                            backgroundSize: "100% 100%",
+                            backgroundImage:
+                              "linear-gradient(120deg, #ffff00 100%, #ffff00 100%)",
+                            textColor: "#000000",
+                          }}
+                        >
+                          {item.nav}
+                        </Box>
+                      ) : (
+                        <div></div>
+                      )}
+                    </ScrollLink>
+                  </>
+                ))}
+
+                <Box height='240px'></Box>
+
                 <Flex
-                  direction='column'
-                  transition='all 0.3s'
+                  pb='68px'
+                  direction='row'
+                  width='100vw'
                   alignItems='center'
-                  transform={isOpen ? "translateY(0px)" : "translateY(-200px)"}
-                  height={isOpen ? "100vh" : "0px"}
                 >
-                  {NAV_ITEMS.map((item, index) => (
-                    <>
-                      <ScrollLink
-                        activeClass='active'
-                        to={item.href}
-                        spy={true}
-                        smooth='easeOutCubic'
-                      >
-                        {isOpen ? (
-                          <Box
-                            mr={item.nav == "references" ? "0px" : "32px"}
-                            px='2px'
-                            my='30px'
-                            width='fit-content'
-                            fontFamily='Fira Mono'
-                            fontSize='18px'
-                            fontWeight='semibold'
-                            // onClick={toggleDrawer("right", !state["right"])}
-                            backgroundImage={
-                              index == indexSelectedBySection
-                                ? "linear-gradient(120deg, #ffff00 100%, #f5f5d8 100%)"
-                                : "linear-gradient(120deg, #5B5B00 100%, #5B5B00 100%)"
-                            }
-                            backgroundRepeat='no-repeat'
-                            backgroundSize={
-                              index == indexSelectedBySection
-                                ? "100% 100%"
-                                : "100% 0.5em"
-                            }
-                            backgroundPosition='0 90%'
-                            transition='all 250ms ease-in-out'
-                            textColor={
-                              index == indexSelectedBySection
-                                ? "#000000"
-                                : "#ffffff"
-                            }
-                            transition-property='height, width, background, font-size, background-size, font-color'
-                            cursor='pointer'
-                            _hover={{
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                "linear-gradient(120deg, #ffff00 100%, #ffff00 100%)",
-                              textColor: "#000000",
-                            }}
-                            _after={{
-                              content: `""`,
-                              backgroundSize: "100% 100%",
-                              backgroundImage:
-                                "linear-gradient(120deg, #ffff00 100%, #ffff00 100%)",
-                              textColor: "#000000",
-                            }}
-                          >
-                            {item.nav}
-                          </Box>
-                        ) : (
-                          <div></div>
-                        )}
-                      </ScrollLink>
-                    </>
-                  ))}
+                  <Box bg='#4C00E8' height='1.5px' width='40%' mr='8px'></Box>
+                  <Text fontFamily='Fira Mono' fontSize='11px'>
+                    mwakicodes@gmail.com
+                  </Text>
+                  <Box bg='#4C00E8' height='1.5px' width='40%' ml='8px'></Box>
                 </Flex>
-              </>
+              </Flex>
             </GlassNav>
           </>
         ) : (
@@ -278,8 +289,8 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    nav: "about",
-    href: "about",
+    nav: "projects",
+    href: "projects",
   },
 
   {
@@ -288,11 +299,12 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 
   {
-    nav: "projects",
-    href: "projects",
-  },
-  {
     nav: "expertise",
     href: "expertise",
+  },
+
+  {
+    nav: "references",
+    href: "references",
   },
 ];

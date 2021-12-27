@@ -8,10 +8,10 @@ import Experience from "../components/content/experience/experience";
 import Projects from "../components/content/projects/projects";
 import References from "../components/content/references/references";
 import Contact from "../components/content/contact/contact";
-import OnImagesLoaded from "react-on-images-loaded";
 import GlobalFonts from "../fonts/fonts";
 import { Helmet } from "react-helmet";
 import Footer from "../components/content/footer/footer";
+// import OnImagesLoaded from "react-on-images-loaded";
 
 const Home = () => {
   const [indexSelectedBySection, selectBySection] = useState(0);
@@ -47,11 +47,11 @@ const Home = () => {
         <Navbar indexSelectedBySection={indexSelectedBySection} />
         <Intro />
         <About onSectionChange={selectBySection} />
-        <Experience onSectionChange={selectBySection} />
         <Projects onSectionChange={selectBySection} />
+        <Experience onSectionChange={selectBySection} />
         <Expertise onSectionChange={selectBySection} />
-        <References />
-        <Contact />
+        <References onSectionChange={selectBySection} />
+        <Contact onSectionChange={selectBySection} />
         <Footer />
       </Box>
     </div>

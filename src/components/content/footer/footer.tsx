@@ -9,7 +9,7 @@ const GlassNav = styled.div`
   position: sticky;
   top: 0;
   z-index: 20;
-  transition: top 0.6s;
+  transition: all 0.6s;
 `;
 const Footer = () => {
   return (
@@ -17,13 +17,12 @@ const Footer = () => {
       <Flex
         direction='row'
         height='80px'
-        justifyContent='space-evenly'
-        color='white'
+        width='100vw'
+        alignItems='center'
+        justifyContent='center'
+        color='#FFFF05'
       >
-        <Text>C Copyright Lewis Mwaki 2021</Text>
-        <Text>C Copyright Lewis Mwaki 2021</Text>
-        <Text>C Copyright Lewis Mwaki 2021</Text>
-        <Text>C Copyright Lewis Mwaki 2021</Text>
+        <Text>© Copyright • Lewis Mwaki • 2021</Text>
       </Flex>
     </GlassNav>
   );

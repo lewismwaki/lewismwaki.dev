@@ -11,7 +11,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import ProjectsArrowLeft from "./projects_arrow_left";
 import ProjectsInfo from "./projects_info";
 import BkgGradient from "../../../images/bkg_gradient_1.svg";
-import AppStore from "../../../images/download-on-the-app-store.svg";
+import ProjectLinks from "./project_links";
 
 const settings = {
   dots: false,
@@ -26,18 +26,18 @@ const Projects = ({ onSectionChange }) => {
   const [projectTag, setProjectTag] = useState(0);
 
   return (
+    <VisibilitySensor
+    partialVisibility={true}
+    onChange={(val) => {
+      val ? onSectionChange(0) : null;
+    }}
+  >
     <Box position='relative'>
       <Box position='relative' overflow='clip'>
         <Center>
           <Box zIndex='10'>
-            <VisibilitySensor
-              partialVisibility={true}
-              onChange={(val) => {
-                val ? onSectionChange(2) : null;
-              }}
-            >
+           
               <SectionTitle title='.projects()' id='projects' />
-            </VisibilitySensor>
             <SectionDescription
               description={
                 "An overview of my proudest works highlighting\nsome features I've enjoyed building. From live video-calling, payment gateways, chats to data visualization and lots more data visualization and lots more"
@@ -81,27 +81,32 @@ const Projects = ({ onSectionChange }) => {
 
           {/* links */}
 
-          <Center py='40px' zIndex='10'>
-            <Flex direction='row'>
-              <Box px='6px'>
-                <StaticImage
-                  src='../../../images/get-it-on-play-store.png'
-                  alt=''
-                  height={41.5}
-                />
-              </Box>
-              <Box pl='6px'>
-                <StaticImage
-                  src='../../../images/get-it-on-github.png'
-                  alt=''
-                  height={41.5}
-                />
-              </Box>
-              <Box pt='7px'>
-                <AppStore height={27.5} />
-              </Box>
-            </Flex>
-          </Center>
+          {projectTag == 0 ? (
+            <ProjectLinks
+              android='https://play.google.com/store/apps/details?id=com.bytmatic.traddit'
+              ios='s'
+              github='s'
+              landing='https://traddit.io'
+            />
+          ) : projectTag == 1 ? (
+            <ProjectLinks
+              android='https://play.google.com/store/apps/details?id=com.bytmatic.traddit'
+              ios=''
+              github=''
+              landing='https://traddit.io'
+            />
+          ) : projectTag == 2 ? (
+            <ProjectLinks android='' ios='s' github='s' landing='' />
+          ) : projectTag == 3 ? (
+            <ProjectLinks
+              android=''
+              ios=''
+              github=''
+              landing='https://traddit.io'
+            />
+          ) : (
+            <></>
+          )}
 
           {/* projects  controller */}
           <Center>
@@ -208,6 +213,9 @@ const Projects = ({ onSectionChange }) => {
         </Flex>
       </Box>
     </Box>
+    
+    </VisibilitySensor>
+    
   );
 };
 

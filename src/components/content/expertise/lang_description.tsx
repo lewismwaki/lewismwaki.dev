@@ -9,9 +9,9 @@ const LangDescription = ({ lang }) => {
         isMobile ? (
           <Box position='relative' top='8px'>
             <Text
-              width='340px'
+              width='320px'
               px='10px'
-              pb='30px'
+              pb='20px'
               fontWeight='semibold'
               textColor='#707070'
               noOfLines={3}

@@ -11,6 +11,7 @@ import SectionDescription from "./../../shared/section_description";
 import VisibilitySensor from "react-visibility-sensor";
 import BkgGradient from "../../../images/bkg_gradient_1.svg";
 import ReferencesGroup from "../../../images/references_group.svg";
+import ReferencesHoriz from "../../../images/references_horiz.svg";
 import MediaQuery from "react-responsive";
 
 const settings = {
@@ -38,74 +39,95 @@ const References = ({ onSectionChange }) => {
           {(isMobile: boolean) =>
             isMobile ? (
               <div>
-                <Center
-                  position='relative'
-                  py='20px'
-                  overflowX='clip'
-                  transition='all 0.3s'
-                >
-                  {/* reference box */}
-                  <Box
-                    height='154px'
-                    width='320px'
+                <Flex direction='column'>
+                  <Center
                     position='relative'
+                    py='20px'
+                    overflowX='clip'
                     transition='all 0.3s'
-                    zIndex='10'
                   >
-                    {/* background img */}
-                    <Box transition='all 0.3s' height='154px' width='320px'>
-                      <StaticImage
-                        src='../../../images/references_img_bkg.png'
-                        alt=''
-                      />
-                    </Box>
-
-                    {/* content*/}
+                    {/* reference box */}
                     <Box
+                      height='154px'
+                      width='320px'
+                      position='relative'
                       transition='all 0.3s'
-                      position='absolute'
-                      top='16px'
-                      left='6px'
-                      right='10px'
-                      bottom='10px'
+                      zIndex='10'
                     >
-                      <Slider ref={slider} {...settings}>
-                        {ReferenceItems.map((ref) => (
-                          <ReferenceDetails
-                            refereeName={ref.refereeName}
-                            refereeAvi={ref.refereeAvi}
-                            refereeTitle={ref.refereeTitle}
-                            referenceText={ref.referenceText}
+                      {/* background img */}
+                      <Box transition='all 0.3s' height='154px' width='320px'>
+                        <StaticImage
+                          src='../../../images/references_img_bkg.png'
+                          alt=''
+                        />
+                      </Box>
+                      {/* content*/}
+                      <Box
+                        transition='all 0.3s'
+                        position='absolute'
+                        top='16px'
+                        left='6px'
+                        right='10px'
+                        bottom='10px'
+                      >
+                        <Slider ref={slider} {...settings}>
+                          {ReferenceItems.map((ref) => (
+                            <ReferenceDetails
+                              refereeName={ref.refereeName}
+                              refereeAvi={ref.refereeAvi}
+                              refereeTitle={ref.refereeTitle}
+                              referenceText={ref.referenceText}
+                            />
+                          ))}
+                        </Slider>
+                      </Box>
+                      {/* buttons */}
+                      <Box
+                        position='absolute'
+                        right='16px'
+                        bottom='4px'
+                        transition='all 0.3s'
+                      >
+                        <Flex direction='row'>
+                          <ReferenceArrowLeft
+                            cursor='pointer'
+                            width='36px'
+                            height='10px'
+                            onClick={() => slider?.current?.slickPrev()}
                           />
-                        ))}
-                      </Slider>
+                          <Box width='10px'></Box>
+                          <ReferenceArrowRight
+                            cursor='pointer'
+                            width='36px'
+                            height='10px'
+                            onClick={() => slider?.current?.slickNext()}
+                          />
+                        </Flex>
+                      </Box>
                     </Box>
+                  </Center>
 
-                    {/* buttons */}
+                  <Box position='relative' transition='all 0.3s' top='-50px'>
                     <Box
                       position='absolute'
-                      right='16px'
-                      bottom='4px'
+                      width='1300px'
                       transition='all 0.3s'
+                      transform='rotate(0deg)'
+                      height='1300px'
                     >
-                      <Flex direction='row'>
-                        <ReferenceArrowLeft
-                          cursor='pointer'
-                          width='36px'
-                          height='10px'
-                          onClick={() => slider?.current?.slickPrev()}
-                        />
-                        <Box width='10px'></Box>
-                        <ReferenceArrowRight
-                          cursor='pointer'
-                          width='36px'
-                          height='10px'
-                          onClick={() => slider?.current?.slickNext()}
-                        />
-                      </Flex>
+                      <BkgGradient width='1300px' height='1300px' />
+                    </Box>
+
+                    <Box
+                      position='relative'
+                      transition='all 0.3s'
+                      width='1100px'
+                      height='1100px'
+                    >
+                      <ReferencesHoriz width='1100px' height='1100px' />
                     </Box>
                   </Box>
-                </Center>
+                </Flex>
               </div>
             ) : (
               <div>

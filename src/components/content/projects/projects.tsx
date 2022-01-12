@@ -25,7 +25,6 @@ const settings = {
 const Projects = ({ onSectionChange }) => {
   const slider = useRef(null);
   const [projectTag, setProjectTag] = useState(0);
-
   return (
     <VisibilitySensor
       partialVisibility={true}
@@ -39,14 +38,12 @@ const Projects = ({ onSectionChange }) => {
             <Box position='relative'>
               <Box position='relative' overflow='clip'>
                 <Center>
-                  <Box zIndex='10'>
-                    <SectionTitle title='.projects()' id='projects' />
-                    <SectionDescription
-                      description={
-                        "An overview of my proudest works highlighting\nsome features I've enjoyed building. From live video-calling, payment gateways, chats to data visualization and lots more data visualization and lots more"
-                      }
-                    />
-                  </Box>
+                  <SectionTitle title='.projects()' id='projects' />
+                  <SectionDescription
+                    description={
+                      "An overview of my proudest works highlighting\nsome features I've enjoyed building. From live video-calling, payment gateways, chats to data visualization and lots more data visualization and lots more"
+                    }
+                  />
                 </Center>
 
                 <Flex
@@ -204,9 +201,9 @@ const Projects = ({ onSectionChange }) => {
                       >
                         <Box width='300px'>
                           <Slider ref={slider} {...settings}>
-                            <ProjectsInfo />
-                            <ProjectsInfo />
-                            <ProjectsInfo />
+                            <ProjectsInfo projectTag={projectTag} />
+                            <ProjectsInfo projectTag={projectTag} />
+                            <ProjectsInfo projectTag={projectTag} />
                           </Slider>
                         </Box>
                         <Box width='40px'></Box>
@@ -226,7 +223,7 @@ const Projects = ({ onSectionChange }) => {
                     <SectionTitle title='.projects()' id='projects' />
                     <SectionDescription
                       description={
-                        "An overview of my proudest works highlighting\nsome features I've enjoyed building. From live video-calling, payment gateways, chats to data visualization and lots more data visualization and lots more"
+                        "A showcase of some of my proudest works, also highlighting\n features I've enjoyed building. From live video-calling, payment gateways, chat messaging, to data visualization, and lots more!"
                       }
                     />
                   </Box>
@@ -250,16 +247,16 @@ const Projects = ({ onSectionChange }) => {
                   </Box>
                   {/* projects images here*/}
                   <Center>
-                    <Box width='430px' height='452px' zIndex='10'>
+                    <Box width='560px' zIndex='10'>
                       <>
                         {projectTag == 0 ? (
                           <StaticImage
-                            src='../../../images/group_3910.png/'
+                            src='../../../images/traddit.png/'
                             alt=''
                           />
                         ) : projectTag == 1 ? (
                           <StaticImage
-                            src='../../../images/image_13.png'
+                            src='../../../images/cryptoboard.png'
                             alt=''
                           />
                         ) : projectTag == 2 ? (
@@ -269,7 +266,7 @@ const Projects = ({ onSectionChange }) => {
                           />
                         ) : (
                           <StaticImage
-                            src='../../../images/image_13.png'
+                            src='../../../images/cryptoboard.png'
                             alt=''
                           />
                         )}
@@ -282,26 +279,21 @@ const Projects = ({ onSectionChange }) => {
                   {projectTag == 0 ? (
                     <ProjectLinks
                       android='https://play.google.com/store/apps/details?id=com.bytmatic.traddit'
-                      ios='s'
-                      github='s'
-                      landing='https://traddit.io'
+                      ios='https://apps.apple.com/us/app/traddit-for-reddit/id1593956528'
+                      github=''
+                      landing='http://www.traddit.io/'
                     />
                   ) : projectTag == 1 ? (
                     <ProjectLinks
-                      android='https://play.google.com/store/apps/details?id=com.bytmatic.traddit'
+                      android='https://github.com/mwakicodes/Cryptoboard/releases/download/v0.0.1-alpha/Cryptoboard.v0.0.1-alpha.apk'
                       ios=''
-                      github=''
-                      landing='https://traddit.io'
+                      github='https://github.com/mwakicodes/Cryptoboard/'
+                      landing='https://github.com/mwakicodes/Cryptoboard#readme'
                     />
                   ) : projectTag == 2 ? (
-                    <ProjectLinks android='' ios='s' github='s' landing='' />
+                    <ProjectLinks android='' ios='' github='' landing='' />
                   ) : projectTag == 3 ? (
-                    <ProjectLinks
-                      android=''
-                      ios=''
-                      github=''
-                      landing='https://traddit.io'
-                    />
+                    <ProjectLinks android='' ios='' github='' landing='' />
                   ) : (
                     <></>
                   )}
@@ -345,9 +337,9 @@ const Projects = ({ onSectionChange }) => {
                       >
                         <Box width='700px'>
                           <Slider ref={slider} {...settings}>
-                            <ProjectsInfo />
-                            <ProjectsInfo />
-                            <ProjectsInfo />
+                            <ProjectsInfo projectTag={projectTag} />
+                            <ProjectsInfo projectTag={projectTag} />
+                            <ProjectsInfo projectTag={projectTag} />
                           </Slider>
                         </Box>
                         <Box width='40px'></Box>
@@ -374,6 +366,7 @@ const Projects = ({ onSectionChange }) => {
                                   onClick={() => {
                                     slider?.current?.slickNext();
                                     setProjectTag(projectTag + 1);
+                                    console.log(projectTag);
                                   }}
                                 />
                               )}

@@ -1,4 +1,4 @@
-import { Center, Text } from "@chakra-ui/react";
+import { Center, Flex, Text } from "@chakra-ui/react";
 import MediaQuery from "react-responsive";
 
 import React from "react";
@@ -19,7 +19,7 @@ const WorkDescription = ({ description }) => {
             </Text>
           </Center>
         ) : (
-          <Center py='20px'>
+          <Flex direction='row' py='20px'>
             <Text
               fontSize='16px'
               width='700px'
@@ -28,7 +28,7 @@ const WorkDescription = ({ description }) => {
             >
               {description}
             </Text>
-          </Center>
+          </Flex>
         )
       }
     </MediaQuery>

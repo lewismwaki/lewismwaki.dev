@@ -29,7 +29,13 @@ const ReferenceDetails = (props: ReferenceItem) => {
         </Flex>
       </Flex>
 
-      <Text fontWeight='semibold' textColor='#707070' pt='13.3px' noOfLines={4}>
+      <Text
+        fontWeight='semibold'
+        textColor='#707070'
+        pt='8px'
+        fontSize='14.5px'
+        noOfLines={5}
+      >
         {props.referenceText}
       </Text>
     </Flex>

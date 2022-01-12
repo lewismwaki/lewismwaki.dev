@@ -170,7 +170,7 @@ const Intro = () => {
           <Center>
             <Flex
               direction='row'
-              left='-10px'
+              left='-20px'
               pb='80px'
               pt='20px'
               position='relative'

@@ -34,7 +34,9 @@ const References = ({ onSectionChange }) => {
     >
       <Box background='inherit'>
         <SectionTitle title='.references()' id='references' />
-        <SectionDescription description="Overview of some of the technologies I've worked with, highlighting how & where they've been used. A list that is ever-growing." />
+
+        <SectionDescription description="What people are saying... You're in good company :)" />
+
         <MediaQuery maxWidth={769}>
           {(isMobile: boolean) =>
             isMobile ? (
@@ -162,8 +164,8 @@ const References = ({ onSectionChange }) => {
                     <Box
                       transition='all 0.3s'
                       position='absolute'
-                      top='50px'
-                      left='18.7px'
+                      top='45px'
+                      left='17px'
                       right='30.7px'
                       bottom='32px'
                     >
@@ -183,7 +185,7 @@ const References = ({ onSectionChange }) => {
                     <Box
                       position='absolute'
                       right='32px'
-                      bottom='32px'
+                      bottom='28px'
                       transition='all 0.3s'
                     >
                       <Flex direction='row'>
@@ -245,9 +247,9 @@ const ReferenceItems: Array<ReferenceItem> = [
   {
     refereeName: "Andrew Zyu",
     refereeAvi: "https://bit.ly/kent-c-dodds",
-    refereeTitle: "Software Engineer at Spotify",
+    refereeTitle: "CTO at Spotify",
     referenceText:
-      "What people are saying. What people are saying. What people are saying. What people are saying. What people are saying.",
+      "What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying.",
   },
 
   {
@@ -256,6 +258,14 @@ const ReferenceItems: Array<ReferenceItem> = [
     refereeTitle: "Android Lead at Giglab.io",
     referenceText:
       "What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. What people are saying. ",
+  },
+
+  {
+    refereeName: "Jake Rogers",
+    refereeAvi: "https://bit.ly/kent-c-dodds",
+    refereeTitle: "CEO at Bytmatic Inc.",
+    referenceText:
+      "Lewis is an extremely talented mobile developer with great eye for UX/UI design. He's one of the hardest working and intelligent people I’ve ever met. His work ethic continues to blow me away with how fast he's able to complete tasks without sacrificing quality and his ability to translate mock-ups into a real functioning product 1:1 is incredible. Traddit is lucky to work with him and anyone who works with him will also be lucky.",
   },
 ];
 

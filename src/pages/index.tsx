@@ -11,17 +11,16 @@ import Contact from "../components/content/contact/contact";
 import GlobalFonts from "../fonts/fonts";
 import { Helmet } from "react-helmet";
 import Footer from "../components/content/footer/footer";
-// import OnImagesLoaded from "react-on-images-loaded";
 
 const Home = () => {
   const [indexSelectedBySection, selectBySection] = useState(0);
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Lewis Mwaki</title>
 
-        <meta name="Lewis' Portfolio Site" content="Welcome to Lewis' world" />
+        <meta name="Lewis Mwaki's Portfolio" content="" />
         <link
           href='https://fonts.googleapis.com/css?family=Fira+Mono&display=swap'
           rel='stylesheet'
@@ -54,7 +53,7 @@ const Home = () => {
         <Contact onSectionChange={selectBySection} />
         <Footer />
       </Box>
-    </div>
+    </>
   );
 };
 

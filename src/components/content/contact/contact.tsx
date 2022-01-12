@@ -52,9 +52,8 @@ const Contact = ({ onSectionChange }) => {
           isMobile ? (
             <Box position='relative'>
               <SectionTitle title='.getInTouch()' id='getInTouch' />
-              <Box position='relative' zIndex='10'>
-                <SectionDescription description="Let's get building! Tell me more about your project" />
-              </Box>
+
+              <SectionDescription description="Say Hello! Tell me more about your project and let's get building!" />
 
               <Center>
                 <Flex
@@ -392,10 +391,9 @@ const Contact = ({ onSectionChange }) => {
             </Box>
           ) : (
             <Box position='relative' top='-300px'>
+              
               <SectionTitle title='.getInTouch()' id='getInTouch' />
-              <Box position='relative' zIndex='10'>
-                <SectionDescription description="Let's get building! Tell me more about your project" />
-              </Box>
+              <SectionDescription description="Let's get building! Tell me more about your project" />
 
               <Center position='relative' overflow='clip'>
                 {/* contact form */}

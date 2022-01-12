@@ -69,7 +69,7 @@ const Contact = ({ onSectionChange }) => {
                 {/* email */}
                 <FormControl
                   id='email'
-                  isRequired
+                  netlify
                   onChange={(e) => {
                     setEmail((e.target as HTMLInputElement).value);
                   }}

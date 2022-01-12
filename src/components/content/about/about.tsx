@@ -5,7 +5,6 @@ import SectionTitle from "../../shared/section_title";
 import LanguageItem from "../about/language_item";
 import { StaticImage } from "gatsby-plugin-image";
 import VisibilitySensor from "react-visibility-sensor";
-import MediaQuery from "react-responsive";
 
 const About = ({ onSectionChange }) => {
   return (
@@ -19,316 +18,201 @@ const About = ({ onSectionChange }) => {
         <SectionTitle title='.aboutMe()' id='about' />
       </VisibilitySensor>
 
-      <MediaQuery maxWidth={769}>
-        {(isMobile: boolean) =>
-          isMobile ? (
-            <Center px='32px' position='relative'>
-              <Flex direction='column' alignItems='center' mt='20px'>
-                <Text
-                  textColor='#ffff04'
-                  fontWeight='bold'
-                  textAlign='center'
-                  fontFamily='Fira Mono'
-                  pt='10px'
-                >
-                  {"//TODO: Meet-Lewis"}
-                </Text>
+      <Center pl='96px' pr='80px' py='40px' position='relative'>
+        <Box position='relative'>
+          <Box
+            position='absolute'
+            top='42px'
+            objectFit='cover'
+            maxWidth='auto'
+            left='10px'
+            right='17px'
+            bottom='14px'
+            zIndex='11'
+          >
+            <StaticImage src='../../../images/life.png' alt='' />
+          </Box>
 
-                <Text
-                  color='#cecece'
-                  fontSize='16px'
-                  fontFamily='CircularBook'
-                  width='300px'
-                  textAlign='center'
-                  pt='20px'
-                  zIndex='20'
-                >
-                  Mobile applications developer based in Nairobi, Kenya. Mobile
-                  Mobile applications developer based in Nairobi, Kenya. Mobile
-                  Mobile developer based in Nairobi, Kenya. developer based in
-                  Nairobi, Kenya. developer based in Nairobi, Kenya.
-                  <br />
-                  <br />
-                  developer based in Nairobi, Nairobi, Kenya. Mobile
-                  applications developer based in Nairobi, Kenya. developer
-                  based in Nairobi, Kenya.
-                </Text>
+          <Box width='384px' height='468px' zIndex='10' position='relative'>
+            <StaticImage src='../../../images/about_img.png' alt='' />
+          </Box>
+        </Box>
 
-                <div
-                  style={{
-                    display: "flex",
-                    zIndex: 20,
-                  }}
-                >
-                  {/* active */}
-                  <Flex direction='column'>
-                    <Text
-                      pt='20px'
-                      pb='10px'
-                      fontFamily='Fira Mono'
-                      fontSize='11.5px'
-                      fontWeight='500'
-                      color='#858689'
-                    >
-                      🟢 Actively working with
-                    </Text>
+        <Flex
+          direction='column'
+          justify='center'
+          position='relative'
+          left='-10px'
+        >
+          <Flex direction='row'>
+            <Box width='85px' pt='5px'>
+              <StaticImage src='../../../images/group_9.png' alt='' />
+            </Box>
 
-                    <Flex justifyContent='space-between'>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsFirst.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsSecond.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                    </Flex>
-                  </Flex>
+            <Text
+              px='2px'
+              py='1px'
+              ml='5px'
+              height='18px'
+              fontFamily='Fira Mono'
+              fontSize='11px'
+              fontWeight='semibold'
+              backgroundColor='#FFFF00'
+              color='#000000'
+            >
+              prolific
+            </Text>
+          </Flex>
 
-                  <Box width='40px' />
-                  {/* interested */}
-                  <Flex direction='column'>
-                    <Text
-                      pt='20px'
-                      pb='10px'
-                      fontFamily='Fira Mono'
-                      fontSize='11.5px'
-                      fontWeight='500'
-                      color='#858689'
-                    >
-                      ⚪ Learning/Interested in
-                    </Text>
+          <Box height='80px'></Box>
 
-                    <Flex justifyContent='space-between'>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsThird.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsFourth.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                    </Flex>
-                  </Flex>
-                </div>
-              </Flex>
-            </Center>
-          ) : (
-            <Center pl='96px' pr='80px' py='40px' position='relative'>
-              <Box position='relative'>
-                <Box
-                  position='absolute'
-                  top='42px'
-                  objectFit='cover'
-                  maxWidth='auto'
-                  left='10px'
-                  right='17px'
-                  bottom='14px'
-                  zIndex='11'
-                >
-                  <StaticImage src='../../../images/life.png' alt='' />
-                </Box>
+          <Flex direction='row' alignItems='flex-end'>
+            <Box width='85px'>
+              <StaticImage src='../../../images/arrow_1.png' alt='' />
+            </Box>
 
-                <Box
-                  width='384px'
-                  height='468px'
-                  zIndex='10'
-                  position='relative'
-                >
-                  <StaticImage src='../../../images/about_img.png' alt='' />
-                </Box>
-              </Box>
+            <Text
+              px='2px'
+              py='1px'
+              ml='5px'
+              mb='10px'
+              height='18px'
+              fontFamily='Fira Mono'
+              fontSize='11px'
+              fontWeight='semibold'
+              backgroundColor='#FFFF00'
+              color='#000000'
+            >
+              pro-active
+            </Text>
+          </Flex>
 
-              <Flex
-                direction='column'
-                justify='center'
-                position='relative'
-                left='-10px'
+          <Box height='80px'></Box>
+
+          <Flex direction='row'>
+            <Box width='85px' pt='5px'>
+              <StaticImage src='../../../images/group_42.png' alt='' />
+            </Box>
+
+            <Text
+              px='2px'
+              py='1px'
+              ml='5px'
+              height='18px'
+              fontFamily='Fira Mono'
+              fontSize='11px'
+              fontWeight='semibold'
+              backgroundColor='#FFFF00'
+              color='#000000'
+            >
+              curious
+            </Text>
+          </Flex>
+        </Flex>
+
+        <Box width='40px' />
+
+        <Flex direction='column' mt='20px'>
+          <Text
+            textColor='#ffff04'
+            fontWeight='bold'
+            fontFamily='Fira Mono'
+            pt='10px'
+          >
+            {"//TODO: Meet-Lewis"}
+          </Text>
+
+          <Text
+            color='#cecece'
+            fontSize='16px'
+            fontFamily='CircularBook'
+            width='470px'
+            pt='20px'
+            zIndex='20'
+          >
+            I'm a pro-active Software Engineer adept in delivering robust mobile
+            applications that scale seamlessly as needs & wants evolve. I've
+            worked in agile and continuous integration environments using
+            modern-day tech stacks and task management tools to build
+            world-class products. <br />
+            Currently pursuing my Bachelor's Degree in Computer Science at
+            Africa Nazarene University
+            <br />
+            <br />I enjoy cycling during my off-screen time.
+            {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
+          </Text>
+
+          <div
+            style={{
+              display: "flex",
+              zIndex: 20,
+            }}
+          >
+            {/* active */}
+            <Flex direction='column'>
+              <Text
+                pt='20px'
+                pb='10px'
+                fontFamily='Fira Mono'
+                fontSize='11.5px'
+                fontWeight='500'
+                color='#858689'
               >
-                <Flex direction='row'>
-                  <Box width='85px' pt='5px'>
-                    <StaticImage src='../../../images/group_9.png' alt='' />
-                  </Box>
+                🟢 Actively working with
+              </Text>
 
-                  <Text
-                    px='2px'
-                    py='1px'
-                    ml='5px'
-                    height='18px'
-                    fontFamily='Fira Mono'
-                    fontSize='11px'
-                    fontWeight='semibold'
-                    backgroundColor='#FFFF00'
-                    color='#000000'
-                  >
-                    prolific
-                  </Text>
+              <Flex justifyContent='space-between'>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsFirst.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
                 </Flex>
-
-                <Box height='80px'></Box>
-
-                <Flex direction='row' alignItems='flex-end'>
-                  <Box width='85px'>
-                    <StaticImage src='../../../images/arrow_1.png' alt='' />
-                  </Box>
-
-                  <Text
-                    px='2px'
-                    py='1px'
-                    ml='5px'
-                    mb='10px'
-                    height='18px'
-                    fontFamily='Fira Mono'
-                    fontSize='11px'
-                    fontWeight='semibold'
-                    backgroundColor='#FFFF00'
-                    color='#000000'
-                  >
-                    pro-active
-                  </Text>
-                </Flex>
-
-                <Box height='80px'></Box>
-
-                <Flex direction='row'>
-                  <Box width='85px' pt='5px'>
-                    <StaticImage src='../../../images/group_42.png' alt='' />
-                  </Box>
-
-                  <Text
-                    px='2px'
-                    py='1px'
-                    ml='5px'
-                    height='18px'
-                    fontFamily='Fira Mono'
-                    fontSize='11px'
-                    fontWeight='semibold'
-                    backgroundColor='#FFFF00'
-                    color='#000000'
-                  >
-                    curious
-                  </Text>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsSecond.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
                 </Flex>
               </Flex>
+            </Flex>
 
-              <Box width='40px' />
+            <Box width='40px' />
+            {/* interested */}
+            <Flex direction='column'>
+              <Text
+                pt='20px'
+                pb='10px'
+                fontFamily='Fira Mono'
+                fontSize='11.5px'
+                fontWeight='500'
+                color='#858689'
+              >
+                ⚪ Learning/Interested in
+              </Text>
 
-              <Flex direction='column' mt='20px'>
-                <Text
-                  textColor='#ffff04'
-                  fontWeight='bold'
-                  fontFamily='Fira Mono'
-                  pt='10px'
-                >
-                  {"//TODO: Meet-Lewis"}
-                </Text>
-
-                <Text
-                  color='#cecece'
-                  fontSize='16px'
-                  fontFamily='CircularBook'
-                  width='470px'
-                  pt='20px'
-                  zIndex='20'
-                >
-                  I'm a pro-active Software Engineer adept in delivering robust
-                  mobile applications that scale seamlessly as needs & wants
-                  evolve. I've worked in agile and continuous integration
-                  environments using modern-day tech stacks and task management
-                  tools to build world-class products. <br />
-                  Currently pursuing my Bachelor's Degree in Computer Science at
-                  Africa Nazarene University
-                  <br />
-                  <br />I enjoy cycling during my off-screen time.
-                  {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
-                </Text>
-
-                <div
-                  style={{
-                    display: "flex",
-                    zIndex: 20,
-                  }}
-                >
-                  {/* active */}
-                  <Flex direction='column'>
-                    <Text
-                      pt='20px'
-                      pb='10px'
-                      fontFamily='Fira Mono'
-                      fontSize='11.5px'
-                      fontWeight='500'
-                      color='#858689'
-                    >
-                      🟢 Actively working with
-                    </Text>
-
-                    <Flex justifyContent='space-between'>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsFirst.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsSecond.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                    </Flex>
-                  </Flex>
-
-                  <Box width='40px' />
-                  {/* interested */}
-                  <Flex direction='column'>
-                    <Text
-                      pt='20px'
-                      pb='10px'
-                      fontFamily='Fira Mono'
-                      fontSize='11.5px'
-                      fontWeight='500'
-                      color='#858689'
-                    >
-                      ⚪ Learning/Interested in
-                    </Text>
-
-                    <Flex justifyContent='space-between'>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsThird.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                      <Flex direction='column'>
-                        <div>
-                          {langItemsFourth.map((item) => (
-                            <LanguageItem item={item} />
-                          ))}
-                        </div>
-                      </Flex>
-                    </Flex>
-                  </Flex>
-                </div>
+              <Flex justifyContent='space-between'>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsThird.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
+                </Flex>
+                <Flex direction='column'>
+                  <div>
+                    {langItemsFourth.map((item) => (
+                      <LanguageItem item={item} />
+                    ))}
+                  </div>
+                </Flex>
               </Flex>
-            </Center>
-          )
-        }
-      </MediaQuery>
+            </Flex>
+          </div>
+        </Flex>
+      </Center>
     </Box>
   );
 };

@@ -60,82 +60,52 @@ const ProjectsInfo = ({ projectTag }) => {
   ];
 
   return (
-    <MediaQuery maxWidth={797}>
-      {(isMobile: boolean) =>
-        isMobile ? (
-          <>
-            <Box width='300px'>
-              {/* description */}
-              <SyntaxHighlighter
-                language='json'
-                style={customStyle}
-                wrapLongLines
-                wrapLines
-                customStyle={{
-                  backgroundColor: "transparent",
-                  opacity: "1",
-                  marginTop: "-10px",
-                }}
-                codeTagProps={{
-                  style: {
-                    fontSize: "9px",
-                  },
-                }}
-              >
-                {cryptoboardDescription}
-              </SyntaxHighlighter>
-            </Box>
-          </>
-        ) : (
-          <Flex direction='row' height='150px'>
-            <Box width='70vw' height='150px' zIndex='30'>
-              {/* name */}
-              <SyntaxHighlighter
-                language='json'
-                style={customStyle}
-                wrapLongLines
-                customStyle={{
-                  backgroundColor: "transparent",
-                  opacity: "1",
-                  marginTop: "-14px",
-                }}
-                codeTagProps={{
-                  style: {
-                    fontSize: "12px",
-                  },
-                }}
-              >
-                {projectIntros[projectTag]}
-              </SyntaxHighlighter>
-            </Box>
+    <Flex direction='row' height='150px'>
+    <Box width='70vw' height='150px' zIndex='30'>
+      {/* name */}
+      <SyntaxHighlighter
+        language='json'
+        style={customStyle}
+        wrapLongLines
+        customStyle={{
+          backgroundColor: "transparent",
+          opacity: "1",
+          marginTop: "-14px",
+        }}
+        codeTagProps={{
+          style: {
+            fontSize: "12px",
+          },
+        }}
+      >
+        {projectIntros[projectTag]}
+      </SyntaxHighlighter>
+    </Box>
 
-            <Box width='40px'></Box>
+    <Box width='40px'></Box>
 
-            <Box width='130vw' height='150px'>
-              {/* description */}
-              <SyntaxHighlighter
-                language='json'
-                style={customStyle}
-                wrapLongLines
-                wrapLines
-                customStyle={{
-                  backgroundColor: "transparent",
-                  opacity: "1",
-                  marginTop: "-14px",
-                }}
-                codeTagProps={{
-                  style: {
-                    fontSize: "12px",
-                  },
-                }}
-              >
-                {projectDescriptions[projectTag]}
-              </SyntaxHighlighter>
-            </Box>
-          </Flex>
-        )
-      }
-    </MediaQuery>
+    <Box width='130vw' height='150px'>
+      {/* description */}
+      <SyntaxHighlighter
+        language='json'
+        style={customStyle}
+        wrapLongLines
+        wrapLines
+        customStyle={{
+          backgroundColor: "transparent",
+          opacity: "1",
+          marginTop: "-14px",
+        }}
+        codeTagProps={{
+          style: {
+            fontSize: "12px",
+          },
+        }}
+      >
+        {projectDescriptions[projectTag]}
+      </SyntaxHighlighter>
+    </Box>
+  </Flex>
   );
 };
 

@@ -12,41 +12,20 @@ const TextStyle = styled.h1`
 
 const SectionTitle = ({ title, id }) => {
   return (
-    <MediaQuery maxWidth={769}>
-      {(isMobile: boolean) =>
-        isMobile ? (
-          <Box position='relative' background='transparent' zIndex='30'>
-            <Center py='10px'>
-              <TextStyle>
-                <Text
-                  fontFamily='Fira Mono'
-                  fontSize='48px'
-                  color='yellow'
-                  id={id}
-                >
-                  {title}
-                </Text>
-              </TextStyle>
-            </Center>
-          </Box>
-        ) : (
-          <Box position='relative' zIndex='30'>
-            <Center py='10px'>
-              <TextStyle>
-                <Text
-                  fontFamily='Fira Mono'
-                  fontSize='96px'
-                  color='yellow'
-                  id={id}
-                >
-                  {title}
-                </Text>
-              </TextStyle>
-            </Center>
-          </Box>
-        )
-      }
-    </MediaQuery>
+    <Box position='relative' zIndex='30'>
+    <Center py='10px'>
+      <TextStyle>
+        <Text
+          fontFamily='Fira Mono'
+          fontSize='96px'
+          color='yellow'
+          id={id}
+        >
+          {title}
+        </Text>
+      </TextStyle>
+    </Center>
+  </Box>
   );
 };
 

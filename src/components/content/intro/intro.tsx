@@ -14,7 +14,7 @@ const Intro = () => {
     <Center>
       <Flex
         direction='row'
-        left='-10px'
+        left='-20px'
         pb='80px'
         pt='20px'
         position='relative'
@@ -114,13 +114,8 @@ const Intro = () => {
             width='500px'
             lineHeight='1.2'
           >
-            I exist purposely to
-            {/* <span style={{ color: "#ffff00" }}>{"{"}</span>{" "} */} build
-            quality software.{" "}
-            {/* <span style={{ color: "#ffff00" }}>{"}"}</span>.  */}
-            Thouroughly enjoy getting knee-deep in the conception, design,
-            development and production phases. Enjoy getting knee-deep in the
-            conception, design, development and
+            I thouroughly enjoy getting knee-deep in the conception, design,
+            development and production phases of mobile applications.
           </Text>
 
           {/* cta */}

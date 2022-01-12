@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Slide, useScrollTrigger } from "@material-ui/core";
 import { Flex, Text, Center, Link as ChakraLink, Box } from "@chakra-ui/react";
 import { Link } from "gatsby";
+
 import styled from "styled-components";
+
+type Anchor = "top" | "left" | "bottom" | "right";
 
 const LogoStyle = styled.h1`
   -webkit-text-stroke: 0.2px yellow;
@@ -11,13 +14,13 @@ const LogoStyle = styled.h1`
 `;
 
 const GlassNav = styled.div`
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.6);
   position: sticky;
   top: 0;
   z-index: 50;
-  transition: top 0.6s;
+  transition: all 0.6s;
 `;
 
 interface Props {
@@ -36,7 +39,7 @@ function HideOnScroll(props: Props) {
 }
 
 const Navbar = ({ indexSelectedBySection }) => {
-  console.log("nav index" + indexSelectedBySection);
+ 
 
   return (
     <HideOnScroll>
@@ -59,6 +62,7 @@ const Navbar = ({ indexSelectedBySection }) => {
               </Text>
             </LogoStyle>
           </Link>
+
           {/* nav */}
           <Center>
             {NAV_ITEMS.map((item, index) => (
@@ -109,6 +113,7 @@ const Navbar = ({ indexSelectedBySection }) => {
               </ScrollLink>
             ))}
           </Center>
+
           {/* CTA */}
           <ScrollLink
             activeClass='active'
@@ -148,8 +153,8 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    nav: "about",
-    href: "about",
+    nav: "projects",
+    href: "projects",
   },
 
   {
@@ -158,11 +163,12 @@ const NAV_ITEMS: Array<NavItem> = [
   },
 
   {
-    nav: "projects",
-    href: "projects",
-  },
-  {
     nav: "expertise",
     href: "expertise",
+  },
+
+  {
+    nav: "references",
+    href: "references",
   },
 ];

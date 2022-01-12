@@ -5,8 +5,6 @@ import SectionTitle from "../../shared/section_title";
 import LanguageItem from "../about/language_item";
 import { StaticImage } from "gatsby-plugin-image";
 import VisibilitySensor from "react-visibility-sensor";
-import Underliner from "../../shared/underliner";
-import styled from "styled-components";
 
 const About = ({ onSectionChange }) => {
   return (
@@ -14,15 +12,30 @@ const About = ({ onSectionChange }) => {
       <VisibilitySensor
         partialVisibility={true}
         onChange={(val) => {
-          val ? onSectionChange(0) : null;
+          val ? onSectionChange(-1) : null;
         }}
       >
         <SectionTitle title='.aboutMe()' id='about' />
       </VisibilitySensor>
 
-      <Center pl='96px' pr='80px' pt='40px' position='relative'>
-        <Box width='384px' height='468px' zIndex='10'>
-          <StaticImage src='../../../images/about_img.png' alt='' />
+      <Center pl='96px' pr='80px' py='40px' position='relative'>
+        <Box position='relative'>
+          <Box
+            position='absolute'
+            top='42px'
+            objectFit='cover'
+            maxWidth='auto'
+            left='10px'
+            right='17px'
+            bottom='14px'
+            zIndex='11'
+          >
+            <StaticImage src='../../../images/life.png' alt='' />
+          </Box>
+
+          <Box width='384px' height='468px' zIndex='10' position='relative'>
+            <StaticImage src='../../../images/about_img.png' alt='' />
+          </Box>
         </Box>
 
         <Flex
@@ -70,7 +83,7 @@ const About = ({ onSectionChange }) => {
               backgroundColor='#FFFF00'
               color='#000000'
             >
-              inquisitive
+              pro-active
             </Text>
           </Flex>
 
@@ -92,12 +105,12 @@ const About = ({ onSectionChange }) => {
               backgroundColor='#FFFF00'
               color='#000000'
             >
-              pro-cyclist
+              curious
             </Text>
           </Flex>
         </Flex>
 
-        <Box width='80px'></Box>
+        <Box width='40px' />
 
         <Flex direction='column' mt='20px'>
           <Text
@@ -117,16 +130,16 @@ const About = ({ onSectionChange }) => {
             pt='20px'
             zIndex='20'
           >
-            Mobile applications developer based in Nairobi, Kenya. Mobile Mobile
-            applications developer based in Nairobi, Kenya. Mobile Mobile
-            developer based in Nairobi, Kenya. developer based in Nairobi,
-            Kenya. developer based in Nairobi, Kenya.
+            I'm a pro-active Software Engineer adept in delivering robust mobile
+            applications that scale seamlessly as needs & wants evolve. I've
+            worked in agile and continuous integration environments using
+            modern-day tech stacks and task management tools to build
+            world-class products. <br />
+            Currently pursuing my Bachelor's Degree in Computer Science at
+            Africa Nazarene University
             <br />
-            <br />
-            developer based in Nairobi,
+            <br />I enjoy cycling during my off-screen time.
             {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
-            Nairobi, Kenya. Mobile applications developer based in Nairobi,
-            Kenya. developer based in Nairobi, Kenya.
           </Text>
 
           <div
@@ -206,7 +219,7 @@ const About = ({ onSectionChange }) => {
 
 export default About;
 
-const langItemsFirst: Array<String> = ["#flutter", "#gatsby"];
+const langItemsFirst: Array<String> = ["#flutter", "#typescript"];
 
 const langItemsSecond: Array<String> = ["#firebase", "#react"];
 

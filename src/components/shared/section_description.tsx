@@ -1,9 +1,12 @@
 import { Text } from "@chakra-ui/layout";
-import { Center } from "@chakra-ui/react";
+import { Center, Box } from "@chakra-ui/react";
+
 import React from "react";
+import MediaQuery from "react-responsive";
 
 const SectionDescription = ({ description }) => {
   return (
+    <Box position='relative' zIndex='30'>
     <Center py='20px'>
       <Text
         fontSize='16px'
@@ -15,6 +18,7 @@ const SectionDescription = ({ description }) => {
         {description}
       </Text>
     </Center>
+  </Box>
   );
 };
 

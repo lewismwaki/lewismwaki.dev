@@ -1,5 +1,7 @@
 import React from "react";
 import { Box, Text, Center, Flex } from "@chakra-ui/react";
+import MediaQuery from "react-responsive";
+
 import styled from "styled-components";
 import { BiBriefcaseAlt2 } from "react-icons/bi";
 
@@ -7,8 +9,6 @@ const RegularTextStyle = styled.h1`
   -webkit-text-stroke: 0.75px yellow;
   -webkit-text-fill-color: transparent;
 `;
-
-
 
 const ExpandedTitleStyle = styled.h1`
   -webkit-text-stroke: 0.75px yellow;
@@ -31,10 +31,7 @@ interface Company {
 }
 const ExpandedTitle = ({ where, title }: Company) => {
   return (
-    <Flex
-      direction='row'
-      alignItems='flex-start'
-    >
+    <Flex direction='row' alignItems='flex-start'>
       <Box
         width='45px'
         height='45px'

@@ -3,7 +3,7 @@ import React from "react";
 import { Text } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-
+import pdf from "../../../assets/Lewis Mwaki's Resume.pdf";
 const TextStyle = styled.h1`
   -webkit-text-stroke: 0.75px #cecece;
   -webkit-text-fill-color: transparent;
@@ -137,7 +137,7 @@ const Intro = () => {
               }}
               onClick={() => {
                 window.open(
-                  "https://docs.google.com/document/d/1zxWzzW33wMQgQqamyp7083aGpDWgD2M6jLyjJNTAP7o/edit?usp=sharing",
+                  "../../../assets/Lewis Mwaki's Resume.pdf",
                   "_blank"
                 );
               }}

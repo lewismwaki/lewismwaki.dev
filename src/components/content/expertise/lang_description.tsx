@@ -19,7 +19,7 @@ const LangDescription = ({ lang }) => {
           ? "Dart + Flutter continue to be my preffered tool for building performant, feature-packed apps. I've got a wide experience spanning over 2 years, working with tools, libraries, SDKs, mini-frameworks in the Flutter ecosystem. Always embrace legacy architectural patterns & state management solutions like Riverpod, BLoC, Redux etc. with a focus on scalabiliy."
           : lang == "#react"
           ? "React has proven to be one of the robust frameworks. I've enjoyed building sites with React + Typescript + Gatsby, including this very website."
-          : { lang }}
+          : " "}
       </Text>
     </Box>
   );

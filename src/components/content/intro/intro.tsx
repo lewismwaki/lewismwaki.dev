@@ -137,7 +137,7 @@ const Intro = () => {
               }}
               onClick={() => {
                 window.open(
-                  "../../../assets/Lewis Mwaki's Resume.pdf",
+                  "https://raw.githubusercontent.com/mwakicodes/lewismwaki.dev/add_content/src/assets/Lewis%20Mwaki's%20Resume.pdf?token=GHSAT0AAAAAABK66P4MXXTSJ4UXE3UOMQPSYPEFOVA",
                   "_blank"
                 );
               }}

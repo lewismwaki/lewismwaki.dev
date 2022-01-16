@@ -8,7 +8,7 @@ const ProjectLinks = ({ android, ios, github, landing }) => {
     <Center py='40px' zIndex='30'>
       <Flex direction='row'>
         {android == "" && ios == "" && github == "" && landing == "" ? (
-          <Flex alignItems='center' direction='row' pl='6px'>
+          <Flex alignItems='center' direction='row' pl='6px' height={41.5}>
             <Box
               px='4px'
               width='fit-content'

@@ -69,7 +69,7 @@ const Projects = ({ onSectionChange }) => {
                   ) : projectTag == 1 ? (
                     <StaticImage src='../../../images/cryptoboard.png' alt='' />
                   ) : projectTag == 2 ? (
-                    <StaticImage src='../../../images/cryptoboard.png' alt='' />
+                    <StaticImage src='../../../images/group_4003.png' alt='' />
                   ) : (
                     <StaticImage src='../../../images/cryptoboard.png' alt='' />
                   )}

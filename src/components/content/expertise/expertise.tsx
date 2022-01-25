@@ -128,8 +128,8 @@ export default function Expertise({ onSectionChange }) {
                           px='4px'
                           mb='2px'
                           fontFamily='Fira Mono'
+                          fontWeight='600'
                           fontSize='13.5px'
-                          fontWeight='semibold'
                           backgroundImage={
                             item.lang == "#flutter"
                               ? lang == item.lang

@@ -104,24 +104,13 @@ const Projects = ({ onSectionChange }) => {
             {/* projects  controller */}
             <Center>
               <Box width='978px' height='240px' position='relative' zIndex='10'>
-                <Box
-                  width='200px'
-                  height='200px'
-                  position='absolute'
-                  left='0px'
-                  top='-202px'
-                  zIndex='1'
-                >
-                  <StaticImage
-                    src='../../../images/peep_projects.png/'
-                    alt=''
-                  />
-                </Box>
+
                 {/* bkg */}
                 <StaticImage
                   src='../../../images/projects_controller.png'
                   alt=''
                 />
+                
                 {/* content */}
                 <Flex
                   position='absolute'

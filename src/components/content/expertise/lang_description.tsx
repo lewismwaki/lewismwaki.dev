@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, Box } from "@chakra-ui/react";
-import MediaQuery from "react-responsive";
 
 const LangDescription = ({ lang }) => {
   return (
@@ -10,10 +9,11 @@ const LangDescription = ({ lang }) => {
         pl='16px'
         pr='28px'
         pb='60px'
-        fontWeight='semibold'
-        textColor='#707070'
+        fontWeight='500'
+        textColor='#666666'
         noOfLines={6}
         fontSize='15px'
+        fontFamily='CircularBook'
       >
         {lang == "#flutter"
           ? "Dart + Flutter continue to be my preffered tool for building performant, feature-packed apps. I've got a wide experience spanning over 2 years, working with tools, libraries, SDKs, mini-frameworks in the Flutter ecosystem. Always embrace legacy architectural patterns & state management solutions like Riverpod, BLoC, Redux etc. with a focus on scalabiliy."

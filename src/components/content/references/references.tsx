@@ -43,6 +43,17 @@ const References = ({ onSectionChange }) => {
             transition='all 0.3s'
             top={{ md: "-100px", lg: "-150px" }}
           >
+            <Box
+              width='200px'
+              height='200px'
+              position='absolute'
+              left='100px'
+              top='201.5px'
+              zIndex='1'
+            >
+              <StaticImage src='../../../images/peep_projects.png/' alt='' />
+            </Box>
+
             {/* reference box */}
             <Box
               height={{ md: "194px", lg: "293px" }}
@@ -166,7 +177,7 @@ const ReferenceItems: Array<ReferenceItem> = [
     refereeAvi: "https://bit.ly/kent-c-dodds",
     refereeTitle: "CEO at Bytmatic Inc.",
     referenceText:
-      "Lewis is an extremely talented mobile developer with great eye for UX/UI design. He's one of the hardest working and intelligent people I’ve ever met. His work ethic continues to blow me away with how fast he's able to complete tasks without sacrificing quality and his ability to translate mock-ups into a real functioning product 1:1 is incredible. Traddit is lucky to work with him and anyone who works with him will also be lucky.",
+      "Lewis is an extremely talented mobile developer with great eye for UX/UI design. He's one of the hardest working and intelligent people I’ve ever met. His work ethic continues to blow me away with how fast he's able to complete tasks without sacrificing quality. Traddit is lucky to work with him and anyone who works with him will also be lucky.",
   },
 ];
 

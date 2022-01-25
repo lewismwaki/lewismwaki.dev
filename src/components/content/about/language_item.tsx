@@ -8,8 +8,8 @@ const LanguageItem = ({ item }) => {
       mb='10px'
       width='fit-content'
       fontFamily='Fira Mono'
-      fontSize='11px'
       fontWeight='semibold'
+      fontSize='11px'
       backgroundImage={
         item == "#flutter"
           ? "linear-gradient(120deg, #194954 100%, #194954 100%)"

@@ -20,9 +20,11 @@ const Footer = () => {
         width='100vw'
         alignItems='center'
         justifyContent='center'
+        fontSize='12px'
+        fontFamily='Fira Mono'
         color='#FFFF05'
       >
-        <Text>© Copyright • Lewis Mwaki • 2021</Text>
+        <Text>© Copyright • Lewis Mwaki • 2022</Text>
       </Flex>
     </GlassNav>
   );

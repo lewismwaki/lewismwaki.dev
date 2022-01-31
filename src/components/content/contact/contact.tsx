@@ -48,13 +48,21 @@ const Contact = ({ onSectionChange }) => {
     >
       <Box position='relative' top='-300px'>
         <SectionTitle title='.getInTouch()' id='getInTouch' />
-        <SectionDescription description="Let's get building! Tell me more about your project" />
+        <SectionDescription description="Let's get building! Tell me more about your project. Or maybe talk about the genius of Ye, formerly Kanye Omari West. :)" />
 
         <Center position='relative' overflow='clip'>
           {/* contact form */}
-          <Box position='relative' right='30px' zIndex='10'>
+          <Box
+            position='relative'
+            right={{ lg: "-10px", xl: "30px" }}
+            transition='all 0.5s ease-in-out'
+            zIndex='10'
+          >
             {/* bkg */}
-            <Box width='545px'>
+            <Box
+              width={{ lg: "490px", xl: "545px" }}
+              transition='all 0.5s ease-in-out'
+            >
               <StaticImage src='../../../images/group_3920.png' alt='' />
             </Box>
             {/* form */}
@@ -63,8 +71,9 @@ const Contact = ({ onSectionChange }) => {
               <Flex
                 position='absolute'
                 direction='column'
-                top='48px'
-                left='220px'
+                top={{ lg: "42px", xl: "48px" }}
+                left={{ lg: "195px", xl: "220px" }}
+                transition='all 0.5s ease-in-out'
               >
                 {/* email */}
                 <FormControl
@@ -91,8 +100,9 @@ const Contact = ({ onSectionChange }) => {
                     borderRadius='4px'
                     backgroundColor='#F0F011'
                     background='#F0F011'
-                    width='304px'
+                    width={{ lg: "280px", xl: "304px" }}
                     height='38px'
+                    transition='all 0.5s ease-in-out'
                     pl='10px'
                     mb='8px'
                     _hover={{
@@ -130,8 +140,9 @@ const Contact = ({ onSectionChange }) => {
                     borderRadius='4px'
                     background='#F0F011'
                     backgroundColor='#F0F011'
-                    width='304px'
+                    width={{ lg: "280px", xl: "304px" }}
                     height='38px'
+                    transition='all 0.5s ease-in-out'
                     pl='10px'
                     mb='8px'
                     _hover={{
@@ -222,10 +233,11 @@ const Contact = ({ onSectionChange }) => {
                     borderColor='#F0F011'
                     borderRadius='4px'
                     background='#F0F011'
-                    width='304px'
-                    height='155px'
+                    width={{ lg: "280px", xl: "304px" }}
+                    height={{ lg: "130px", xl: "155px" }}
                     pl='12px'
-                    pb='40px'
+                    pb={{ lg: "32px", xl: "40px" }}
+                    transition='all 0.5s ease-in-out'
                     mb='16px'
                     m='0px'
                     _hover={{
@@ -258,15 +270,15 @@ const Contact = ({ onSectionChange }) => {
               >
                 <Flex
                   position='absolute'
-                  bottom='36px'
-                  left='220px'
+                  bottom={{ lg: "28px", xl: "36px" }}
+                  left={{ lg: "195px", xl: "220px" }}
                   height='40px'
                   borderRadius='6px'
-                  width='304px'
+                  width={{ lg: "280px", xl: "304px" }}
                   textAlign='center'
                   alignItems='center'
                   justifyContent='center'
-                  transition='all 0.3s ease-in-out'
+                  transition='all 0.5s ease-in-out'
                   fontSize='14px'
                   fontFamily='Futura'
                   disabled={!isFormValid()}
@@ -340,7 +352,7 @@ const Contact = ({ onSectionChange }) => {
           </Box>
 
           {/* contact bubbles */}
-          <Box position='relative' right='60px' overflow='clip'>
+          <Box position='relative' right={{ lg: "100px", xl: "60px" }}>
             <Box
               position='absolute'
               transform='rotate(45deg)'

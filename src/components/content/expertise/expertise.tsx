@@ -1,24 +1,16 @@
 import React, { useState } from "react";
-
 import { Box, Center, Flex } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/react";
-import CircleGradientYellow from "../../../images/ellipse_122_yellow.svg";
 import SectionTitle from "../../shared/section_title";
 import SectionDescription from "../../shared/section_description";
 import { StaticImage } from "gatsby-plugin-image";
-import {
-  Animate,
-  useAnimate,
-  AnimateKeyframes,
-  AnimateGroup,
-} from "react-simple-animate";
-
 import BkgGradient from "../../../images/bkg_gradient_1.svg";
 import VisibilitySensor from "react-visibility-sensor";
 import LangDescription from "./lang_description";
 import LangsGraphic from "../../../images/langs_graphic.svg";
-import { Stack, Container } from "@mui/material";
+import { Stack, Container, Fade } from "@mui/material";
 import { ThemeProvider, useTheme } from "@mui/material/styles";
+
 
 export default function Expertise({ onSectionChange }) {
   const theme = useTheme();
@@ -35,7 +27,7 @@ export default function Expertise({ onSectionChange }) {
         <Box position='relative' background='inherit' py='20px'>
           <SectionTitle title='.expertise()' id='expertise' />
 
-          <div>
+          
             <SectionDescription
               description="Overview of some of the technologies I've worked with, highlighting how
       & where they've been used. A list that's by no means exhaustive."
@@ -195,7 +187,7 @@ export default function Expertise({ onSectionChange }) {
                 </Box>
               </Stack>
             </Container>
-          </div>
+          
         </Box>
       </VisibilitySensor>
     </ThemeProvider>

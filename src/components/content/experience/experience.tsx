@@ -82,7 +82,7 @@ export default function Experience({ onSectionChange }) {
         <Box position='relative'>
           <SectionTitle title='.experience()' id='experience' />
           <Box pt='12px' pb='24px'>
-            <SectionDescription description="Where I've been priviledged to work, roles I performed and my general involvement there." />
+            <SectionDescription description="Where I've been priviledged to work, my impact and general involvement there." />
           </Box>
 
           <div>
@@ -155,12 +155,13 @@ export default function Experience({ onSectionChange }) {
                   <AccordionDetails>
                     <Flex direction='column'>
                       <Duration date=' 📆 Jul 3rd 2021 - Present' />
+
                       <WorkDescription description="Worked with the great team at Bytmatic Inc. to build Traddit to an evergrowing userbase that we're all proud of. Here, I mastered collaboration across different time zones, as well as task management. I was tasked with the following:" />
 
-                      <Role role='Developing architectural & design patterns for scalability' />
-                      <Role role='Regularly implementing user feedback to ensure top-notch user experience.' />
-                      <Role role='Supporting the life-cycle by code reviews, design, and conception of new ideas.' />
-                      <Role role='Translating in-house designed mock-ups to UI while adhering to Material.io & iOS HIG' />
+                      <Role role='Onboarded the team to sturdier architectural & design patterns that helped us scale seamlessly.' />
+                      <Role role='Helped in the conception and development of 3 premium features.' />
+                      <Role role='Implemented user feedback to ensure best possible UX, backed with an average rating of 4.5 stars.' />
+                      <Role role='Translated 3 different iterations of mock-ups to UI, with adherence to Material Design & iOS HIG.' />
                     </Flex>
                   </AccordionDetails>
                 </Accordion>
@@ -190,19 +191,18 @@ export default function Experience({ onSectionChange }) {
                         title='Mobile Apps Developer'
                       />
                     )}
-                    {/* /this is smooth tpesssssmssmooooooooooooooomm */}
                   </AccordionSummary>
                   <AccordionDetails>
                     <Flex direction='column'>
                       <Duration date=' 📆 Feb 20th 2021 - Present' />
 
-                      <WorkDescription description='Took a developer role at Giglab as we built Ssential and Sported. I was tasked with the following:' />
+                      <WorkDescription description='Took a developer role at Giglab as we built apps from scratch to production for multiple clients. ' />
 
-                      <Role role='Architecting apps with the aim of allowing apps to scale seamlessly' />
-                      <Role role='Continuously developing new time-critical features ' />
-                      <Role role='Implementing animations & theming to ensure the best possible user experience' />
-                      <Role role='Continuously fixing time and financially critical bugs' />
-                      <Role role='Writing tests to ensure reliability of code' />
+                      <Role role='Architected codebases with the aim of allowing apps to scale seamlessly' />
+                      <Role role='Expanded test coverage to ensure reliability of code.' />
+                      <Role role='Maintained and upgraded existing codebases.' />
+                      <Role role='Continuously fixed time and financially critical bugs' />
+                      <Role role='Helped 3 clients begin generating revenue from their applications' />
                     </Flex>
                   </AccordionDetails>
                 </Accordion>
@@ -224,24 +224,24 @@ export default function Experience({ onSectionChange }) {
                   >
                     {expanded === "panel3" ? (
                       <ExpandedTitle
-                        where='Freelance'
-                        title='Designer & Consultant'
+                        where='Indipendent'
+                        title='UI/UX Designer, Developer'
                       />
                     ) : (
                       <CollapsedTitle
-                        where='Freelance'
-                        title='Designer & Consultant'
+                        where='Indipendent'
+                        title='UI/UX Designer, Developer'
                       />
                     )}
                   </AccordionSummary>
                   <AccordionDetails>
                     <Flex direction='column'>
                       <Duration date=' 📆 Apr 25th 2020 - Dec 31st 2020' />
-                      <WorkDescription description='Enjoyed my freelance days when I doubled up as developer, UI/UX designer, graphic designer.' />
+                      <WorkDescription description='Enjoyed my freelance days when I doubled up as developer, and UI/UX designer.' />
 
-                      <Role role='Translating designs to frontend code for both web & mobile' />
-                      <Role role='Consulting for startups' />
-                      <Role role='UI/UX Design for startups' />
+                      <Role role='Translated designs to frontend code for both web & mobile' />
+                      <Role role='UI/UX Design from ideas and wireframes to prototypes' />
+                      <Role role='Consulted and drafted roadmaps for startups' />
                       <Role role='Graphic Design' />
                     </Flex>
                   </AccordionDetails>

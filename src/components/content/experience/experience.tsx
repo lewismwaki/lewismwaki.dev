@@ -200,7 +200,7 @@ export default function Experience({ onSectionChange }) {
 
                       <Role role='Architected codebases with the aim of allowing apps to scale seamlessly' />
                       <Role role='Expanded test coverage to ensure reliability of code.' />
-                      <Role role='Maintained and upgraded existing codebases.' />
+                      <Role role='Maintained and upgraded fairly large existing codebases.' />
                       <Role role='Continuously fixed time and financially critical bugs' />
                       <Role role='Helped 3 clients begin generating revenue from their applications' />
                     </Flex>

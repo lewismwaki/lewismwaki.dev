@@ -13,19 +13,14 @@ const TextStyle = styled.h1`
 const SectionTitle = ({ title, id }) => {
   return (
     <Box position='relative' zIndex='30'>
-    <Center py='10px'>
-      <TextStyle>
-        <Text
-          fontFamily='Fira Mono'
-          fontSize='96px'
-          color='yellow'
-          id={id}
-        >
-          {title}
-        </Text>
-      </TextStyle>
-    </Center>
-  </Box>
+      <Center py='10px'>
+        <TextStyle>
+          <Text fontFamily='Fira Mono' fontSize='96px' color='yellow' id={id}>
+            {title}
+          </Text>
+        </TextStyle>
+      </Center>
+    </Box>
   );
 };
 

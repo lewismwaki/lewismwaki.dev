@@ -16,6 +16,7 @@ import { RiGitBranchLine } from "react-icons/ri";
 import WorkDescription from "./work_description";
 import BkgGradient from "../../../images/bkg_gradient_1.svg";
 import CircleGradientYellow from "../../../images/ellipse_122_yellow.svg";
+import AosAnim from "../../shared/aos_anim";
 
 const Accordion = withStyles({
   root: {
@@ -113,7 +114,10 @@ export default function Experience({ onSectionChange }) {
                 height='900px'
                 top='-200px'
               >
-                <BkgGradient width='900px' height='900px' />
+                <AosAnim
+                  animation='slide-up'
+                  child={<BkgGradient width='900px' height='900px' />}
+                />
               </Box>
 
               <Box position='relative' left='23px'>
@@ -126,45 +130,50 @@ export default function Experience({ onSectionChange }) {
               </Box>
               <Flex position='relative' direction='column'>
                 {/* accordion 1 */}
-                <Accordion
-                  square
-                  expanded={expanded === "panel1"}
-                  onChange={
-                    expanded === "panel1"
-                      ? handleChange("panel2")
-                      : handleChange("panel1")
+                <AosAnim
+                  animation='fade-up'
+                  child={
+                    <Accordion
+                      square
+                      expanded={expanded === "panel1"}
+                      onChange={
+                        expanded === "panel1"
+                          ? handleChange("panel2")
+                          : handleChange("panel1")
+                      }
+                    >
+                      {/* title */}
+                      <AccordionSummary
+                        aria-controls='panel1d-content'
+                        id='panel1d-header'
+                      >
+                        {expanded === "panel1" ? (
+                          <ExpandedTitle
+                            where='Bytmatic Inc. - Texas, US'
+                            title='Mobile Apps Developer'
+                          />
+                        ) : (
+                          <CollapsedTitle
+                            where='Bytmatic Inc. - Texas, US'
+                            title='Mobile Apps Developer'
+                          />
+                        )}
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Flex direction='column'>
+                          <Duration date=' 📆 Jul 3rd 2021 - Present' />
+
+                          <WorkDescription description="Worked with the great team at Bytmatic Inc. to build Traddit to an evergrowing userbase that we're all proud of. Here, I mastered collaboration across different time zones, as well as task management. I was tasked with the following:" />
+
+                          <Role role='Onboarded the team to sturdier architectural & design patterns that helped us scale seamlessly.' />
+                          <Role role='Helped in the conception and development of 3 premium features.' />
+                          <Role role='Implemented user feedback to ensure best possible UX, backed with an average rating of 4.5 stars.' />
+                          <Role role='Translated 3 different iterations of mock-ups to UI, with adherence to Material Design & iOS HIG.' />
+                        </Flex>
+                      </AccordionDetails>
+                    </Accordion>
                   }
-                >
-                  {/* title */}
-                  <AccordionSummary
-                    aria-controls='panel1d-content'
-                    id='panel1d-header'
-                  >
-                    {expanded === "panel1" ? (
-                      <ExpandedTitle
-                        where='Bytmatic Inc. - Texas, US'
-                        title='Mobile Apps Developer'
-                      />
-                    ) : (
-                      <CollapsedTitle
-                        where='Bytmatic Inc. - Texas, US'
-                        title='Mobile Apps Developer'
-                      />
-                    )}
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Flex direction='column'>
-                      <Duration date=' 📆 Jul 3rd 2021 - Present' />
-
-                      <WorkDescription description="Worked with the great team at Bytmatic Inc. to build Traddit to an evergrowing userbase that we're all proud of. Here, I mastered collaboration across different time zones, as well as task management. I was tasked with the following:" />
-
-                      <Role role='Onboarded the team to sturdier architectural & design patterns that helped us scale seamlessly.' />
-                      <Role role='Helped in the conception and development of 3 premium features.' />
-                      <Role role='Implemented user feedback to ensure best possible UX, backed with an average rating of 4.5 stars.' />
-                      <Role role='Translated 3 different iterations of mock-ups to UI, with adherence to Material Design & iOS HIG.' />
-                    </Flex>
-                  </AccordionDetails>
-                </Accordion>
+                />
                 {/* accordion 2 */}
                 <Accordion
                   square

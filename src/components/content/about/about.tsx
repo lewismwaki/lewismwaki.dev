@@ -22,7 +22,7 @@ const About = ({ onSectionChange }) => {
       <Center pl='96px' pr='80px' py='40px' position='relative'>
         <AosAnim
           animation='fade-right'
-          children={
+          child={
             <Center position='relative'>
               <Box position='relative'>
                 <Box
@@ -117,104 +117,117 @@ const About = ({ onSectionChange }) => {
         <Box width='40px' />
 
         <Flex direction='column' mt='20px'>
-          <Text
-            textColor='#ffff04'
-            fontWeight='bold'
-            fontFamily='Fira Mono'
-            pt='10px'
-          >
-            {"//TODO: Meet-Lewis"}
-          </Text>
-
-          <Text
-            color='#cecece'
-            fontSize='16px'
-            fontFamily='CircularBook'
-            width='470px'
-            pt='20px'
-            zIndex='20'
-          >
-            I'm a pro-active Software Engineer adept in delivering robust mobile
-            applications that scale seamlessly as needs & wants evolve. I've
-            worked in agile and continuous integration environments using
-            modern-day tech stacks and task management tools to build
-            world-class products. <br />
-            Currently pursuing my Bachelor's Degree in Computer Science at
-            Africa Nazarene University
-            <br />
-            <br />I enjoy cycling during my off-screen time.
-            {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
-          </Text>
-
-          <div
-            style={{
-              display: "flex",
-              zIndex: 20,
-            }}
-          >
-            {/* active */}
-            <Flex direction='column'>
+          
+          <AosAnim
+            child={
               <Text
-                pt='20px'
-                pb='10px'
+                textColor='#ffff04'
+                fontWeight='bold'
                 fontFamily='Fira Mono'
-                fontSize='11.5px'
-                fontWeight='500'
-                color='#858689'
+                pt='10px'
               >
-                🟢 Actively working with
+                {"//TODO: Meet-Lewis"}
               </Text>
-
-              <Flex justifyContent='space-between'>
-                <Flex direction='column'>
-                  <div>
-                    {langItemsFirst.map((item) => (
-                      <LanguageItem item={item} />
-                    ))}
-                  </div>
-                </Flex>
-                <Flex direction='column'>
-                  <div>
-                    {langItemsSecond.map((item) => (
-                      <LanguageItem item={item} />
-                    ))}
-                  </div>
-                </Flex>
-              </Flex>
-            </Flex>
-
-            <Box width='40px' />
-            {/* interested */}
-            <Flex direction='column'>
+            }
+          />
+          
+          <AosAnim
+            child={
               <Text
+                color='#cecece'
+                fontSize='16px'
+                fontFamily='CircularBook'
+                width='470px'
                 pt='20px'
-                pb='10px'
-                fontFamily='Fira Mono'
-                fontSize='11.5px'
-                fontWeight='500'
-                color='#858689'
+                zIndex='20'
               >
-                ⚪ Learning/Interested in
+                I'm a pro-active Software Engineer adept in delivering robust
+                mobile applications that scale seamlessly as needs & wants
+                evolve. I've worked in agile and continuous integration
+                environments using modern-day tech stacks and task management
+                tools to build world-class products. <br />
+                Currently pursuing my Bachelor's Degree in Computer Science at
+                Africa Nazarene University
+                <br />
+                <br />I enjoy cycling during my off-screen time.
+                {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
               </Text>
+            }
+          />
+          
+          <AosAnim
+            child={
+              <div
+                style={{
+                  display: "flex",
+                  zIndex: 20,
+                }}
+              >
+                {/* active */}
+                <Flex direction='column'>
+                  <Text
+                    pt='20px'
+                    pb='10px'
+                    fontFamily='Fira Mono'
+                    fontSize='11.5px'
+                    fontWeight='500'
+                    color='#858689'
+                  >
+                    🟢 Actively working with
+                  </Text>
 
-              <Flex justifyContent='space-between'>
-                <Flex direction='column'>
-                  <div>
-                    {langItemsThird.map((item) => (
-                      <LanguageItem item={item} />
-                    ))}
-                  </div>
+                  <Flex justifyContent='space-between'>
+                    <Flex direction='column'>
+                      <div>
+                        {langItemsFirst.map((item) => (
+                          <LanguageItem item={item} />
+                        ))}
+                      </div>
+                    </Flex>
+                    <Flex direction='column'>
+                      <div>
+                        {langItemsSecond.map((item) => (
+                          <LanguageItem item={item} />
+                        ))}
+                      </div>
+                    </Flex>
+                  </Flex>
                 </Flex>
+
+                <Box width='40px' />
+                {/* interested */}
                 <Flex direction='column'>
-                  <div>
-                    {langItemsFourth.map((item) => (
-                      <LanguageItem item={item} />
-                    ))}
-                  </div>
+                  <Text
+                    pt='20px'
+                    pb='10px'
+                    fontFamily='Fira Mono'
+                    fontSize='11.5px'
+                    fontWeight='500'
+                    color='#858689'
+                  >
+                    ⚪ Learning/Interested in
+                  </Text>
+
+                  <Flex justifyContent='space-between'>
+                    <Flex direction='column'>
+                      <div>
+                        {langItemsThird.map((item) => (
+                          <LanguageItem item={item} />
+                        ))}
+                      </div>
+                    </Flex>
+                    <Flex direction='column'>
+                      <div>
+                        {langItemsFourth.map((item) => (
+                          <LanguageItem item={item} />
+                        ))}
+                      </div>
+                    </Flex>
+                  </Flex>
                 </Flex>
-              </Flex>
-            </Flex>
-          </div>
+              </div>
+            }
+          />
         </Flex>
       </Center>
     </Box>

@@ -4,17 +4,25 @@ import "aos/dist/aos.css";
 
 interface Props {
   duration?: number;
+  offset?: number;
   animation?: string;
-  children: React.ReactNode;
+  child: React.ReactNode;
 }
 
-const AosAnim = ({ duration, animation, children }: Props) => {
+const AosAnim = ({ duration, offset, animation, child }: Props) => {
   useEffect(() => {
-    Aos.init({ duration: duration ?? 700 });
+    Aos.init({});
   }, []);
 
   return (
-    <div data-aos={animation == null ? "fade-up" : animation}>{children}</div>
+    <div
+      data-aos={animation == null ? "fade-up" : animation}
+      data-aos-duration={duration ?? 700}
+      data-aos-once={true}
+      data-aos-offset={offset ?? "100"}
+    >
+      {child}
+    </div>
   );
 };
 

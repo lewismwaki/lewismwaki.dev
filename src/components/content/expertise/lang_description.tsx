@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, Box } from "@chakra-ui/react";
-import MediaQuery from "react-responsive";
 
 const LangDescription = ({ lang }) => {
   return (
@@ -10,15 +9,20 @@ const LangDescription = ({ lang }) => {
         pl='16px'
         pr='28px'
         pb='60px'
-        fontWeight='semibold'
-        textColor='#707070'
+        fontWeight='500'
+        textColor='#666666'
         noOfLines={6}
         fontSize='15px'
+        fontFamily='CircularBook'
       >
         {lang == "#flutter"
-          ? "Dart + Flutter continue to be my preffered tool for building performant, feature-packed apps. I've got a wide experience spanning over 2 years, working with tools, libraries, SDKs, mini-frameworks in the Flutter ecosystem. Always embrace legacy architectural patterns & state management solutions like Riverpod, BLoC, Redux etc. with a focus on scalabiliy."
+          ? "Absolutely love the static and declarative nature of Dart & Flutter and that's a reason they continue to be my 'preffered' tools for building feature-packed apps, fast. I've got experience spanning over 2 years, working with libraries, SDKs, APIs, and mini-frameworks in this ecosystem. I always embrace legacy architectural patterns & state management solutions that by like MVVM, MVC, Riverpod, BLoC, GetX etc. with a main focus on scalability."
           : lang == "#react"
-          ? "React has proven to be one of the robust frameworks. I've enjoyed building sites with React + Typescript + Gatsby, including this very website."
+          ? "I like to combine React with Typescript's typing system, & SSGs like Gatsby to reduce development and debugging times when building for the web. Been building websites since God knows when, but React's + Typescript's robust nature has recently compelled me begin building fully-fledged apps that live on the web."
+          : lang == "#typescript"
+          ? "By now you might have noticed I like my developer experienced served right 🍜 :) Typescript surely helps with that and has been a great experience while building for the web, and sometimes when writing cloud functions."
+          : lang == "#firebase"
+          ? "The go-to when building MVPs"
           : " "}
       </Text>
     </Box>

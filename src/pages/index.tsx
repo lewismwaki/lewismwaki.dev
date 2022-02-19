@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box } from "@chakra-ui/react";
+
 import Navbar from "../components/shared/navbar";
 import Intro from "../components/content/intro/intro";
 import About from "./../components/content/about/about";
@@ -20,7 +21,7 @@ const Home = () => {
       <Helmet>
         <title>Lewis Mwaki</title>
 
-        <meta name="Lewis Mwaki's Portfolio" content="" />
+        <meta name="Lewis Mwaki's Portfolio" content='' />
         <link
           href='https://fonts.googleapis.com/css?family=Fira+Mono&display=swap'
           rel='stylesheet'

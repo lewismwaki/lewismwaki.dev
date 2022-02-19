@@ -1,0 +1,7 @@
+{
+  "access_token": "BQDcfcS0x9QaNXUS7yhOeVyjg7AnJY3OPuY42LIFwvuLB7fKX-XI4I0FJ46Hfw2UDYmz4Y86PLnwJvEtfVNntd08CjD4v1jOUXKnotfp3GMjrPOtWKS6CiUTZiPzR8BI1KwWAauDBcycvpVLVPVP3Zmumea-hWER3IPYwXGpWBM",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": "AQDHYbSoH1aJ8DWQH0wVg1nraSgQIZpCvDGu8emg6Rhxry6jZSQiPJ5GOMT4zMfK41VoxWvUXCb8ce2XVkTzmmPKIwGvKHoqx-7T-lC7IpdXKwhduSDK7lcZZKfAwSO2unU",
+  "scope": "user-read-currently-playing"
+}

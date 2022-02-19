@@ -4,6 +4,7 @@ import { Text } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import pdf from "../../../assets/Lewis Mwaki's Resume.pdf";
+
 const TextStyle = styled.h1`
   -webkit-text-stroke: 0.75px #cecece;
   -webkit-text-fill-color: transparent;
@@ -66,7 +67,6 @@ const Intro = () => {
             >
               developer
             </Text>
-
             <Text
               color='#d6d6d6'
               fontFamily='Fira Mono'
@@ -104,6 +104,25 @@ const Intro = () => {
               transition-property='height, width, background, font-size, background-size, font-color'
             >
               learner
+            </Text>
+            <Text
+              color='#d6d6d6'
+              fontFamily='Fira Mono'
+              fontSize='smaller'
+              fontWeight='semibold'
+              width='fit-content'
+              lineHeight='1.2'
+              p='4px'
+              ml='8px'
+              backgroundImage='linear-gradient(120deg, #cecece 100%, #cecece 100%)'
+              backgroundRepeat='no-repeat'
+              backgroundSize='100% 100%'
+              backgroundPosition='100% 100%'
+              transition='all 250ms ease-in-out'
+              textColor='#000000'
+              transition-property='height, width, background, font-size, background-size, font-color'
+            >
+              pro music-listener
             </Text>
           </Flex>
 

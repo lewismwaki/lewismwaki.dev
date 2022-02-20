@@ -29,7 +29,7 @@ const Projects = ({ onSectionChange }) => {
     <VisibilitySensor
       partialVisibility={true}
       onChange={(val) => {
-        val ? onSectionChange(0) : null;
+        val ? onSectionChange(1) : null;
       }}
     >
       <Box position='relative'>

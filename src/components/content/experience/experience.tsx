@@ -76,7 +76,7 @@ export default function Experience({ onSectionChange }) {
     <VisibilitySensor
       partialVisibility={true}
       onChange={(val) => {
-        val ? onSectionChange(1) : null;
+        val ? onSectionChange(2) : null;
       }}
     >
       <Center position='relative' overflowX='clip' background='inherit'>

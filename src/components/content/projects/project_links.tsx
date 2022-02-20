@@ -47,6 +47,7 @@ const ProjectLinks = ({ android, ios, github, landing }) => {
                   src='../../../images/get-it-on-play-store.png'
                   alt=''
                   height={41.5}
+                  placeholder='tracedSVG'
                 />
               </Box>
             ) : (
@@ -65,6 +66,7 @@ const ProjectLinks = ({ android, ios, github, landing }) => {
                   src='../../../images/get-it-on-github.png'
                   alt=''
                   height={41.5}
+                  placeholder='tracedSVG'
                 />
               </Box>
             ) : (

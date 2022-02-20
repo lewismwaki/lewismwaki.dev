@@ -48,7 +48,7 @@ const tradditDescription = `
 
 const ssentialDescription = `
 {
-  "projectDescription": "Ssential Health is a B2C app where Doctors and Health Insurance Agents can communicate in-app with patients with the help of Chat Messaging and Live Video Calls. Users can purchase Health Insurances as well as get profeesional health advice directly from the app. It houses extensive, verified medical info for reference. It's an all-inclusive telemedicine app."
+  "projectDescription": "Ssential Health is a B2C app where Doctors and Health Insurance Agents can communicate in-app with patients, with the help of Chat Messaging and Live Video Calls. Users can purchase Health Insurances as well as get professional health advice from praciticing doctors through the app. It also houses extensive, verified medical info for reference. It's an all-inclusive telemedicine app."
 }`;
 
 const ProjectsInfo = ({ projectTag }) => {

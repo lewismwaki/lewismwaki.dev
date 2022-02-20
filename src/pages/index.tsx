@@ -50,7 +50,6 @@ const Home = () => {
         <Projects onSectionChange={selectBySection} />
         <Experience onSectionChange={selectBySection} />
         <Expertise onSectionChange={selectBySection} />
-        <References onSectionChange={selectBySection} />
         <Contact onSectionChange={selectBySection} />
         <Footer />
       </Box>

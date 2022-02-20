@@ -234,8 +234,9 @@ const Navbar = ({ indexSelectedBySection }) => {
                     <ScrollLink
                       activeClass='active'
                       to={item.href}
+                      duration={index <= 1 ? 700 : 1400}
                       spy={true}
-                      smooth='easeOutCubic'
+                      smooth='easeOutSine'
                     >
                       <Box
                         mr={item.nav == "references" ? "0px" : "32px"}
@@ -325,6 +326,10 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
+    nav: "about",
+    href: "about",
+  },
+  {
     nav: "projects",
     href: "projects",
   },
@@ -337,10 +342,5 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     nav: "expertise",
     href: "expertise",
-  },
-
-  {
-    nav: "references",
-    href: "references",
   },
 ];

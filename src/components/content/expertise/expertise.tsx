@@ -21,7 +21,7 @@ export default function Expertise({ onSectionChange }) {
       <VisibilitySensor
         partialVisibility={true}
         onChange={(val) => {
-          val ? onSectionChange(2) : null;
+          val ? onSectionChange(3) : null;
         }}
       >
         <Box position='relative' background='inherit' py='20px'>
@@ -80,6 +80,7 @@ export default function Expertise({ onSectionChange }) {
                       <StaticImage
                         src='../../../images/expertise_bkg.png'
                         alt=''
+                        placeholder='tracedSVG'
                       />
                     </Box>
 
@@ -98,29 +99,34 @@ export default function Expertise({ onSectionChange }) {
                               height={58}
                               alt=''
                               src='../../../images/flutter_logo.png'
+                              placeholder='tracedSVG'
                             />
                           ) : lang == "#react" ? (
                             <StaticImage
                               height={58}
                               alt=''
                               src='../../../images/react_logo.png'
+                              placeholder='tracedSVG'
                             />
                           ) : lang == "#firebase" ? (
                             <StaticImage
                               height={58}
                               alt=''
                               src='../../../images/firebase_logo.png'
+                              placeholder='tracedSVG'
                             />
                           ) : lang == "#typescript" ? (
                             <StaticImage
                               height={58}
                               alt=''
                               src='../../../images/typescript_logo.png'
+                              placeholder='tracedSVG'
                             />
                           ) : (
                             <StaticImage
                               alt=''
                               src='../../../images/typescript_logo.png'
+                              placeholder='tracedSVG'
                             />
                           )}
                         </Box>

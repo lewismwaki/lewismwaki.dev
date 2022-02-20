@@ -47,7 +47,7 @@ const Contact = ({ onSectionChange }) => {
         val ? onSectionChange(4) : null;
       }}
     >
-      <Box position='relative' top='-300px'>
+      <Box position='relative' top='-150px'>
         <SectionTitle title='.getInTouch()' id='getInTouch' />
         <SectionDescription description="Let's get building! Tell me more about your project. Or maybe talk about the genius of Ye, formerly Kanye Omari West. :)" />
 

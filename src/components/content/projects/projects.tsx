@@ -75,22 +75,22 @@ const Projects = ({ onSectionChange }) => {
                       {projectTag == 0 ? (
                         <StaticImage
                           src='../../../images/traddit.png/'
-                          alt=''
+                          alt=''placeholder='tracedSVG'
                         />
                       ) : projectTag == 1 ? (
                         <StaticImage
                           src='../../../images/cryptoboard.png'
-                          alt=''
+                          alt=''placeholder='tracedSVG'
                         />
                       ) : projectTag == 2 ? (
                         <StaticImage
                           src='../../../images/group_4003.png'
-                          alt=''
+                          alt=''placeholder='tracedSVG'
                         />
                       ) : (
                         <StaticImage
                           src='../../../images/cryptoboard.png'
-                          alt=''
+                          alt=''placeholder='tracedSVG'
                         />
                       )}
                     </>
@@ -139,7 +139,7 @@ const Projects = ({ onSectionChange }) => {
                     {/* bkg */}
                     <StaticImage
                       src='../../../images/projects_controller.png'
-                      alt=''
+                      alt=''placeholder='tracedSVG'
                     />
 
                     {/* content */}

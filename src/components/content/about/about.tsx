@@ -1,5 +1,5 @@
 import { Box, Flex, Center } from "@chakra-ui/layout";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Text } from "@chakra-ui/react";
 import SectionTitle from "../../shared/section_title";
 import LanguageItem from "../about/language_item";
@@ -8,6 +8,57 @@ import VisibilitySensor from "react-visibility-sensor";
 import AosAnim from "../../shared/aos_anim";
 
 const About = ({ onSectionChange }) => {
+  const images = [
+    <AosAnim
+      animation='fade'
+      duration={250}
+      once={false}
+      child={
+        <StaticImage
+          src='../../../images/life.png'
+          placeholder='blurred'
+          alt=''
+        />
+      }
+    />,
+    <AosAnim
+      animation='fade'
+      duration={250}
+      once={false}
+      child={
+        <Box pt='24px'>
+          <StaticImage
+            src='../../../images/football.png'
+            placeholder='blurred'
+            alt=''
+          />
+        </Box>
+      }
+    />,
+    <AosAnim
+      animation='fade'
+      duration={250}
+      once={false}
+      child={
+        <StaticImage
+          src='../../../images/math.png'
+          placeholder='blurred'
+          alt=''
+        />
+      }
+    />,
+  ];
+
+  const [image, setImage] = useState(images[0]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+      setImage(randomImage);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [image]);
+
   return (
     <Box background='inherit'>
       <VisibilitySensor
@@ -35,7 +86,7 @@ const About = ({ onSectionChange }) => {
                   bottom='14px'
                   zIndex='11'
                 >
-                  <StaticImage src='../../../images/life.png' alt='' />
+                  {image}
                 </Box>
                 <Box
                   width='384px'
@@ -43,7 +94,11 @@ const About = ({ onSectionChange }) => {
                   zIndex='10'
                   position='relative'
                 >
-                  <StaticImage src='../../../images/about_img.png' alt='' />
+                  <StaticImage
+                    src='../../../images/about_img.png'
+                    alt=''
+                    placeholder='tracedSVG'
+                  />
                 </Box>
               </Box>
               <Flex
@@ -54,7 +109,7 @@ const About = ({ onSectionChange }) => {
               >
                 <Flex direction='row'>
                   <Box width='85px' pt='5px'>
-                    <StaticImage src='../../../images/group_9.png' alt='' />
+                    <StaticImage src='../../../images/group_9.png' alt=''placeholder='tracedSVG' />
                   </Box>
                   <Text
                     px='2px'
@@ -73,7 +128,7 @@ const About = ({ onSectionChange }) => {
                 <Box height='80px'></Box>
                 <Flex direction='row' alignItems='flex-end'>
                   <Box width='85px'>
-                    <StaticImage src='../../../images/arrow_1.png' alt='' />
+                    <StaticImage src='../../../images/arrow_1.png' alt='' placeholder='tracedSVG'/>
                   </Box>
                   <Text
                     px='2px'
@@ -93,7 +148,7 @@ const About = ({ onSectionChange }) => {
                 <Box height='80px'></Box>
                 <Flex direction='row'>
                   <Box width='85px' pt='5px'>
-                    <StaticImage src='../../../images/group_42.png' alt='' />
+                    <StaticImage src='../../../images/group_42.png' alt=''placeholder='tracedSVG' />
                   </Box>
                   <Text
                     px='2px'
@@ -117,7 +172,6 @@ const About = ({ onSectionChange }) => {
         <Box width='40px' />
 
         <Flex direction='column' mt='20px'>
-          
           <AosAnim
             child={
               <Text
@@ -130,7 +184,7 @@ const About = ({ onSectionChange }) => {
               </Text>
             }
           />
-          
+
           <AosAnim
             child={
               <Text
@@ -154,7 +208,7 @@ const About = ({ onSectionChange }) => {
               </Text>
             }
           />
-          
+
           <AosAnim
             child={
               <div

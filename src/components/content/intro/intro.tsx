@@ -15,7 +15,7 @@ const Intro = () => {
     <Center>
       <Flex
         direction='row'
-        left='-20px'
+        left='-28px'
         pb='80px'
         pt='20px'
         position='relative'
@@ -29,7 +29,7 @@ const Intro = () => {
           <TextStyle>
             <Text
               color='#cecece'
-              fontSize='72px'
+              fontSize='88px'
               fontFamily='Futura'
               lineHeight='1.0'
             >
@@ -39,7 +39,7 @@ const Intro = () => {
           <Box position='relative'>
             <Text
               color='#cecece'
-              fontSize='88px'
+              fontSize='92px'
               fontFamily='Futura'
               lineHeight='1.2'
             >
@@ -180,13 +180,12 @@ const Intro = () => {
         </Flex>
         <Box
           position='relative'
-          top='-60px'
+          top='-20px'
           width='460px'
           height='416px'
-          right='-90px'
-          bottom='65px'
+          right='-30px'
         >
-          <StaticImage src='../../../images/intro_img.png' alt='' />
+          <StaticImage src='../../../images/intro_img.png' alt='' placeholder='blurred' />
         </Box>
       </Flex>
     </Center>

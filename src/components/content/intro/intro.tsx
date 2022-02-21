@@ -149,9 +149,9 @@ const Intro = () => {
             width='530px'
             lineHeight='1.2'
           >
-            I enjoy helping startups, individuals, and corporates build great
-            mobile experiences, by getting knee-deep right from conception and
-            design, to the development and deployment phases of applications.
+            I help startups, individuals, and corporates build great mobile
+            experiences, by getting knee-deep right from conception and design,
+            to the development and deployment phases of applications.
           </Text>
 
           {/* cta */}
@@ -172,7 +172,7 @@ const Intro = () => {
             }}
             onClick={() => {
               window.open(
-                "https://raw.githubusercontent.com/mwakicodes/lewismwaki.dev/add_content/src/assets/Lewis%20Mwaki's%20Resume.pdf?token=GHSAT0AAAAAABK66P4MXXTSJ4UXE3UOMQPSYPEFOVA",
+                "https://github.com/mwakicodes/lewismwaki.dev/files/8105230/Lewis_Mwaki-Resume.pdf",
                 "_blank"
               );
             }}

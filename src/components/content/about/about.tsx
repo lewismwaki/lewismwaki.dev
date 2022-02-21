@@ -109,7 +109,11 @@ const About = ({ onSectionChange }) => {
               >
                 <Flex direction='row'>
                   <Box width='85px' pt='5px'>
-                    <StaticImage src='../../../images/group_9.png' alt=''placeholder='tracedSVG' />
+                    <StaticImage
+                      src='../../../images/group_9.png'
+                      alt=''
+                      placeholder='tracedSVG'
+                    />
                   </Box>
                   <Text
                     px='2px'
@@ -128,7 +132,11 @@ const About = ({ onSectionChange }) => {
                 <Box height='80px'></Box>
                 <Flex direction='row' alignItems='flex-end'>
                   <Box width='85px'>
-                    <StaticImage src='../../../images/arrow_1.png' alt='' placeholder='tracedSVG'/>
+                    <StaticImage
+                      src='../../../images/arrow_1.png'
+                      alt=''
+                      placeholder='tracedSVG'
+                    />
                   </Box>
                   <Text
                     px='2px'
@@ -148,7 +156,11 @@ const About = ({ onSectionChange }) => {
                 <Box height='80px'></Box>
                 <Flex direction='row'>
                   <Box width='85px' pt='5px'>
-                    <StaticImage src='../../../images/group_42.png' alt=''placeholder='tracedSVG' />
+                    <StaticImage
+                      src='../../../images/group_42.png'
+                      alt=''
+                      placeholder='tracedSVG'
+                    />
                   </Box>
                   <Text
                     px='2px'
@@ -195,16 +207,17 @@ const About = ({ onSectionChange }) => {
                 pt='20px'
                 zIndex='20'
               >
-                I'm a pro-active Software Engineer adept in delivering robust
-                mobile applications that scale seamlessly as needs & wants
-                evolve. I've worked in agile and continuous integration
-                environments using modern-day tech stacks and task management
-                tools to build world-class products. <br />
-                Currently pursuing my Bachelor's Degree in Computer Science at
-                Africa Nazarene University
+                I'm a Software Engineer with a 2-year track record in delivering
+                solid software solutions across industries such as finance,
+                health-care, blockchain, sports, and more. I'm passionate about
+                leveraging the capabilities of modern technologies to build
+                innovative, and future-proof experiences for the next generation
+                of the internet.
                 <br />
-                <br />I enjoy cycling during my off-screen time.
-                {/* <Underliner text={"male"} fontSize='13px' /> Kenya. based in */}
+                <br />
+                Currently pursuing my Bachelor's Degree of Science in Computer
+                Science at Africa Nazarene University. I enjoy cycling, playing
+                table tennis and football during my off-screen time.
               </Text>
             }
           />
@@ -294,6 +307,6 @@ const langItemsFirst: Array<String> = ["#flutter", "#typescript"];
 
 const langItemsSecond: Array<String> = ["#firebase", "#react"];
 
-const langItemsThird: Array<String> = ["#kotlin", "#python"];
+const langItemsThird: Array<String> = ["#AR", "#solidity"];
 
-const langItemsFourth: Array<String> = ["#AR", "#solidity"];
+const langItemsFourth: Array<String> = ["#kotlin", "#python"];

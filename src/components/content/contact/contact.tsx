@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import SectionTitle from "../../shared/section_title";
 import SectionDescription from "../../shared/section_description";
 import ContactBubble from "./contact_bubble";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { Fade, Tooltip } from "@material-ui/core";
 import VisibilitySensor from "react-visibility-sensor";
 import BkgGradient from "../../../images/bkg_gradient_1.svg";

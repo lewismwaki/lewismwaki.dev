@@ -20,6 +20,7 @@
     "@chakra-ui/provider": "^1.6.9",
     "@chakra-ui/react": "^1.6.5",
     "@ctrl/tinycolor": "^3.4.0",
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@fontsource/fira-mono": "^4.5.0",
@@ -29,9 +30,8 @@
     "@react-icons/all-files": "^4.1.0",
     "@types/react-helmet": "^6.1.4",
     "babel-plugin-styled-components": "^1.13.2",
-    "emailjs-com": "^3.2.0",
     "framer-motion": "^4.1.17",
-    "gatsby": "^3.11.0",
+    "gatsby": "^3.14.6",
     "gatsby-cli": "^3.11.0",
     "gatsby-plugin-emotion": "^6.11.0",
     "gatsby-plugin-gatsby-cloud": "^2.11.0",
@@ -62,9 +62,11 @@
     "react-visibility-sensor": "^5.1.1",
     "slick-carousel": "^1.8.1",
     "spotify-web-api-js": "^1.5.2",
-    "styled-components": "^5.3.0"
+    "styled-components": "^5.3.0",
+    "universalify": "^2.0.0"
   },
   "devDependencies": {
+    "@types/node": "^17.0.30",
     "@types/react-scroll": "^1.8.2",
     "@types/react-slick": "^0.23.4",
     "@types/styled-components": "^5.1.10",

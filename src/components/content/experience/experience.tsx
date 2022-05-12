@@ -166,7 +166,7 @@ export default function Experience({ onSectionChange }) {
                           <WorkDescription description='Worked with the great team at Bytmatic and greatly contributed to build, design and launch Traddit for Reddit to an ever-growing userbase. Was tasked with, and achieved the following:' />
 
                           <Role role='Introduced and onboarded the team to better architectural & design patterns that helped us scale seamlessly to 2000+ users.' />
-                          <Role role='Heavily involved in the conception and development of 7 premium features.' />
+                          <Role role='Heavily involved in the conception and development of 4 premium features.' />
                           <Role role='Regularly implemented user feedback to ensure best possible user experience, backed with an average rating of 4.5 stars.' />
                           <Role role='Translated 3 different iterations of in-house designed mock-ups to UI, with adherence to Material Design guidelines & iOS HIG.' />
                         </Flex>

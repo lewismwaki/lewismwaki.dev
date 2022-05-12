@@ -3,7 +3,6 @@ import React from "react";
 import { Text } from "@chakra-ui/react";
 import { StaticImage } from "gatsby-plugin-image";
 import styled, { keyframes } from "styled-components";
-import pdf from "../../../assets/Lewis Mwaki's Resume.pdf";
 
 const TextStyle = styled.h1`
   -webkit-text-stroke: 0.75px #cecece;
@@ -149,9 +148,10 @@ const Intro = () => {
             width='530px'
             lineHeight='1.2'
           >
-            I help startups, individuals, and corporates build great mobile
-            experiences, by getting knee-deep right from conception and design,
-            to the development and deployment phases of applications.
+            Absolutely love helping companies, start-ups and individuals
+            leverage the extensive capabilities of modern technologies to build
+            immersive, innovative, and future-proof experiences for the next
+            generation of the internet.
           </Text>
 
           {/* cta */}
@@ -172,7 +172,7 @@ const Intro = () => {
             }}
             onClick={() => {
               window.open(
-                "https://github.com/mwakicodes/lewismwaki.dev/files/8105230/Lewis_Mwaki-Resume.pdf",
+                "https://github.com/mwakicodes/lewismwaki.dev/files/8680615/Lewis_Mwaki-Resume.pdf",
                 "_blank"
               );
             }}

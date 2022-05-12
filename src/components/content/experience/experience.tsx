@@ -163,12 +163,12 @@ export default function Experience({ onSectionChange }) {
                         <Flex direction='column'>
                           <Duration date=' 📆 Jul 3rd 2021 - Present' />
 
-                          <WorkDescription description="Worked with the great team at Bytmatic Inc. to build Traddit to an evergrowing userbase that we're all proud of. Here, I mastered collaboration across different time zones, as well as task management. I was tasked with the following:" />
+                          <WorkDescription description='Worked with the great team at Bytmatic and greatly contributed to build, design and launch Traddit for Reddit to an ever-growing userbase. Was tasked with, and achieved the following:' />
 
-                          <Role role='Onboarded the team to sturdier architectural & design patterns that helped us scale seamlessly.' />
-                          <Role role='Helped in the conception and development of 3 premium features.' />
-                          <Role role='Implemented user feedback to ensure best possible UX, backed with an average rating of 4.5 stars.' />
-                          <Role role='Translated 3 different iterations of mock-ups to UI, with adherence to Material Design & iOS HIG.' />
+                          <Role role='Introduced and onboarded the team to better architectural & design patterns that helped us scale seamlessly to 2000+ users.' />
+                          <Role role='Heavily involved in the conception and development of 7 premium features.' />
+                          <Role role='Regularly implemented user feedback to ensure best possible user experience, backed with an average rating of 4.5 stars.' />
+                          <Role role='Translated 3 different iterations of in-house designed mock-ups to UI, with adherence to Material Design guidelines & iOS HIG.' />
                         </Flex>
                       </AccordionDetails>
                     </Accordion>
@@ -205,13 +205,13 @@ export default function Experience({ onSectionChange }) {
                     <Flex direction='column'>
                       <Duration date=' 📆 Feb 20th 2021 - Present' />
 
-                      <WorkDescription description='Took a developer role at Giglab as we built apps from scratch to production for multiple clients. ' />
+                      <WorkDescription description='Took a developer role at Giglab as we built production apps for multiple clients. Was tasked with, and achieved the following:' />
 
                       <Role role='Architected codebases with the aim of allowing apps to scale seamlessly' />
                       <Role role='Expanded test coverage to ensure reliability of code.' />
                       <Role role='Maintained and upgraded fairly large existing codebases.' />
                       <Role role='Continuously fixed time and financially critical bugs' />
-                      <Role role='Helped 3 clients begin generating revenue from their applications' />
+                      <Role role='Helped 3 clients begin generating revenue from their software solutions' />
                     </Flex>
                   </AccordionDetails>
                 </Accordion>

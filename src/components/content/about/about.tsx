@@ -209,10 +209,9 @@ const About = ({ onSectionChange }) => {
               >
                 I'm a Software Engineer with a 2-year track record in delivering
                 solid software solutions across industries such as finance,
-                health-care, blockchain, sports, and more. I'm passionate about
-                leveraging the capabilities of modern technologies to build
-                innovative, and future-proof experiences for the next generation
-                of the internet.
+                health-care, blockchain, sports, and more. I enjoy getting
+                heavily involved right from conception and design, to the
+                development and deployment phases of applications.
                 <br />
                 <br />
                 Currently pursuing my Bachelor's Degree of Science in Computer

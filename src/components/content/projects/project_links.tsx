@@ -40,7 +40,7 @@ const ProjectLinks = ({ android, ios, github, landing }) => {
                 px='6px'
                 cursor='pointer'
                 onClick={() => {
-                  window.open(ios, "_blank");
+                  window.open(android, "_blank");
                 }}
               >
                 <StaticImage

@@ -49,7 +49,7 @@ const Contact = ({ onSectionChange }) => {
     >
       <Box position='relative' top='-150px'>
         <SectionTitle title='.getInTouch()' id='getInTouch' />
-        <SectionDescription description="Let's get building! Tell me more about your project. Or maybe talk about the genius of Ye, formerly Kanye Omari West. :)" />
+        <SectionDescription description="Let's get building! Tell me more about your project, or your team's principles, or your recent funding round! Or maybe talk about the genius of Ye, formerly Kanye 'Omari' West. :)" />
 
         <Center position='relative' overflow='clip'>
           {/* contact form */}
@@ -424,7 +424,7 @@ const ContactBubbleList: Array<ContactBubbleProps> = [
     platform: "Mail",
   },
   {
-    href: "https://www.linkedin.com/in/mwakicodes/",
+    href: "https://www.linkedin.com/in/lewis-mwaki-980565222/",
     platform: "LinkedIn",
   },
 
@@ -434,7 +434,7 @@ const ContactBubbleList: Array<ContactBubbleProps> = [
   },
 
   {
-    href: "https://wa.me/254745943954",
+    href: "tel:+254745943954",
     platform: "Phone",
   },
   {

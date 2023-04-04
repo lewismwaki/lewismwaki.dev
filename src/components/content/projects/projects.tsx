@@ -110,10 +110,10 @@ const Projects = ({ onSectionChange }) => {
                   />
                 ) : projectTag == 1 ? (
                   <ProjectLinks
-                    android='https://github.com/mwakicodes/Cryptoboard/releases/download/v0.0.1-alpha/Cryptoboard.v0.0.1-alpha.apk'
+                    android='https://github.com/lewismwaki/Cryptoboard/releases/download/v0.0.1-alpha/Cryptoboard.v0.0.1-alpha.apk'
                     ios=''
-                    github='https://github.com/mwakicodes/Cryptoboard/'
-                    landing='https://github.com/mwakicodes/Cryptoboard#readme'
+                    github='https://github.com/lewismwaki/Cryptoboard/'
+                    landing='https://github.com/lewismwaki/Cryptoboard#readme'
                   />
                 ) : projectTag == 2 ? (
                   <ProjectLinks android='' ios='' github='' landing='' />

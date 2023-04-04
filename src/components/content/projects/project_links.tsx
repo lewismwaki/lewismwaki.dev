@@ -116,7 +116,7 @@ const ProjectLinks = ({ android, ios, github, landing }) => {
                   {landing == "http://www.traddit.io/"
                     ? "Traddit.io"
                     : landing ==
-                      "https://github.com/mwakicodes/Cryptoboard#readme"
+                      "https://github.com/lewismwaki/Cryptoboard#readme"
                     ? "ReadMe.md"
                     : ""}
                 </Box>

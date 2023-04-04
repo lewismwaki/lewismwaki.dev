@@ -438,7 +438,7 @@ const ContactBubbleList: Array<ContactBubbleProps> = [
     platform: "Phone",
   },
   {
-    href: "https://www.github.com/mwakicodes/",
+    href: "https://www.github.com/lewismwaki/",
     platform: "Github",
   },
 ];

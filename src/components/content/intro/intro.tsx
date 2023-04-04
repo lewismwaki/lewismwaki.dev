@@ -172,7 +172,7 @@ const Intro = () => {
             }}
             onClick={() => {
               window.open(
-                "https://github.com/mwakicodes/lewismwaki.dev/files/8680615/Lewis_Mwaki-Resume.pdf",
+                "https://github.com/lewismwaki/lewismwaki.dev/files/8680615/Lewis_Mwaki-Resume.pdf",
                 "_blank"
               );
             }}

@@ -233,12 +233,12 @@ export default function Experience({ onSectionChange }) {
                   >
                     {expanded === "panel3" ? (
                       <ExpandedTitle
-                        where='Indipendent'
+                        where='Independent'
                         title='UI/UX Designer, Developer'
                       />
                     ) : (
                       <CollapsedTitle
-                        where='Indipendent'
+                        where='Independent'
                         title='UI/UX Designer, Developer'
                       />
                     )}
